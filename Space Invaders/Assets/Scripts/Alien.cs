@@ -4,34 +4,13 @@ using UnityEngine;
 
 public class Alien : MonoBehaviour
 {
-    float speed;
-    float downSpeed;
-    Horde horde;
-    Rigidbody rb;
-
-    public void setSpeed(float s) { speed = s; }
-    public void setDownSpeed(float s) { downSpeed = s; }
-
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
-        horde = FindObjectOfType<Horde>();
+        gameObject.GetComponent<CubeEditor>().enabled = false; //Se desactiva el snap para que se puedan mover en el play
     }
 
     void Update()
     {
-        rb.velocity = Vector3.right * speed;
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        horde.goDownAndChangeDirection();
-    }
-
-    public void changeDirection() { speed = -speed; }
-
-    public void moveDown()
-    {
-        rb.MovePosition(new Vector3(transform.position.x, 0, transform.position.z - downSpeed));
     }
 }
