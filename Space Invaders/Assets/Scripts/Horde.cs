@@ -22,7 +22,7 @@ public class Horde : MonoBehaviour
     }
 
     //Es public ya que los aliens lo llaman cuando son destruidos (NOTA: al destruit aliens debemos ponerlos en disable no destruir el gameObject) 
-    public void calculateBoxCollider() //El box collider de la horda ajusta su tamaño para el cálculo de colisiones con los limites
+    void calculateBoxCollider() //El box collider de la horda ajusta su tamaño para el cálculo de colisiones con los limites
     {
         //Punto más arriba, abajo, a la izquierda y a la derecha de los aliens de la horda
         float top = 0;
@@ -59,5 +59,10 @@ public class Horde : MonoBehaviour
             speed = -speed;
             rb.MovePosition(new Vector3(transform.position.x, transform.position.y, transform.position.z - downSpeed)); //¿Mas suave?
         }
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        Debug.Log("mal");
     }
 }

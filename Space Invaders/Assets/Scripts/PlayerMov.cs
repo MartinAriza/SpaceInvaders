@@ -5,19 +5,33 @@ using UnityEngine;
 public class PlayerMov : MonoBehaviour
 {
 
-    public float speed = 7.5f;
-    // Start is called before the first frame update
+    [SerializeField] float speed = 200;
+    Rigidbody rb;
+    [SerializeField] ParticleSystem gun;
+
     void Start()
     {
-        
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Vector3 ejeX = Input.GetAxis("Horizontal") * transform.right * Time.deltaTime * speed;
+        movement();
+        fire();
+    }
 
-        transform.Translate(ejeX);
+    void movement()
+    {
+        Vector3 ejeX = Input.GetAxisRaw("Horizontal") * Vector3.right * Time.deltaTime * speed;
+        rb.velocity = ejeX;
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -8, 8), transform.position.y, transform.position.z);
+    }
 
+    void fire()
+    {
+        if (Input.GetButton("Fire1"))
+        {
+            gun.Play();
+        }
     }
 }

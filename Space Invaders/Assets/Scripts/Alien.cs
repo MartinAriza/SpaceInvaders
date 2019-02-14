@@ -7,6 +7,8 @@ public class Alien : MonoBehaviour
     public float minTimeBetweenShots = 1.0f;
     public float maxTimeBetweenShots = 3.0f;
 
+    [SerializeField] ParticleSystem deathFX;
+
     bool stopFiring = false;
 
     void Start()
@@ -20,6 +22,17 @@ public class Alien : MonoBehaviour
         while(!stopFiring)
         {
             yield return new WaitForSeconds( Random.Range(minTimeBetweenShots, maxTimeBetweenShots) );
+        }
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        if(other.tag == "PlayerLaser")
+        {
+            Debug.Log("muerto");
+            Instantiate(deathFX, transform.position, Quaternion.identity);
+            gameObject.SendMessageUpwards("calculateBoxCollider");
+            gameObject.SetActive(false);
         }
     }
 }
