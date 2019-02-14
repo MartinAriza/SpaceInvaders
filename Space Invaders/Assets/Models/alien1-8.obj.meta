@@ -1,16 +1,28 @@
 fileFormatVersion: 2
-guid: 17a34875e9fadf0469e5289be0e4987d
+guid: bb2cf6e794da476479223a94991707a4
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: default
+    100002: alien_Cube
+    100004: EYE1_Sphere.001
+    100006: EYE2_Sphere
     400000: //RootNode
-    400002: default
-    2100000: defaultMat
-    2300000: default
-    3300000: default
-    4300000: default
+    400002: alien_Cube
+    400004: EYE1_Sphere.001
+    400006: EYE2_Sphere
+    2100000: alien_CubeMat
+    2100002: EYE1_Sphere.001Mat
+    2100004: EYE2_SphereMat
+    2300000: alien_Cube
+    2300002: EYE1_Sphere.001
+    2300004: EYE2_Sphere
+    3300000: alien_Cube
+    3300002: EYE1_Sphere.001
+    3300004: EYE2_Sphere
+    4300000: alien_Cube
+    4300002: EYE1_Sphere.001
+    4300004: EYE2_Sphere
   externalObjects: {}
   materials:
     importMaterials: 1
