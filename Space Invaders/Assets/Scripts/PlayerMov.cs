@@ -8,6 +8,7 @@ public class PlayerMov : MonoBehaviour
     [SerializeField] float speed = 200;
     Rigidbody rb;
     [SerializeField] ParticleSystem gun;
+    [SerializeField] float allowedmovement = 10.0f;
 
     void Start()
     {
@@ -24,7 +25,7 @@ public class PlayerMov : MonoBehaviour
     {
         Vector3 ejeX = Input.GetAxisRaw("Horizontal") * Vector3.right * Time.deltaTime * speed;
         rb.velocity = ejeX;
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -8, 8), transform.position.y, transform.position.z);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -allowedmovement, allowedmovement), transform.position.y, transform.position.z);
     }
 
     void fire()
