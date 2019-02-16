@@ -9,7 +9,8 @@ public class PlayerMov : MonoBehaviour
     [Tooltip("Numero de golpes que aguanta la nave")]public int HP = 3;
     [SerializeField][Tooltip("Numero maximo de disparos del jugador que puede haber a la vez en pantalla")] int maxShots = 2;
     [SerializeField] float shotSpeed = 15;
-    
+
+    [SerializeField][Tooltip("Cuanto rota la nave al moverse")] float rotationAmount = 4.0f;
     [SerializeField][Tooltip("Cuanta distancia puede moverse la nave desde el centro de la pantalla")] float allowedMovement = 10.0f;
 
     [SerializeField] ParticleSystem gun;
@@ -29,6 +30,7 @@ public class PlayerMov : MonoBehaviour
         if (HP > 0)
         {
             movement();
+            rotation();
             if(adult) fire();
         }
     }
@@ -40,6 +42,14 @@ public class PlayerMov : MonoBehaviour
         Vector3 ejeX = Input.GetAxisRaw("Horizontal") * Vector3.right * Time.deltaTime * speed;
         rb.velocity = ejeX;
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -allowedMovement, allowedMovement), transform.position.y, transform.position.z);
+    }
+
+    void rotation()
+    {
+        float xThrow = Input.GetAxisRaw("Horizontal");
+        float roll = xThrow * rotationAmount;
+
+        transform.localRotation = Quaternion.Euler(0, 0, -roll);
     }
 
     void fire()
