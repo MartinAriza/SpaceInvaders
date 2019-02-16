@@ -21,7 +21,6 @@ public class ExplosionDestroyer : MonoBehaviour
     {
         while (!stopDestroying)
         {
-            Debug.Log("destroying");
             explosions = GetComponentsInChildren<ParticleSystem>();
             foreach(ParticleSystem explosion in explosions)
             {

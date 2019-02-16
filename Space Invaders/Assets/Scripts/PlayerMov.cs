@@ -45,6 +45,15 @@ public class PlayerMov : MonoBehaviour
         if (Input.GetButton("Fire1")) gun.Play();
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        if(collision.gameObject.tag == "Alien")
+        {
+            HP--;
+            if (HP <= 0) destroyPlayer();
+        }
+    }
+
     private void OnParticleCollision(GameObject other)
     {
         if(other.tag == "AlienLaser")
@@ -53,10 +62,15 @@ public class PlayerMov : MonoBehaviour
             if(HP <= 0)
             {
                 deathFX.Play();
-                gameObject.GetComponent<BoxCollider>().enabled = false;
-                gameObject.GetComponent<MeshRenderer>().enabled = false;
+                destroyPlayer();
             }
             
         }
+    }
+
+    void destroyPlayer()
+    {
+        gameObject.GetComponent<BoxCollider>().enabled = false;
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6646047537060437866}
   - component: {fileID: 6646047537060437865}
   - component: {fileID: 6646047537060437864}
+  - component: {fileID: 424934155}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -51,6 +52,9 @@ MonoBehaviour:
   downSpeedIncrement: 0.25
   hpIncrement: 1
   shotSpeedIncrement: 0.5
+  alienScoreValueIncrement: 10
+  extraPlayerLives: 1
+  waveNumber: 1
 --- !u!114 &6646047537060437864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,3 +68,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destructionPeriod: 10
+--- !u!114 &424934155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6646047537060437863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb3936b4e68cce4ab283707d8738924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScore: 0

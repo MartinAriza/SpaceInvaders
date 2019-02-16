@@ -15,15 +15,19 @@ public class HordeManager : MonoBehaviour
     [SerializeField] float alienScoreValueIncrement = 10.0f;
 
     [SerializeField] int extraPlayerLives = 1;
+    [SerializeField] int extraBarriersHP = 2;
 
     Horde horde;
     PlayerMov player;
 
     [HideInInspector] public int waveNumber = 1;
 
+    Barrier [] barriers;
+
     void Start()
     {
         player = FindObjectOfType<PlayerMov>();
+        barriers = FindObjectsOfType<Barrier>();
     }
 
     public void spawnNewHorde()
@@ -38,6 +42,12 @@ public class HordeManager : MonoBehaviour
         horde.alienScoreValue += alienScoreValueIncrement * waveNumber;
 
         player.HP += extraPlayerLives;
+
+        foreach(Barrier barrier in barriers)
+        {
+            barrier.restore();
+            barrier.HP += extraBarriersHP * waveNumber;
+        }
 
         waveNumber++;
     }

@@ -124,8 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
-  HP: 3
-  maxShots: 3
+  HP: 99
+  maxShots: 99
   shotSpeed: 15
   allowedMovement: 10
   gun: {fileID: 5552605771097900321}
@@ -161,6 +161,11 @@ PrefabInstance:
         type: 3}
       propertyPath: CollisionModule.multiplyColliderForceByCollisionAngle
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093135451645133771, guid: c220f5227bceee6458eb47e4fb2c2894,
+        type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 1536
       objectReference: {fileID: 0}
     - target: {fileID: 1302661693122025728, guid: c220f5227bceee6458eb47e4fb2c2894,
         type: 3}
