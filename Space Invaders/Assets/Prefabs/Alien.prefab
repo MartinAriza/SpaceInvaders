@@ -125,8 +125,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minTimeBetweenShots: 1
   maxTimeBetweenShots: 3
-  checkLineOfSight: 0
+  shotSpeed: 15
   deathFX: {fileID: 4639930365437419148, guid: 9b5843d1caa62de49a754265cb8be289, type: 3}
+  gun: {fileID: 8890496014025355387}
 --- !u!114 &1136998036486032700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +151,11 @@ PrefabInstance:
     - target: {fileID: 4881861495892245313, guid: ccd4f241e22cb31419bb31dedfd04dcc,
         type: 3}
       propertyPath: m_Name
+      value: AlienLaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245313, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_TagString
       value: AlienLaser
       objectReference: {fileID: 0}
     - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
@@ -207,11 +213,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245319, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245319, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245319, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccd4f241e22cb31419bb31dedfd04dcc, type: 3}
 --- !u!4 &8890496014025355384 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+    type: 3}
+  m_PrefabInstance: {fileID: 4097915223096265532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8890496014025355387 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4881861495892245319, guid: ccd4f241e22cb31419bb31dedfd04dcc,
     type: 3}
   m_PrefabInstance: {fileID: 4097915223096265532}
   m_PrefabAsset: {fileID: 0}
