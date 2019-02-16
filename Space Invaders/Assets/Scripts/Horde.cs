@@ -12,6 +12,8 @@ public class Horde : MonoBehaviour
     public float alienShotSpeed = 15;
     public float alienScoreValue = 10;
 
+    public bool adult = true;
+
     Rigidbody rb;
     BoxCollider bc;
     Alien [] aliens;
@@ -46,6 +48,7 @@ public class Horde : MonoBehaviour
             alien.setHp(alienHP);
             alien.setShotSpeed(alienShotSpeed);
             alien.setScoreValue(alienScoreValue);
+            alien.setAdult(adult);
         }
     }
 

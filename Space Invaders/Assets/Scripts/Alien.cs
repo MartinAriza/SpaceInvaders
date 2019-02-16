@@ -11,20 +11,29 @@ public class Alien : MonoBehaviour
     [SerializeField] float scoreValue = 10.0f;
 
     bool alive = true;
+    bool adult = true;
 
     Transform parent;
     [SerializeField] ParticleSystem deathFX;
     [SerializeField] ParticleSystem gun;
 
     bool stopFiring = false; //Permite que la subrutina de disparo se ejecute periodicamente hasta que se ponga a true
+    bool firstTime = true; //Evita que el juego comience con una oleada de disparos al ejecutarse al subrutina
 
-    public bool isAlive() { return alive; }
+    public bool isAlive()
+    { return alive; }
 
-    public void setHp(int h) { HP = h; }
+    public void setHp(int h)
+    { HP = h; }
 
-    public void setShotSpeed(float s) { shotSpeed = s; }
+    public void setShotSpeed(float s)
+    { shotSpeed = s; }
 
-    public void setScoreValue(float sv) { scoreValue = sv; }
+    public void setScoreValue(float sv)
+    { scoreValue = sv; }
+
+    public void setAdult(bool a)
+    { adult = a; }
 
     void Start()
     {
@@ -33,16 +42,18 @@ public class Alien : MonoBehaviour
         gameObject.GetComponent<CubeEditor>().enabled = false; //Se desactiva el snap para que se puedan mover en el play
         gun = gameObject.GetComponentInChildren<ParticleSystem>();
         gun.startSpeed = shotSpeed; //Es deprecate pero la otra opcion es solo de lectura
-        
+
         StartCoroutine(fire());
     }
 
     IEnumerator fire()
     {
         //No es necesario comprobar si el alien tiene visión del jugador, si tiene otro delante su disparo colisionará con este y se destruirá
-        while(!stopFiring)
+        while(adult && !stopFiring)
         {
-            gun.Play();
+            if (!firstTime) gun.Play();
+
+            firstTime = false;
             yield return new WaitForSeconds( Random.Range(minTimeBetweenShots, maxTimeBetweenShots) );
         }
     }

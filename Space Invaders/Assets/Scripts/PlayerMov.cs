@@ -15,6 +15,8 @@ public class PlayerMov : MonoBehaviour
     [SerializeField] ParticleSystem gun;
     [SerializeField] ParticleSystem deathFX;
 
+    public bool adult = true;
+
     void Start()
     {
         //Son deprecate pero la otra opcion es solo de lectura
@@ -27,7 +29,7 @@ public class PlayerMov : MonoBehaviour
         if (HP > 0)
         {
             movement();
-            fire();
+            if(adult) fire();
         }
     }
 

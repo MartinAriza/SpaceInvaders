@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6646047537060437865}
   - component: {fileID: 6646047537060437864}
   - component: {fileID: 424934155}
+  - component: {fileID: 2068307675007613037}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -47,13 +48,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hordePrefab: {fileID: 5272548732517855720, guid: f1d90b124f9e55749bc7eb11220f5c59,
     type: 3}
-  initialPosition: {x: 0, y: 0, z: 0}
+  initialPosition: {x: 0, y: 0, z: 27.27}
   speedIncrement: 10
   downSpeedIncrement: 0.25
   hpIncrement: 1
   shotSpeedIncrement: 0.5
   alienScoreValueIncrement: 10
   extraPlayerLives: 1
+  extraBarriersHP: 2
   waveNumber: 1
 --- !u!114 &6646047537060437864
 MonoBehaviour:
@@ -81,3 +83,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScore: 0
+--- !u!114 &2068307675007613037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6646047537060437863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a43d65a3165bd5c4bab7b950e23b3fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  adult: 1
