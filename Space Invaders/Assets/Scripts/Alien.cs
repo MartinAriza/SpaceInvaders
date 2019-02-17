@@ -10,6 +10,8 @@ public class Alien : MonoBehaviour
     [SerializeField][Tooltip("Numero de disparos necesarios para destruir el alien")] int HP = 1;
     [SerializeField] float scoreValue = 10.0f;
 
+    Animator anim;
+
     bool alive = true;
     bool adult = true;
 
@@ -38,7 +40,7 @@ public class Alien : MonoBehaviour
     void Start()
     {
         parent = FindObjectOfType<ExplosionDestroyer>().transform;
-
+        anim = GetComponentInChildren<Animator>();
         gameObject.GetComponent<CubeEditor>().enabled = false; //Se desactiva el snap para que se puedan mover en el play
         gun = gameObject.GetComponentInChildren<ParticleSystem>();
         gun.startSpeed = shotSpeed; //Es deprecate pero la otra opcion es solo de lectura
@@ -48,6 +50,7 @@ public class Alien : MonoBehaviour
 
     IEnumerator fire()
     {
+        anim.SetTrigger("atkTrigger");
         //No es necesario comprobar si el alien tiene visión del jugador, si tiene otro delante su disparo colisionará con este y se destruirá
         while(adult && !stopFiring)
         {
