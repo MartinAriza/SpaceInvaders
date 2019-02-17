@@ -31,7 +31,14 @@ public class PlayerMov : MonoBehaviour
         {
             movement();
             rotation();
-            if(adult) fire();
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (HP > 0)
+        {
+            if (adult) fire();
         }
     }
 
