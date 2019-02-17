@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1356057810227012741}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_back_tentacle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3567358353660696399}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_front_tentacle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 5504682288325182038}
   - component: {fileID: 3925875295701995776}
   - component: {fileID: 3094846686779750178}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EYE1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 407538414798413114}
   - component: {fileID: 8309629910265983096}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: alien1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7792902345752069725}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_front_tentacle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 277996323136017957}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_back_tentacle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3912184080210485946}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_front_tentacle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7086367363661746443}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_back_tentacle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3622853920402973399}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4537254897884038160}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: uphead_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9191076135079277418}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_back_tentacle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6847727435803295801}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_front_tentacle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +446,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2868677344687599201}
   - component: {fileID: 3171049030778297877}
-  m_Layer: 0
+  - component: {fileID: 4318649621070741388}
+  - component: {fileID: 8714039613696523829}
+  - component: {fileID: 6473301152850045488}
+  m_Layer: 9
   m_Name: alien1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,10 +464,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4257062086218561942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5580371, y: -0.82515836, z: -5.5137105}
+  m_LocalPosition: {x: 0, y: 0, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 407538414798413114}
+  - {fileID: 88927270454210551}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -481,6 +485,56 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.71, y: 2.39, z: 1.81}
   m_Center: {x: 0, y: 0.52, z: 0.06}
+--- !u!54 &4318649621070741388
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4257062086218561942}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
+--- !u!114 &8714039613696523829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4257062086218561942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d4bb411b53414749a89d46c6392c8ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenShots: 1
+  maxTimeBetweenShots: 3
+  shotSpeed: 15
+  HP: 1
+  scoreValue: 10
+  deathFX: {fileID: 4639930365437419148, guid: 9b5843d1caa62de49a754265cb8be289, type: 3}
+  gun: {fileID: 88927270454210548}
+  alienBody: {fileID: 8176790688217061988}
+  alienEyes: {fileID: 3248530898938568310}
+--- !u!114 &6473301152850045488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4257062086218561942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b978743e9fa884c8211d470651a2a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridSize: 2
 --- !u!1 &4497748388466563554
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +544,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6208819553930596303}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_front_tentacle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +577,7 @@ GameObject:
   - component: {fileID: 6129514661117454670}
   - component: {fileID: 4366538736376129357}
   - component: {fileID: 1434472685241252246}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EYE2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -598,7 +652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8050991324281522424}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_back_tentacle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -630,7 +684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 94176047297469473}
   - component: {fileID: 2146571144}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye 1 Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +729,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8792852525589416729}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_back_tentacle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -706,7 +760,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2713279262553502319}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_back_tentacle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -737,7 +791,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6633814540591762221}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_back_tentacle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -767,7 +821,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9052211377927806696}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: uphead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -798,7 +852,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1235194958751419614}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -835,7 +889,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8585301337120414113}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_front_tentacle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -866,7 +920,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1049934823980776082}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_back_tentacle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -897,7 +951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3395575059700546247}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_front_tentacle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -929,7 +983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5323907149316849502}
   - component: {fileID: 2981931547629580593}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: alien
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1026,7 +1080,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3220881469074276062}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_front_tentacle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1057,7 +1111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5565188757966001245}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_back_tentacle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1088,7 +1142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4072468442385385451}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_front_tentacle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1119,7 +1173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9037644569037187443}
   - component: {fileID: 680439697}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye 2 Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1164,7 +1218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3813083073241666886}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_front_tentacle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,3 +1240,99 @@ Transform:
   m_Father: {fileID: 7792902345752069725}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4793015052897932467
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2868677344687599201}
+    m_Modifications:
+    - target: {fileID: 4881861495892245313, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_Name
+      value: AlienLaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245313, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245313, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_TagString
+      value: AlienLaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245319, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ccd4f241e22cb31419bb31dedfd04dcc, type: 3}
+--- !u!4 &88927270454210551 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+    type: 3}
+  m_PrefabInstance: {fileID: 4793015052897932467}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &88927270454210548 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4881861495892245319, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+    type: 3}
+  m_PrefabInstance: {fileID: 4793015052897932467}
+  m_PrefabAsset: {fileID: 0}

@@ -22,6 +22,9 @@ public class Alien : MonoBehaviour
     bool stopFiring = false; //Permite que la subrutina de disparo se ejecute periodicamente hasta que se ponga a true
     bool firstTime = true; //Evita que el juego comience con una oleada de disparos al ejecutarse al subrutina
 
+    [SerializeField] GameObject alienBody;
+    [SerializeField] GameObject alienEyes;
+
     public bool isAlive()
     { return alive; }
 
@@ -40,7 +43,7 @@ public class Alien : MonoBehaviour
     void Start()
     {
         parent = FindObjectOfType<ExplosionDestroyer>().transform;
-        anim = GetComponentInChildren<Animator>();
+        anim = GetComponentsInChildren<Animator>()[0];
         gameObject.GetComponent<CubeEditor>().enabled = false; //Se desactiva el snap para que se puedan mover en el play
         gun = gameObject.GetComponentInChildren<ParticleSystem>();
         gun.startSpeed = shotSpeed; //Es deprecate pero la otra opcion es solo de lectura
@@ -50,13 +53,17 @@ public class Alien : MonoBehaviour
 
     IEnumerator fire()
     {
-        anim.SetTrigger("atkTrigger");
         //No es necesario comprobar si el alien tiene visión del jugador, si tiene otro delante su disparo colisionará con este y se destruirá
         while(adult && !stopFiring)
         {
-            if (!firstTime) gun.Play();
+            if (!firstTime)
+            {
+                gun.Play();
+                //anim.SetTrigger("atkTrigger");
+            }
 
             firstTime = false;
+
             yield return new WaitForSeconds( Random.Range(minTimeBetweenShots, maxTimeBetweenShots) );
         }
     }
@@ -77,7 +84,9 @@ public class Alien : MonoBehaviour
                 gameObject.SendMessageUpwards("calculateBoxCollider");
 
                 gameObject.GetComponent<BoxCollider>().enabled = false;
-                gameObject.GetComponent<MeshRenderer>().enabled = false;
+                //gameObject.GetComponent<MeshRenderer>().enabled = false;
+                alienBody.SetActive(false);
+                alienEyes.SetActive(false);
             }
         }
     }

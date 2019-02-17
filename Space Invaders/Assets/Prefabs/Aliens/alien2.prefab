@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4754826752907839637}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_back_tentacle6_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4615214680968620971}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_back_tentacle6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5087404795050925394}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_antenna1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2953220887618456864}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_antenna6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7550116635969260446}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_back_tentacle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5856083177157676770}
   - component: {fileID: 6113322617827055241}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: alien2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4823185874014517373}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_antenna3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 3475212144381320238}
   - component: {fileID: 2570367963132817343}
   - component: {fileID: 7312178915678060633}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5555839472374715112}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4977807734577301065}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mouth_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9173692703205755070}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_back_tentacle6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5805815257717871623}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_antenna4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8975088433005558247}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1099830960577424441}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_frontal_tentacle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3731746826498886191}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_back_tentacle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +548,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8567008244948930716}
   - component: {fileID: 4521437658862469475}
-  m_Layer: 0
+  - component: {fileID: 572933936457781824}
+  - component: {fileID: 3773122293561921787}
+  - component: {fileID: 3274634598137206317}
+  m_Layer: 9
   m_Name: alien2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -563,10 +566,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3938889999735072521}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5580371, y: -0.82515836, z: -5.5137105}
+  m_LocalPosition: {x: 0, y: 0, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5856083177157676770}
+  - {fileID: 8713830543917748506}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -583,6 +587,56 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2, y: 2.18, z: 1.81}
   m_Center: {x: 0, y: 0.53, z: 0.06}
+--- !u!54 &572933936457781824
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3938889999735072521}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
+--- !u!114 &3773122293561921787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3938889999735072521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d4bb411b53414749a89d46c6392c8ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenShots: 1
+  maxTimeBetweenShots: 3
+  shotSpeed: 15
+  HP: 1
+  scoreValue: 10
+  deathFX: {fileID: 4639930365437419148, guid: 9b5843d1caa62de49a754265cb8be289, type: 3}
+  gun: {fileID: 8713830543917748505}
+  alienBody: {fileID: 4679228459028771283}
+  alienEyes: {fileID: 7930071332454094605}
+--- !u!114 &3274634598137206317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3938889999735072521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b978743e9fa884c8211d470651a2a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridSize: 2
 --- !u!1 &3981984672518473451
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,7 +646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7732975198544366384}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_antenna6_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,7 +676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7117356633785679562}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_back_tentacle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,7 +707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4323670912469686939}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_frontal_tentacle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -685,7 +739,7 @@ GameObject:
   - component: {fileID: 5815982526630918339}
   - component: {fileID: 7410293786612319124}
   - component: {fileID: 3062336120450000281}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +815,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5055269235950519626}
   - component: {fileID: 9041475165447211352}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: alien2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +926,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6461700350985777097}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_frontal_tentacle4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -902,7 +956,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3942932111166154278}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_back_tentacle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -934,7 +988,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1112286541577508787}
   - component: {fileID: 1405316173}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye 1 Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -979,7 +1033,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1070789354182811151}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_back_tentacle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1010,7 +1064,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1190134895107582664}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_antenna4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1041,7 +1095,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3581499727628470271}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_antenna6_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1071,7 +1125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5769597557828339663}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_antenna5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1102,7 +1156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3016213549971806638}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_back_tentacle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1133,7 +1187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1685920604597268518}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_antenna2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1164,7 +1218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 475530581993541617}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_antenna3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1196,7 +1250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 431704520725940413}
   - component: {fileID: 1489060680}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye 2 Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1241,7 +1295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8422229009227859130}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_back_tentacle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1272,7 +1326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2825733835331791773}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_antenna1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1303,7 +1357,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6639576618551369511}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_antenna6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1334,7 +1388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5641150525599802113}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_frontal_tentacle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1365,7 +1419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6524744953485016715}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_antenna5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1396,7 +1450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5474699155817154853}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_frontal_tentacle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1427,7 +1481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8928888411692497964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_frontal_tentacle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1458,7 +1512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8341753544236323968}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1489,7 +1543,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4335202687466105439}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_frontal_tentacle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1520,7 +1574,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4222323306707090452}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_frontal_tentacle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1551,7 +1605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 878567163855707114}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_frontal_tentacle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1582,7 +1636,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1344629286891813683}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_antenna2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1613,7 +1667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5601735004775320279}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_frontal_tentacle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1644,7 +1698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8479578428448388827}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_back_tentacle6_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1674,7 +1728,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 99159333036694663}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_back_tentacle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1696,3 +1750,99 @@ Transform:
   m_Father: {fileID: 3016213549971806638}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4274590718803765854
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8567008244948930716}
+    m_Modifications:
+    - target: {fileID: 4881861495892245313, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_Name
+      value: AlienLaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245313, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245313, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_TagString
+      value: AlienLaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245319, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ccd4f241e22cb31419bb31dedfd04dcc, type: 3}
+--- !u!4 &8713830543917748506 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+    type: 3}
+  m_PrefabInstance: {fileID: 4274590718803765854}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8713830543917748505 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4881861495892245319, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+    type: 3}
+  m_PrefabInstance: {fileID: 4274590718803765854}
+  m_PrefabAsset: {fileID: 0}
