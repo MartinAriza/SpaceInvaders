@@ -11,6 +11,8 @@ public class Horde : MonoBehaviour
     public int alienHP = 1;
     public float alienShotSpeed = 15;
     public float alienScoreValue = 10;
+    public float alienMinTimeBetweenShots = 3.0f;
+    public float alienMaxTimeBetweenShots = 6.0f;
 
     public bool adult = true;
 
@@ -49,6 +51,8 @@ public class Horde : MonoBehaviour
             alien.setShotSpeed(alienShotSpeed);
             alien.setScoreValue(alienScoreValue);
             alien.setAdult(adult);
+            alien.setMinTimeBetweenShots(alienMinTimeBetweenShots);
+            alien.setMaxTimeBetweenShots(alienMaxTimeBetweenShots);
         }
     }
 

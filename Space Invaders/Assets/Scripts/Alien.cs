@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Alien : MonoBehaviour
 {
-    [SerializeField] float minTimeBetweenShots = 1.0f;
-    [SerializeField] float maxTimeBetweenShots = 3.0f;
+    [SerializeField] float minTimeBetweenShots = 3.0f;
+    [SerializeField] float maxTimeBetweenShots = 6.0f;
     [SerializeField] float shotSpeed = 15.0f;
     [SerializeField][Tooltip("Numero de disparos necesarios para destruir el alien")] int HP = 1;
     [SerializeField] float scoreValue = 10.0f;
@@ -40,6 +40,12 @@ public class Alien : MonoBehaviour
     public void setAdult(bool a)
     { adult = a; }
 
+    public void setMinTimeBetweenShots(float t)
+    { minTimeBetweenShots = t; }
+
+    public void setMaxTimeBetweenShots(float t)
+    { maxTimeBetweenShots = t; }
+
     void Start()
     {
         parent = FindObjectOfType<ExplosionDestroyer>().transform;
@@ -47,6 +53,7 @@ public class Alien : MonoBehaviour
         gameObject.GetComponent<CubeEditor>().enabled = false; //Se desactiva el snap para que se puedan mover en el play
         gun = gameObject.GetComponentInChildren<ParticleSystem>();
         gun.startSpeed = shotSpeed; //Es deprecate pero la otra opcion es solo de lectura
+
         StartCoroutine(fire());
     }
 
@@ -59,12 +66,10 @@ public class Alien : MonoBehaviour
             {
                 gun.Play();
                 anim.SetBool("atk",true);
-                //print("disparando");
             }
 
             firstTime = false;
             yield return new WaitForSeconds( Random.Range(minTimeBetweenShots, maxTimeBetweenShots));
-            //anim.SetBool("atk", false);
         }
     }
 

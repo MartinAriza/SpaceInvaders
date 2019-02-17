@@ -15,6 +15,7 @@ public class PlayerMov : MonoBehaviour
 
     [SerializeField] ParticleSystem gun;
     [SerializeField] ParticleSystem deathFX;
+    [SerializeField] ParticleSystem [] engineParticles;
 
     public bool adult = true;
 
@@ -90,6 +91,10 @@ public class PlayerMov : MonoBehaviour
     void destroyPlayer()
     {
         gameObject.GetComponent<BoxCollider>().enabled = false;
-        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+        foreach(ParticleSystem engine in engineParticles)
+        {
+            engine.gameObject.SetActive(false);
+        }
     }
 }

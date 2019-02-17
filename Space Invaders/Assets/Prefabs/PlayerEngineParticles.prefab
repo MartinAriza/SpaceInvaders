@@ -600,7 +600,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 10
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -1303,9 +1303,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.4764151, g: 0.9187576, b: 1, a: 0.43529412}
-        key1: {r: 0.77561325, g: 0.29156283, b: 0.9811321, a: 0.41960785}
-        key2: {r: 0.6779589, g: 0, b: 0.9622642, a: 0.53333336}
+        key0: {r: 0.4764151, g: 0.9187576, b: 1, a: 0.27450982}
+        key1: {r: 0.77561325, g: 0.29156283, b: 0.9811321, a: 1}
+        key2: {r: 0.6779589, g: 0, b: 0.9622642, a: 0.7411765}
         key3: {r: 0.19339621, g: 0.873592, b: 1, a: 0}
         key4: {r: 0.19339621, g: 0.873592, b: 1, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -3708,17 +3708,17 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 0
-    ratio: 0
-    light: {fileID: 0}
-    randomDistribution: 1
+    enabled: 1
+    ratio: 0.2
+    light: {fileID: 4420560035839830168, guid: d073a4bb51afcf8419b81a3aecf248b9, type: 3}
+    randomDistribution: 0
     color: 1
-    range: 1
+    range: 0
     intensity: 1
     rangeCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 8
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3821,7 +3821,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    maxLights: 20
+    maxLights: 5
   TrailModule:
     enabled: 0
     mode: 0

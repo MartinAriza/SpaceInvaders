@@ -7,7 +7,7 @@ public class EyesController : MonoBehaviour
 
     private Vector3 originalLook;
     [SerializeField] string targetName;
-    [SerializeField] GameObject target;
+    [SerializeField] PlayerMov target;
     float maxAngle = 50.0f;
 
     // Start is called before the first frame update
@@ -15,10 +15,7 @@ public class EyesController : MonoBehaviour
     {
         originalLook = transform.forward;
 
-        //Si no se ha introducido un nombre en el inspector, se usa "Player" por defecto
-        if (targetName == "") targetName = "Player";
-
-        if (!target) target = GameObject.Find(targetName);
+        target = FindObjectOfType<PlayerMov>();
     }
 
     // Update is called once per frame
