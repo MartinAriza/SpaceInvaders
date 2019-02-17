@@ -1003,6 +1003,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: AlienLaser
       objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245319, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881861495892245319, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1057,11 +1067,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4881861495892245319, guid: ccd4f241e22cb31419bb31dedfd04dcc,
-        type: 3}
-      propertyPath: moveWithTransform
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccd4f241e22cb31419bb31dedfd04dcc, type: 3}

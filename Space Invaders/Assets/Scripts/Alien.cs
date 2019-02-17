@@ -47,7 +47,6 @@ public class Alien : MonoBehaviour
         gameObject.GetComponent<CubeEditor>().enabled = false; //Se desactiva el snap para que se puedan mover en el play
         gun = gameObject.GetComponentInChildren<ParticleSystem>();
         gun.startSpeed = shotSpeed; //Es deprecate pero la otra opcion es solo de lectura
-
         StartCoroutine(fire());
     }
 
@@ -59,12 +58,13 @@ public class Alien : MonoBehaviour
             if (!firstTime)
             {
                 gun.Play();
-                //anim.SetTrigger("atkTrigger");
+                anim.SetBool("atk",true);
+                //print("disparando");
             }
 
             firstTime = false;
-
-            yield return new WaitForSeconds( Random.Range(minTimeBetweenShots, maxTimeBetweenShots) );
+            yield return new WaitForSeconds( Random.Range(minTimeBetweenShots, maxTimeBetweenShots));
+            //anim.SetBool("atk", false);
         }
     }
 
