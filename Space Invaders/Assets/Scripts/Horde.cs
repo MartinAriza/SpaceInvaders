@@ -21,6 +21,7 @@ public class Horde : MonoBehaviour
     Alien [] aliens;
     HordeManager hordeManager;
     ScoreManager scoreManager;
+    AudioSource collision;
 
     public int numberOfAliveAliens;
 
@@ -30,6 +31,7 @@ public class Horde : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
 
         aliens = gameObject.GetComponentsInChildren<Alien>();
+        collision = GetComponent<AudioSource>();
 
         hordeManager = FindObjectOfType<HordeManager>();
         scoreManager = FindObjectOfType<ScoreManager>();
@@ -41,6 +43,11 @@ public class Horde : MonoBehaviour
         initialiceAlienProperties();
 
         calculateBoxCollider();
+    }
+
+    public void playDeathSound()
+    {
+       collision.Play();
     }
 
     void initialiceAlienProperties()
@@ -56,7 +63,7 @@ public class Horde : MonoBehaviour
         }
     }
 
-    void calculateBoxCollider() //El box collider de la horda ajusta su tamaño para el cálculo de colisiones con los limites
+    public void calculateBoxCollider() //El box collider de la horda ajusta su tamaño para el cálculo de colisiones con los limites
     {
         numberOfAliveAliens--;
 

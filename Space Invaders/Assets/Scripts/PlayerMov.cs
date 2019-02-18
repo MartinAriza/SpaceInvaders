@@ -20,6 +20,7 @@ public class PlayerMov : MonoBehaviour
     ScoreManager scoreManager;
 
     public bool adult = true;
+    AudioSource laserSound;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class PlayerMov : MonoBehaviour
         gun.maxParticles = maxShots;
         gun.startSpeed = shotSpeed;
         scoreManager = FindObjectOfType<ScoreManager>();
+        laserSound = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -67,7 +69,11 @@ public class PlayerMov : MonoBehaviour
 
     void fire()
     {
-        if (Input.GetButton("Fire1")) gun.Play();
+        if (Input.GetButton("Fire1"))
+        {
+            gun.Play();
+            laserSound.Play();
+        }
     }
 
     void checkExit()

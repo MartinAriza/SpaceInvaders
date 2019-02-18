@@ -14,6 +14,8 @@ public class Alien : MonoBehaviour
 
     Animator anim;                          //Objeto animator para poder hacer transiciones entre animaciones 
 
+    Horde horde;
+
     bool stopFiring = false;
     bool alive = true;                      //Si el alien está vivo vale true
     bool adult = true;                      //Si eres mayor de 13 vale true y el alien puede disparar
@@ -59,6 +61,7 @@ public class Alien : MonoBehaviour
 
         anim = GetComponentsInChildren<Animator>()[0];
 
+        horde = FindObjectOfType<Horde>();
 
         gameObject.GetComponent<CubeEditor>().enabled = false; //Se desactiva el snap para que se puedan mover bien al darle a play
 
@@ -94,12 +97,13 @@ public class Alien : MonoBehaviour
             {
                 //Se crea al efecto de explosion en la posición del alien y se asigna su padre
                 Instantiate(deathFX, transform.position, Quaternion.identity).gameObject.transform.parent = parent;
+                horde.playDeathSound();
 
                 stopFiring = true;
                 alive = false;
 
                 gameObject.SendMessageUpwards("increaseScore", scoreValue); //El game manager aumenta el score del jugador
-                gameObject.SendMessageUpwards("calculateBoxCollider");      //Se recalculan las colisiones de la horda para que los rebotes con las paredes funcionen correctamente
+                horde.calculateBoxCollider();      //Se recalculan las colisiones de la horda para que los rebotes con las paredes funcionen correctamente
 
                 //Se desactiva la colisión y el render de la mesh del alien
                 gameObject.GetComponent<BoxCollider>().enabled = false;
