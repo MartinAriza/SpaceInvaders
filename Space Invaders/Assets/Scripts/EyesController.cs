@@ -5,30 +5,25 @@ using UnityEngine;
 public class EyesController : MonoBehaviour
 {
 
-    private Vector3 originalLook;
-    [SerializeField] string targetName;
-    [SerializeField] PlayerMov target;
-    float maxAngle = 50.0f;
+    private Vector3 originalLook;       //Almacenará el vector de dirección original del ojo
+    [SerializeField] PlayerMov target;  //Guarda una referencia al objeto al que mira el ojo
+    float maxAngle = 50.0f;             //Ángulo de giro máximo del ojo respecto a originalLook
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        originalLook = transform.forward;
-
-        target = FindObjectOfType<PlayerMov>();
+        originalLook = transform.forward;       //Al inicio guardamos el vector forward (z) de la base geométrica del objeto
+        target = FindObjectOfType<PlayerMov>(); //Al inicio encuentra el jugador y guarda una referencia a él
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Vector3 actualLook = transform.forward;
-        transform.LookAt(target.transform);
-        float actualAngle = Vector3.Angle(originalLook, transform.forward);
-        //print(actualAngle);
-        if (actualAngle > maxAngle)
+        Vector3 actualLook = transform.forward;                             //Guarda el vector de dirección de los ojos al inicio del frame
+        transform.LookAt(target.transform);                                 //Apunto al jugador (ahora el ojo mira hacia el jugador target)
+        float actualAngle = Vector3.Angle(originalLook, transform.forward); //Guardo el ángulo entre el vector de dirección original y el actual
+        if (actualAngle > maxAngle)                                         //Si es mayor que el ángulo máximo permitido:
         {
-            transform.LookAt(transform.position + actualLook);
-            //print("blocking");
+            transform.LookAt(transform.position + actualLook);              //Mantengo la dirección al inicio del frame
         }
     }
 }
