@@ -55,27 +55,28 @@ LightmapSettings:
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 10
-    m_Resolution: 2
-    m_BakeResolution: 10
-    m_AtlasSize: 512
+    m_Resolution: 1
+    m_BakeResolution: 3
+    m_AtlasSize: 64
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
     m_Padding: 2
-    m_LightmapParameters: {fileID: 0}
+    m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000,
+      type: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
-    m_ReflectionCompression: 2
+    m_ReflectionCompression: 1
     m_MixedBakeMode: 2
     m_BakeBackend: 0
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 256
-    m_PVRBounces: 2
+    m_PVRBounces: 1
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
@@ -162,7 +163,7 @@ PrefabInstance:
     - target: {fileID: 5272548732517855721, guid: f1d90b124f9e55749bc7eb11220f5c59,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5272548732517855721, guid: f1d90b124f9e55749bc7eb11220f5c59,
         type: 3}
@@ -643,6 +644,11 @@ PrefabInstance:
       propertyPath: initialPosition.x
       value: -10.17
       objectReference: {fileID: 0}
+    - target: {fileID: 6646047537060437865, guid: e1339e9b1695eda428dbde13e12f18f0,
+        type: 3}
+      propertyPath: extraBarriersHP
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1339e9b1695eda428dbde13e12f18f0, type: 3}
 --- !u!1001 &1031909864
@@ -666,6 +672,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Barrier
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426417928153607720, guid: c9885d00808a9c34cacf90fe9540b9dd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7426417928154100232, guid: c9885d00808a9c34cacf90fe9540b9dd,
         type: 3}
@@ -761,6 +772,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Barrier
       objectReference: {fileID: 0}
+    - target: {fileID: 7426417928153607720, guid: c9885d00808a9c34cacf90fe9540b9dd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7426417928154100232, guid: c9885d00808a9c34cacf90fe9540b9dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -848,6 +864,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1961989484, guid: bf12f9796f7db5f4a8d72ce90eb16f0c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 351254502408370714, guid: bf12f9796f7db5f4a8d72ce90eb16f0c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -886,7 +906,7 @@ PrefabInstance:
     - target: {fileID: 351254502408370714, guid: bf12f9796f7db5f4a8d72ce90eb16f0c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 351254502408370714, guid: bf12f9796f7db5f4a8d72ce90eb16f0c,
         type: 3}
@@ -964,7 +984,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 72.433}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1570138245
 MeshRenderer:
@@ -1032,6 +1052,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Barrier
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426417928153607720, guid: c9885d00808a9c34cacf90fe9540b9dd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7426417928154100232, guid: c9885d00808a9c34cacf90fe9540b9dd,
         type: 3}
@@ -1155,7 +1180,7 @@ PrefabInstance:
     - target: {fileID: 1865108276289579824, guid: 4a4a70ab91d8eb048b94514660e8b553,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1865108276289579824, guid: 4a4a70ab91d8eb048b94514660e8b553,
         type: 3}
@@ -1190,6 +1215,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 743665806375405643, guid: ac2bd6bace228a44ba466ea2405a1b7b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2997313602978667787, guid: ac2bd6bace228a44ba466ea2405a1b7b,
         type: 3}
@@ -1289,6 +1319,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Barrier
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426417928153607720, guid: c9885d00808a9c34cacf90fe9540b9dd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7426417928154100232, guid: c9885d00808a9c34cacf90fe9540b9dd,
         type: 3}
