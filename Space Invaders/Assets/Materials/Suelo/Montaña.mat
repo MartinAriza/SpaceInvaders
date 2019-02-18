@@ -10,7 +10,7 @@ Material:
   m_Name: "Monta\xF1a"
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-  m_LightmapFlags: 1
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -36,12 +36,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: eb67da00f5f9e064e887fbc860ed9b7d, type: 3}
-        m_Scale: {x: 15, y: 5}
+        m_Texture: {fileID: 2800000, guid: 5f5d1e68fe5a5c441964abdecafa5056, type: 3}
+        m_Scale: {x: 11, y: 11}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2f2fe3d41468466449425c74a20924dd, type: 3}
-        m_Scale: {x: 15, y: 5}
+        m_Texture: {fileID: 2800000, guid: 5f5d1e68fe5a5c441964abdecafa5056, type: 3}
+        m_Scale: {x: 11, y: 11}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -74,4 +74,4 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0, g: 0.8117648, b: 0.9058824, a: 1}
-    - _EmissionColor: {r: 0, g: 0.62396055, b: 0.79910296, a: 1}
+    - _EmissionColor: {r: 0.012286487, g: 0.39157256, b: 1, a: 1}

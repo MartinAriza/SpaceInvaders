@@ -41,6 +41,8 @@ public class PlayerMov : MonoBehaviour
         {
             if (adult) fire();
         }
+
+        checkExit();
     }
 
     void movement()
@@ -63,6 +65,11 @@ public class PlayerMov : MonoBehaviour
     void fire()
     {
         if (Input.GetButton("Fire1")) gun.Play();
+    }
+
+    void checkExit()
+    {
+        if( Input.GetKey("escape") ) { Application.Quit(); }
     }
 
     private void OnCollisionStay(Collision collision)
