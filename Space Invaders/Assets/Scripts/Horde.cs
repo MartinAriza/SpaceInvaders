@@ -102,4 +102,12 @@ public class Horde : MonoBehaviour
             rb.MovePosition(new Vector3(transform.position.x, transform.position.y, transform.position.z - downSpeed)); //¿Mas suave?
         }
     }
+
+    public void stopFiring()
+    {
+        foreach(Alien alien in aliens)
+        {
+            alien.setStopFiring(true);
+        }
+    }
 }

@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class ir_scores : MonoBehaviour, IPointerClickHandler
+public class volver_al_menu : MonoBehaviour, IPointerClickHandler
 {
-
+   
     public void OnPointerClick(PointerEventData eventData) // 3
     {
-        SceneManager.LoadScene("Scoreboard");
+        SceneManager.LoadScene("MENU");
     }
+
 }
