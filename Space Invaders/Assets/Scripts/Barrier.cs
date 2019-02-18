@@ -29,7 +29,7 @@ public class Barrier : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().enabled = true;
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         HP--;
         if (HP <= 0) destroyBarrier();
