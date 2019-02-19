@@ -3,18 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Conjunto de los alienigenas
 public class Horde : MonoBehaviour
 {
-    public float speed = 1.0f;
-    public float downSpeed = 1.0f;
+    [Header("Propiedades de la horda")]
+    [Tooltip("Velocidad horizontal de los aliens")]public float speed = 1.0f;
+    [Tooltip("Cuantas unidades se desplaza la horda hacia abajo al tocar una pared")]public float downSpeed = 1.0f;
+    [Space]
 
-    public int alienHP = 1;
-    public float alienShotSpeed = 15;
-    public float alienScoreValue = 10;
-    public float alienMinTimeBetweenShots = 3.0f;
-    public float alienMaxTimeBetweenShots = 6.0f;
+    [Header("Propiedades de los aliens de la horda")]
+    [Tooltip("Vida inicial de los aliens de la horda")]public int alienHP = 1;
+    [Tooltip("Velocidad inicial de los disparos de los aliens")]public float alienShotSpeed = 15;
+    [Tooltip("Cuantos puntos vale inicialmente cada alien")]public float alienScoreValue = 10;
+    [Tooltip("Tiempo minimo que esperará cada alien para disparar")]public float alienMinTimeBetweenShots = 3.0f;
+    [Tooltip("Tiempo máximo que esperará cada alien para disparar")]public float alienMaxTimeBetweenShots = 6.0f;
 
-    public bool adult = true;
+    [Tooltip("Si la horda es para adultos los aliens podrán disparar")]public bool adult = true;
 
     Rigidbody rb;
     BoxCollider bc;
@@ -27,6 +31,7 @@ public class Horde : MonoBehaviour
 
     void Start()
     {
+        //Se recogen los componentes necesarios del gameObject
         bc = gameObject.GetComponent<BoxCollider>();
         rb = gameObject.GetComponent<Rigidbody>();
 
@@ -36,20 +41,14 @@ public class Horde : MonoBehaviour
         hordeManager = FindObjectOfType<HordeManager>();
         scoreManager = FindObjectOfType<ScoreManager>();
 
-        numberOfAliveAliens = aliens.Length + 1;
-        //El +1 se debe a que el metodo calculateBoxCollider es el que reduce el numero de aliens vivos
-        //se llama cada vez que uno muere pero también se llama la primera vez para ajustar el bc 
+        numberOfAliveAliens = aliens.Length;    //Numero de aliens que están vivos
 
         initialiceAlienProperties();
 
         calculateBoxCollider();
     }
 
-    public void playDeathSound()
-    {
-       collision.Play();
-    }
-
+    //Se inician las propiedades de los aliens a las variables 
     void initialiceAlienProperties()
     {
         foreach(Alien alien in aliens)
@@ -63,10 +62,9 @@ public class Horde : MonoBehaviour
         }
     }
 
-    public void calculateBoxCollider() //El box collider de la horda ajusta su tamaño para el cálculo de colisiones con los limites
+    //El box collider de la horda ajusta su tamaño para el cálculo de colisiones con los limites
+    public void calculateBoxCollider() 
     {
-        numberOfAliveAliens--;
-
         //Punto más arriba, abajo, a la izquierda y a la derecha de los aliens de la horda
         float top = 0;
         float bottom = 0;
@@ -90,31 +88,38 @@ public class Horde : MonoBehaviour
         bc.size = new Vector3(Mathf.Abs(right - left), 1, Mathf.Abs(top - bottom));
     }
 
-    void increaseScore(float sv)
+    public void increaseScore(float sv)
     {
         scoreManager.playerScore += sv;
     }
 
+    //todos los aliens de la horda dejan de disparar
+    public void stopFiring()
+    {
+        foreach (Alien alien in aliens)
+        {
+            alien.setStopFiring(true);
+        }
+    }
+
+    public void playDeathSound()
+    {
+        collision.Play();
+    }
+
     void FixedUpdate()
     {
-        rb.velocity = Vector3.right * speed * Time.deltaTime;
-        if (numberOfAliveAliens <= 0) { hordeManager.spawnNewHorde(); Destroy(gameObject); }
+        rb.velocity = Vector3.right * speed * Time.deltaTime; //Se mueve la horda en el eje horizontal
+        if (numberOfAliveAliens <= 0) { hordeManager.spawnNewHorde(); Destroy(gameObject); } //Si la horda se queda sin aliens se crea otra más fuerte y se destruye esta
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Limit") //Para evitar que interactua con los colliders de los aliens, ver Compound Colliders en el manual
+        //Si choca con los limites de la escena
+        if(other.tag == "Limit")
         {
-            speed = -speed;
-            rb.MovePosition(new Vector3(transform.position.x, transform.position.y, transform.position.z - downSpeed)); //¿Mas suave?
-        }
-    }
-
-    public void stopFiring()
-    {
-        foreach(Alien alien in aliens)
-        {
-            alien.setStopFiring(true);
+            speed = -speed; //Su dirección cambia
+            rb.MovePosition(new Vector3(transform.position.x, transform.position.y, transform.position.z - downSpeed)); //Se mueve hacia abajo
         }
     }
 }

@@ -14,19 +14,17 @@ public class ExplosionDestroyer : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(killThemAllNotJustTheMenButTheWomenAndChildrenToo());
+        StartCoroutine(killChildren());
     }
 
-    IEnumerator killThemAllNotJustTheMenButTheWomenAndChildrenToo()
+    //Destruye periodicamente las explosiones hijas de este objeto
+    IEnumerator killChildren()
     {
-        while (!stopDestroying)
-        {
-            explosions = GetComponentsInChildren<ParticleSystem>();
-            foreach (ParticleSystem explosion in explosions)
-            {
-                Destroy(explosion.gameObject);
-            }
-            yield return new WaitForSeconds(destructionPeriod);
-        }
+        explosions = GetComponentsInChildren<ParticleSystem>(); //Cogemos todas las explosiones hijas de este objeto
+
+        foreach (ParticleSystem explosion in explosions) Destroy(explosion.gameObject); //Destruimos todas
+
+        yield return new WaitForSeconds(destructionPeriod); //La subrutina espera destructionPeriod segundos
+        StartCoroutine(killChildren()); //Se reinicia la subrutina
     }
 }

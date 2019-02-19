@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class CubeEditor : MonoBehaviour
 {
-    [SerializeField] int gridSize = 10;
+    [SerializeField] int gridSize = 10; //Como de grande es la rejilla a la que ajustarse
 
     void Update()
     {
@@ -17,6 +17,7 @@ public class CubeEditor : MonoBehaviour
 
     private void SnapPositionToGRid()
     {
+        //Se limita la posición del objeto para que siempre sea múltiplo de gridSize
         transform.position = new Vector3(
 
                 Mathf.RoundToInt(transform.position.x / gridSize) * gridSize,
