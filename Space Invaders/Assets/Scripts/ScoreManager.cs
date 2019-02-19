@@ -5,17 +5,18 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public float playerScore = 0.0f;
-    //y aqui es donde vamos a.... esta clase es totalmente innecesaria
+    public float playerScore = 0.0f;    
 
     Horde horde;
     [SerializeField] Text scoreText;
 
     void start()
     {
+        //Se recogen los componentes necesarios
         horde = FindObjectOfType<Horde>();
     }
 
+    //Se detiene la horda, deja de disparar y se muestre la puntuación por pantalla con un botón para volver al menú
     public void scoreAnimation()
     {
         horde = FindObjectOfType<Horde>();

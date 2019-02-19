@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MenuAudio : MonoBehaviour
 {
-    [SerializeField] AudioClip soundEnter;
-    [SerializeField] AudioClip soundClick;
+    [SerializeField] AudioClip soundEnter;  //Audio que suena al poner el ratón encima de un botón
+    [SerializeField] AudioClip soundClick;  //Audio que suena al hacer click en un botón
 
     [SerializeField] AudioSource audioSource;
 

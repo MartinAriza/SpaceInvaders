@@ -10,10 +10,10 @@ public class botones : MonoBehaviour,
       , IPointerEnterHandler
       , IPointerExitHandler
 {
-    [SerializeField] Sprite sprite_0;
-    [SerializeField] Sprite sprite_ex;
+    [SerializeField] Sprite sprite_0;   //Sprite del botón apagado
+    [SerializeField] Sprite sprite_ex;  //Sprite del botón cuando pasas el ratón encima
 
-    [SerializeField] MenuAudio menuAudio;
+    [SerializeField] MenuAudio menuAudio; //Manejador del audio del menú de este botón
 
     public void OnPointerClick(PointerEventData eventData) // 3
     {

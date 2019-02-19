@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class AdultManager : MonoBehaviour
 {
-    public static bool adult; //Por defecto eres mayor de 13, este valor cambia con la interfaz del menu principal
+    public static bool adult; //Variable static que cambia el botón de adulto, se mantiene entre escenas
 
     void Start()
     {
