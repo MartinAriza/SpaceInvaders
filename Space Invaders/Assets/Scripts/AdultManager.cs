@@ -8,12 +8,12 @@ using UnityEngine;
 
 public class AdultManager : MonoBehaviour
 {
-    public bool adult = true; //Por defecto eres mayor de 13, este valor cambia con la interfaz del menu principal
+    public static bool adult; //Por defecto eres mayor de 13, este valor cambia con la interfaz del menu principal
 
     void Start()
     {
         //Transmite si eres mayor de 13 o no a la horda de aliens y al jugador para cambiar su comportamiento
-        FindObjectOfType<Horde>().adult = adult;
         FindObjectOfType<PlayerMov>().adult = adult;
+        FindObjectOfType<Horde>().adult = adult;
     }
 }

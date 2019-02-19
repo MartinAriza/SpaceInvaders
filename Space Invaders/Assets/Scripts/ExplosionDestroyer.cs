@@ -22,7 +22,7 @@ public class ExplosionDestroyer : MonoBehaviour
         while (!stopDestroying)
         {
             explosions = GetComponentsInChildren<ParticleSystem>();
-            foreach(ParticleSystem explosion in explosions)
+            foreach (ParticleSystem explosion in explosions)
             {
                 Destroy(explosion.gameObject);
             }

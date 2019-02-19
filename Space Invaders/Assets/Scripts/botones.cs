@@ -10,12 +10,14 @@ public class botones : MonoBehaviour,
       , IPointerEnterHandler
       , IPointerExitHandler
 {
+    [SerializeField] Sprite sprite_0;
+    [SerializeField] Sprite sprite_ex;
 
-    public Sprite sprite_0;
-    public Sprite sprite_ex;
+    [SerializeField] MenuAudio menuAudio;
 
     public void OnPointerClick(PointerEventData eventData) // 3
     {
+        menuAudio.PlayClick();
         print("I was clicked");
     }
 
@@ -26,24 +28,12 @@ public class botones : MonoBehaviour,
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        menuAudio.PlayEnter();
         GetComponent<Image>().sprite = sprite_ex;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         GetComponent<Image>().sprite = sprite_0;
-    }
-
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

@@ -31,7 +31,7 @@ public class Barrier : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        HP--;
+        HP = 0;
         if (HP <= 0) destroyBarrier();
     }
 

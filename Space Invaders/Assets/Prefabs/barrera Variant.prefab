@@ -27,8 +27,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.6198492, y: 1.5105653, z: 0.6248671}
-  m_Center: {x: 0.037444353, y: 0.03431678, z: 0.18756646}
+  m_Size: {x: 2.6198492, y: 1.5105653, z: 3.3786936}
+  m_Center: {x: 0.037444346, y: 0.03431678, z: -0.8190131}
 --- !u!114 &962524425139079190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,7 +53,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 559c53eab32bee645aff626ca0cb3138, type: 3}
       propertyPath: m_Name
-      value: Barrier (1)
+      value: Barrier
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 559c53eab32bee645aff626ca0cb3138, type: 3}
       propertyPath: m_Layer
@@ -69,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 559c53eab32bee645aff626ca0cb3138, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4077.3289
+      value: 4051.9097
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 559c53eab32bee645aff626ca0cb3138, type: 3}
       propertyPath: m_LocalPosition.y
