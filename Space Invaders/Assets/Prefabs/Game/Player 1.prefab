@@ -76,9 +76,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbb9f8fa672b9a4cb07a797aad547cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
+  speed: {x: 250, y: 0, z: 0}
+  aceleration: {x: 75, y: 0, z: 0}
+  brakeMultiplier: 0.5
   HP: 1
-  maxShots: 4
+  maxShots: 5
   shotSpeed: 30
   rotationAmount: 22
   allowedMovement: 15
