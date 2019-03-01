@@ -9,6 +9,7 @@ TagManager:
   - AlienLaser
   - Barrier
   - Alien
+  - Vin
   layers:
   - Default
   - TransparentFX
