@@ -20,7 +20,7 @@ public class VinCamera : MonoBehaviour
         //lastTargetPos = target.position;
     }
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         Move();
         toVarsPosition(getLastTargetPosition());

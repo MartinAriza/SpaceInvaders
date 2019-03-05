@@ -38,10 +38,11 @@ public class VinMov : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         Move();
         if (Input.GetKeyDown("f")) freezeInput = !freezeInput;
+        print("the speed is " + rb.velocity.magnitude);
     }
 
     private void Move()
