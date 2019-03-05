@@ -24,7 +24,6 @@ public class VinCamera : MonoBehaviour
     {
         Move();
         toVarsPosition(getLastTargetPosition());
-        //lastTargetPos = target.position;
     }
 
     void toVarsPosition(Vector3 targetPos)

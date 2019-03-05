@@ -17,6 +17,8 @@ public class VinMov : MonoBehaviour
     Vector2 input = new Vector2(0f, 0f);
     float levitateTargetHeight;
     Animator anim;
+    int layerMask;
+    private float actualMaxSpeed;
 
     //Bool names
     private static string Anim_idle = "idle";
@@ -33,25 +35,45 @@ public class VinMov : MonoBehaviour
 
     void Start()
     {
+        layerMask = LayerMask.GetMask(solidLayer);
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
 
-
-    void FixedUpdate()
+    private void Update()
     {
-        Move();
+        InputController();
         if (Input.GetKeyDown("f")) freezeInput = !freezeInput;
         print("the speed is " + rb.velocity.magnitude);
     }
 
+    void FixedUpdate()
+    {
+        Move();
+    }
+
     private void Move()
+    {
+        //Operations
+        if (actualMaxSpeed > 0.0f)
+        {
+            direction += (input.normalized - direction / actualMaxSpeed) * aceleration;
+            float Yvel = 0f;
+            if (levitate)
+                Yvel = (levitateTargetHeight - transform.position.y) * aceleration / 5f;
+            else
+                Yvel = rb.velocity.y;
+            rb.velocity = new Vector3(direction.x * Time.deltaTime, Yvel, direction.y * Time.deltaTime);
+            transform.LookAt(transform.position + Vector3.ProjectOnPlane(rb.velocity, Vector3.up));
+        }
+    }
+
+    private void InputController()
     {
         //DEFAULT NIMATION SPEED
         anim.speed = 1.0f;
         //Inputs
         //LEVITATE
-        int layerMask = LayerMask.GetMask(solidLayer);
         Collider[] onFloor = Physics.OverlapSphere(feetPos.position, 0.1f, layerMask);
         if (Input.GetKeyDown("space"))
         {
@@ -95,21 +117,8 @@ public class VinMov : MonoBehaviour
         else
             anim.SetBool(Anim_idle, false);
 
-        //Operations
-        float actualMaxSpeed = maxSpeed;
+        actualMaxSpeed = maxSpeed;
         if (sneaky && walk) actualMaxSpeed *= sneakyMultiplier;
         else if (run && walk) actualMaxSpeed *= runMultiplier;
-
-        if(actualMaxSpeed > 0.0f)
-        {
-            direction += (input.normalized - direction / actualMaxSpeed) * aceleration;
-            float Yvel = 0f;
-            if (levitate)
-                Yvel = (levitateTargetHeight - transform.position.y) * aceleration / 5f;
-            else
-                Yvel = rb.velocity.y;
-            rb.velocity = new Vector3(direction.x * Time.deltaTime, Yvel, direction.y * Time.deltaTime);
-            transform.LookAt(transform.position + Vector3.ProjectOnPlane(rb.velocity, Vector3.up));
-        }
     }
 }
