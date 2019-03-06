@@ -96,8 +96,8 @@ public class VinMov : MonoBehaviour
         
 
         //SNEAKY IDLE
-        bool sneaky = Input.GetKey(KeyCode.LeftControl)/* && !levitate*/;
-        bool run = Input.GetKey(KeyCode.LeftShift)/* && !levitate*/;
+        bool sneaky = Input.GetKey(KeyCode.LeftControl);
+        bool run = Input.GetKey(KeyCode.LeftShift) && !sneaky;
         bool sneakyIdle = (run || sneaky) && !walk && !levitate;
 
         //MIENTRAS ESTE ANDANDO DEBERÍA PODER EMPEZAR A CORRER Y ANDAR CON SIGILO, NO DEBERÍAS TENER QUE PARARTE
