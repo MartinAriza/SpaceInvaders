@@ -129,7 +129,8 @@ public class VinMov : MonoBehaviour
             else
                 Yvel = rb.velocity.y;
             rb.velocity = new Vector3(direction.x * Time.deltaTime, Yvel, direction.y * Time.deltaTime);
-            transform.LookAt(transform.position + Vector3.ProjectOnPlane(rb.velocity, Vector3.up));
+            if(rb.velocity.magnitude > 0.001)
+                transform.LookAt(transform.position + Vector3.ProjectOnPlane(rb.velocity, Vector3.up));
         }
     }
     public float getMaxPossibleSpeed()
