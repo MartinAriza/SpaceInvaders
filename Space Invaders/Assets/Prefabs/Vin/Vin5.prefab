@@ -2819,7 +2819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 90
-  aceleration: 15
+  aceleration: 10
   runMultiplier: 2
   sneakyMultiplier: 0.5
   levitate: 0

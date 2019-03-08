@@ -130,9 +130,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: {x: 40, y: 0, z: 0}
-  postDisplacement: {x: 0, y: 1, z: -1}
-  maxOffset: 2
-  minDistance: 1
+  postDisplacement: {x: 0, y: 1, z: -1.5}
+  maxOffset: 1
+  minDistance: 3
   maxDistance: 15
-  distance: 3
+  distance: 5
   offsetAceleration: 0.05
