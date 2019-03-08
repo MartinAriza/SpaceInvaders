@@ -34,7 +34,7 @@ public class VinMov : MonoBehaviour
     //Layer names
     private static string solidLayer = "staticSolid";
 
-    void Start()
+    void Awake()
     {
         layerMask = LayerMask.GetMask(solidLayer);
         rb = GetComponent<Rigidbody>();
@@ -45,7 +45,7 @@ public class VinMov : MonoBehaviour
     {
         InputController();
         if (Input.GetKeyDown("f")) freezeInput = !freezeInput;
-        print("the speed is " + rb.velocity.magnitude);
+        //print("the speed is " + rb.velocity.magnitude);
     }
 
     void FixedUpdate()
@@ -131,5 +131,9 @@ public class VinMov : MonoBehaviour
             rb.velocity = new Vector3(direction.x * Time.deltaTime, Yvel, direction.y * Time.deltaTime);
             transform.LookAt(transform.position + Vector3.ProjectOnPlane(rb.velocity, Vector3.up));
         }
+    }
+    public float getMaxPossibleSpeed()
+    {
+        return maxSpeed * runMultiplier;
     }
 }
