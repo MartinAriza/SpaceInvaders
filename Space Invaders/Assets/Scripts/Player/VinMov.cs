@@ -20,6 +20,8 @@ public class VinMov : MonoBehaviour
     int layerMask;
     private float actualMaxSpeed;
     private float actualAceleration;
+    bool falling = false;
+    bool wasLevitating = false;
 
     //Bool names
     private static string Anim_idle = "idle";
@@ -30,9 +32,14 @@ public class VinMov : MonoBehaviour
     private static string Anim_sneakyWalk = "sneakyWalk";
     private static string Anim_run = "run";
     private static string Anim_power = "power";
+    private static string Anim_falling = "falling";
+
+    //Trigger names
+    private static string Anim_Fall = "fall";
 
     //Layer names
     private static string solidLayer = "staticSolid";
+
 
     void Awake()
     {
@@ -60,6 +67,7 @@ public class VinMov : MonoBehaviour
         //Inputs
         //LEVITATE
         Collider[] onFloor = Physics.OverlapSphere(feetPos.position, 0.1f, layerMask);
+        RaycastHit hit;
         if (Input.GetKeyDown("space"))
         {
             levitate = !levitate;
@@ -68,9 +76,29 @@ public class VinMov : MonoBehaviour
                 if (onFloor.Length == 0) levitate = false;
                 else levitateTargetHeight = transform.position.y + levitateHeight;
             }
+            else
+            {
+                if (Physics.Raycast(transform.position, -Vector3.up, out hit, levitateHeight + (feetPos.position - transform.position).magnitude + 0.5f, layerMask))
+                {
+                    wasLevitating = true;
+                }
+            }
             rb.useGravity = !levitate;
             anim.SetBool(Anim_levitate, levitate);
         }
+
+        //FALL
+        if(onFloor.Length == 0 && !falling && !levitate && !wasLevitating)
+        {
+            falling = true;
+            anim.SetTrigger(Anim_Fall);
+        } else if(onFloor.Length > 0 && falling)
+        {
+            falling = false;
+        }
+        anim.SetBool(Anim_falling, falling);
+
+        if (onFloor.Length > 0) wasLevitating = false;
 
         //WALK
         if (!freezeInput) input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -97,7 +125,7 @@ public class VinMov : MonoBehaviour
         anim.SetBool(Anim_run, run && walk);
 
         //IDLE
-        bool notInput = input.magnitude == 0 && !levitate && !sneakyIdle/*...*/;
+        bool notInput = input.magnitude == 0 && !levitate && !sneakyIdle && !falling;
         if (notInput)
             anim.SetBool(Anim_idle, true);
         else
@@ -129,7 +157,7 @@ public class VinMov : MonoBehaviour
             else
                 Yvel = rb.velocity.y;
             rb.velocity = new Vector3(direction.x * Time.deltaTime, Yvel, direction.y * Time.deltaTime);
-            if(rb.velocity.magnitude > 0.001)
+            if(rb.velocity.magnitude > 0.01)
                 transform.LookAt(transform.position + Vector3.ProjectOnPlane(rb.velocity, Vector3.up));
         }
     }

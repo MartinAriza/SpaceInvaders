@@ -47,10 +47,11 @@ public class VinCamera1 : MonoBehaviour
 
     private void Move()
     {
-        float currentMaxOffset = maxOffset + (distance - minDistance) + 0.5f;
+        float currentMaxOffset = maxOffset + (distance - minDistance)/2.0f + 0.5f;
         float currentOffsetAceleration = offsetAceleration * (distance - minDistance) + offsetAceleration;
         Vector3 targetedPosition = targetRB.velocity / (targetMaxPossibleSpeed * Time.deltaTime);
         currentOffset += (targetedPosition - currentOffset/ currentMaxOffset) * offsetAceleration;
+        currentOffset.y = 0;
         //print(targetedPosition.magnitude);
         if (currentOffset.magnitude > currentMaxOffset) currentOffset = currentOffset.normalized * currentMaxOffset;
         //print("current offset is: " + currentOffset);
