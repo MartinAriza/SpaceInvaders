@@ -66,7 +66,7 @@ public class VinMov : MonoBehaviour
         anim.speed = 1.0f;
         //Inputs
         //LEVITATE
-        Collider[] onFloor = Physics.OverlapSphere(feetPos.position, 0.1f, layerMask);
+        Collider[] onFloor = Physics.OverlapSphere(feetPos.position, 0.2f, layerMask);
         RaycastHit hit;
         if (Input.GetKeyDown("space"))
         {
@@ -157,8 +157,9 @@ public class VinMov : MonoBehaviour
             else
                 Yvel = rb.velocity.y;
             rb.velocity = new Vector3(direction.x * Time.deltaTime, Yvel, direction.y * Time.deltaTime);
-            if(rb.velocity.magnitude > 0.01)
-                transform.LookAt(transform.position + Vector3.ProjectOnPlane(rb.velocity, Vector3.up));
+            Vector3 look = Vector3.ProjectOnPlane(rb.velocity, Vector3.up);
+            if (look.magnitude > 0.01)
+                transform.LookAt(transform.position + look);
         }
     }
     public float getMaxPossibleSpeed()
