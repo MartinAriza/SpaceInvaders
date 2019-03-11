@@ -9,7 +9,7 @@ public class volver_al_menu : MonoBehaviour, IPointerClickHandler
    
     public void OnPointerClick(PointerEventData eventData) // 3
     {
-        SceneManager.LoadScene("MENU");
+        SceneManager.LoadScene("menu");
     }
 
 }

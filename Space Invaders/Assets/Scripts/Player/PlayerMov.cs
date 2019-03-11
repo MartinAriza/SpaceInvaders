@@ -5,7 +5,10 @@ using UnityEngine;
 public class PlayerMov : MonoBehaviour
 {
 
-    [SerializeField] [Tooltip("Velocidad horizontal de la nave")]float speed = 200;
+    [SerializeField] [Tooltip("Velocidad máxima de la nave")] Vector3 speed = new Vector3(0f,0f,0f);
+    [SerializeField] [Tooltip("Aceleración de la nave")] Vector3 aceleration = new Vector3(0f,0f,0f);
+    [SerializeField] [Tooltip("multiplicador de la aceleración para frenar al no pulsar nada")] [Range(0,3)]float brakeMultiplier = 2.0f;
+
     [Tooltip("Numero de golpes que aguanta la nave")] public int HP = 3;
     [SerializeField] [Tooltip("Numero maximo de disparos del jugador que puede haber a la vez en pantalla")] int maxShots = 2;
     [SerializeField] float shotSpeed = 15;
@@ -22,6 +25,9 @@ public class PlayerMov : MonoBehaviour
     public bool adult = true;
     AudioSource laserSound;
     Rigidbody rb;
+
+    Vector3 velocity = new Vector3(0f, 0f, 0f);
+    Vector3 locRotation = new Vector3(0f, 0f, 0f);
 
     void Start()
     {
@@ -51,13 +57,12 @@ public class PlayerMov : MonoBehaviour
         {
             if (adult) fire();
         }
-
         checkExit();
     }
 
     void movement()
     {
-        Vector3 ejeX = Input.GetAxisRaw("Horizontal") * Vector3.right * Time.deltaTime * speed; //Se mueve horizontalmente al jugador
+        /*Vector3 ejeX = Input.GetAxisRaw("Horizontal") * Vector3.right * Time.deltaTime * speed; //Se mueve horizontalmente al jugador
         rb.velocity = ejeX;
 
         //Se limita la posición del jugador a los límites establecidos
@@ -65,14 +70,39 @@ public class PlayerMov : MonoBehaviour
             Mathf.Clamp(transform.position.x, -allowedMovement, allowedMovement), 
             transform.position.y, 
             transform.position.z
+            );*/
+        
+        //X Movement
+        float inputX = Input.GetAxisRaw("Horizontal");
+        float absX = Mathf.Abs(inputX);
+        velocity.x += (inputX - velocity.x / speed.x) * aceleration.x * ((1-absX) * brakeMultiplier + 1 * absX); //si no pulso nada me freno más lento de lo que acelero
+
+        //Y Movement
+
+        //Z Movement
+
+        //Clamping
+        velocity = new Vector3(
+            Mathf.Clamp(velocity.x, -speed.x, speed.x),
+            Mathf.Clamp(velocity.y, -speed.y, speed.y),
+            Mathf.Clamp(velocity.z, -speed.z, speed.z)
+            );
+        rb.velocity = velocity * Time.deltaTime;
+
+        transform.position = new Vector3(
+            Mathf.Clamp(transform.position.x, -allowedMovement, allowedMovement),
+            transform.position.y,
+            transform.position.z
             );
     }
 
     //La nave rota un poco hacia el lado que el jugador se está moviendo
     void rotation()
     {
-        float roll = Input.GetAxisRaw("Horizontal") * rotationAmount;
-        transform.localRotation = Quaternion.Euler(0, 0, -roll);
+        //float roll = Input.GetAxis("Horizontal") * rotationAmount;
+        //transform.localRotation = Quaternion.Euler(0, 0, -roll);
+        locRotation.z = (velocity.x / speed.x) * -rotationAmount;
+        transform.localRotation = Quaternion.Euler(0, 0, locRotation.z);
     }
 
     //Si se pulsa espacio o mouse Izq se dispara un láser y suena su efecto de sonido
