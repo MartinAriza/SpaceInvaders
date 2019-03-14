@@ -53,7 +53,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 559c53eab32bee645aff626ca0cb3138, type: 3}
       propertyPath: m_Name
-      value: Barrier
+      value: barrera Variant
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 559c53eab32bee645aff626ca0cb3138, type: 3}
       propertyPath: m_Layer

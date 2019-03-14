@@ -10,6 +10,7 @@ TagManager:
   - Barrier
   - Alien
   - Vin
+  - KillBarrier
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,8 @@ public class PlayerMov : MonoBehaviour
     [SerializeField] float shotSpeed = 15;
 
     [SerializeField][Tooltip("Cuanto rota la nave al moverse")] float rotationAmount = 4.0f;
-    [SerializeField][Tooltip("Cuanta distancia puede moverse la nave desde el centro de la pantalla")] float allowedMovement = 10.0f;
+    [SerializeField][Tooltip("Cuanta distancia puede moverse la nave desde el centro de la pantalla en el eje X")] float allowedMovementX = 10.0f;
+    [SerializeField][Tooltip("Cuanta distancia puede moverse la nave desde el centro de la pantalla en el eje Y")] float allowedMovementY = 5.0f;
 
     [SerializeField] ParticleSystem gun;
     [SerializeField] ParticleSystem deathFX;
@@ -78,6 +79,9 @@ public class PlayerMov : MonoBehaviour
         velocity.x += (inputX - velocity.x / speed.x) * aceleration.x * ((1-absX) * brakeMultiplier + 1 * absX); //si no pulso nada me freno más lento de lo que acelero
 
         //Y Movement
+        float inputY = Input.GetAxisRaw("Vertical");
+        float absY = Mathf.Abs(inputY);
+        velocity.y += (inputY - velocity.y / speed.y) * aceleration.y * ((1-absY) * brakeMultiplier + 1 * absY);
 
         //Z Movement
 
@@ -90,8 +94,8 @@ public class PlayerMov : MonoBehaviour
         rb.velocity = velocity * Time.deltaTime;
 
         transform.position = new Vector3(
-            Mathf.Clamp(transform.position.x, -allowedMovement, allowedMovement),
-            transform.position.y,
+            Mathf.Clamp(transform.position.x, -allowedMovementX, allowedMovementX),
+            Mathf.Clamp(transform.position.y, -allowedMovementY, allowedMovementY),
             transform.position.z
             );
     }
@@ -102,7 +106,8 @@ public class PlayerMov : MonoBehaviour
         //float roll = Input.GetAxis("Horizontal") * rotationAmount;
         //transform.localRotation = Quaternion.Euler(0, 0, -roll);
         locRotation.z = (velocity.x / speed.x) * -rotationAmount;
-        transform.localRotation = Quaternion.Euler(0, 0, locRotation.z);
+        locRotation.x = (velocity.y / speed.y) * -rotationAmount;
+        transform.localRotation = Quaternion.Euler(locRotation.x, 0, locRotation.z);
     }
 
     //Si se pulsa espacio o mouse Izq se dispara un láser y suena su efecto de sonido
@@ -141,7 +146,7 @@ public class PlayerMov : MonoBehaviour
         }
     }
 
-    void destroyPlayer()
+    public void destroyPlayer()
     {
         deathFX.Play();                                                     //Suena el sonido de explosión
         scoreManager.scoreAnimation();                                      //Aparece la puntuación en pantalla

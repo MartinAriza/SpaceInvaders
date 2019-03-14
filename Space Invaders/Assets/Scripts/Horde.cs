@@ -26,12 +26,14 @@ public class Horde : MonoBehaviour
     HordeManager hordeManager;
     ScoreManager scoreManager;
     AudioSource collision;
+    PlayerMov player;
 
     public int numberOfAliveAliens;
 
     void Start()
     {
         //Se recogen los componentes necesarios del gameObject
+        player = FindObjectOfType<PlayerMov>();
         bc = gameObject.GetComponent<BoxCollider>();
         rb = gameObject.GetComponent<Rigidbody>();
 
@@ -120,6 +122,10 @@ public class Horde : MonoBehaviour
         {
             speed = -speed; //Su dirección cambia
             rb.MovePosition(new Vector3(transform.position.x, transform.position.y, transform.position.z - downSpeed)); //Se mueve hacia abajo
+        }
+        else if (other.tag == "KillBarrier")
+        {
+            player.destroyPlayer();
         }
     }
 }
