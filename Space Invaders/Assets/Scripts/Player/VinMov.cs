@@ -22,6 +22,7 @@ public class VinMov : MonoBehaviour
     private float actualAceleration;
     bool falling = false;
     bool wasLevitating = false;
+    [HideInInspector]public bool usingPower = false;
 
     //Bool names
     private static string Anim_idle = "idle";
@@ -33,9 +34,11 @@ public class VinMov : MonoBehaviour
     private static string Anim_run = "run";
     private static string Anim_power = "power";
     private static string Anim_falling = "falling";
+    private static string Anim_usingPower = "usingPower";
 
     //Trigger names
     private static string Anim_Fall = "fall";
+    private static string Anim_Power = "power";
 
     //Layer names
     private static string solidLayer = "staticSolid";
@@ -52,7 +55,6 @@ public class VinMov : MonoBehaviour
     {
         InputController();
         if (Input.GetKeyDown("f")) freezeInput = !freezeInput;
-        //print("the speed is " + rb.velocity.magnitude);
     }
 
     void FixedUpdate()
@@ -68,7 +70,7 @@ public class VinMov : MonoBehaviour
         //LEVITATE
         Collider[] onFloor = Physics.OverlapSphere(feetPos.position, 0.2f, layerMask);
         RaycastHit hit;
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space") && !usingPower)
         {
             levitate = !levitate;
             if (levitate)
@@ -87,6 +89,9 @@ public class VinMov : MonoBehaviour
             anim.SetBool(Anim_levitate, levitate);
         }
 
+        //POWER
+        anim.SetBool(Anim_usingPower, usingPower);
+
         //FALL
         if(onFloor.Length == 0 && !falling && !levitate && !wasLevitating)
         {
@@ -102,12 +107,11 @@ public class VinMov : MonoBehaviour
 
         //WALK
         if (!freezeInput) input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        if (usingPower) input = new Vector2(0f, 0f);
         bool walk = input.magnitude > 0f;
         if (walk)
             anim.speed = Mathf.Clamp(direction.magnitude / maxSpeed, 0.35f, 1);
         anim.SetBool(Anim_walk, walk);
-
-        
 
         //SNEAKY IDLE
         bool sneaky = Input.GetKey(KeyCode.LeftControl);
@@ -165,5 +169,18 @@ public class VinMov : MonoBehaviour
     public float getMaxPossibleSpeed()
     {
         return maxSpeed * runMultiplier;
+    }
+    public void usePower()
+    {
+        anim.SetTrigger(Anim_Power);
+
+        levitate = false;
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, -Vector3.up, out hit, levitateHeight + (feetPos.position - transform.position).magnitude + 0.5f, layerMask))
+        {
+            wasLevitating = true;
+        }
+        rb.useGravity = true;
+        anim.SetBool(Anim_levitate, false);
     }
 }
