@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
 
 public class rankingController : MonoBehaviour
 {
 
     public static string fileName = "ranking.txt";
     public static int maxPlayersInRanking = 10;
+    public InputField playerName;
 
     private void Start()
     {
