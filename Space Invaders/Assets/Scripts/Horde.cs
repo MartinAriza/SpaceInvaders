@@ -28,6 +28,10 @@ public class Horde : MonoBehaviour
     AudioSource collision;
     PlayerMov player;
 
+    [Space]
+    [SerializeField] float minAlienY = -1.0f;
+    [SerializeField] float maxAlienY = 3.0f;
+
     public int numberOfAliveAliens;
 
     void Start()
@@ -46,8 +50,19 @@ public class Horde : MonoBehaviour
         numberOfAliveAliens = aliens.Length;    //Numero de aliens que están vivos
 
         initialiceAlienProperties();
-
+        randomizeAlienHeight();
         calculateBoxCollider();
+    }
+
+    void randomizeAlienHeight()
+    {
+        foreach (Alien alien in aliens)
+        { 
+            alien.transform.position = new Vector3(
+                alien.transform.position.x,
+                UnityEngine.Random.Range(minAlienY, maxAlienY),
+                alien.transform.position.z);
+        }
     }
 
     //Se inician las propiedades de los aliens a las variables 

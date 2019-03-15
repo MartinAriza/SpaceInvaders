@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
+    [SerializeField] Text scoreTextUI;
+
     public float playerScore = 0.0f;
     public string playerName;
     public InputField inp;
@@ -44,6 +46,8 @@ public class ScoreManager : MonoBehaviour
                 scoreText.gameObject.SetActive(false);
             }
         }
+
+        scoreTextUI.text = "score   " + playerScore;
     }
 
     //Se detiene la horda, deja de disparar y se muestre la puntuación por pantalla con un botón para volver al menú

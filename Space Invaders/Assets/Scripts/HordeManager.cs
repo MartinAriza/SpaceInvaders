@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //Este script hace que als hordas sean cada vez más difíciles
 public class HordeManager : MonoBehaviour
@@ -20,6 +21,8 @@ public class HordeManager : MonoBehaviour
 
     Horde horde;
     PlayerMov player;
+    [SerializeField] Text waveNumberUI;
+    [SerializeField] Text playerLivesUI;
 
     [HideInInspector] public int waveNumber = 1;
 
@@ -58,6 +61,12 @@ public class HordeManager : MonoBehaviour
         }
 
         waveNumber++;
+        waveNumberUI.text = "wave    " + waveNumber;
+    }
+
+    private void Update()
+    {
+        playerLivesUI.text = "LIves     " + player.HP;
     }
 }
 

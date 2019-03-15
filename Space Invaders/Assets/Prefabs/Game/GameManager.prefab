@@ -57,6 +57,8 @@ MonoBehaviour:
   alienScoreValueIncrement: 10
   extraPlayerLives: 1
   extraBarriersHP: 1
+  waveNumberUI: {fileID: 0}
+  playerLivesUI: {fileID: 0}
   waveNumber: 1
 --- !u!114 &6646047537060437864
 MonoBehaviour:
@@ -83,6 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cb3936b4e68cce4ab283707d8738924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreTextUI: {fileID: 0}
   playerScore: 0
   playerName: 
   inp: {fileID: 0}

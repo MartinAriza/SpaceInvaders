@@ -133,6 +133,7 @@ public class PlayerMov : MonoBehaviour
         if(collision.gameObject.tag == "Alien")
         {
             HP--;
+            deathFX.Play();
             if (HP <= 0) destroyPlayer();
         }
     }
@@ -143,13 +144,13 @@ public class PlayerMov : MonoBehaviour
         if(other.tag == "AlienLaser")
         {
             HP--;
-            if(HP <= 0) destroyPlayer(); 
+            deathFX.Play();
+            if (HP <= 0) destroyPlayer(); 
         }
     }
 
     public void destroyPlayer()
-    {
-        deathFX.Play();                                                     //Suena el sonido de explosión
+    {                                                  //Suena el sonido de explosión
         scoreManager.scoreAnimation();                                      //Aparece la puntuación en pantalla
         //Se desactivan colisiones y el renderizado
         gameObject.GetComponent<BoxCollider>().enabled = false;
