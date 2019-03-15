@@ -46,7 +46,7 @@ public class ScoreManager : MonoBehaviour
             }
         }
 
-        scoreTextUI.text = "score   " + playerScore;
+        scoreTextUI.text = "Puntuación:   " + playerScore;
     }
 
     //Se detiene la horda, deja de disparar y se muestre la puntuación por pantalla con un botón para volver al menú

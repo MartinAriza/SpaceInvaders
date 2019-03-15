@@ -61,12 +61,12 @@ public class HordeManager : MonoBehaviour
         }
 
         waveNumber++;
-        waveNumberUI.text = "wave    " + waveNumber;
+        waveNumberUI.text = "Oleada    " + waveNumber;
     }
 
     private void Update()
     {
-        playerLivesUI.text = "LIves     " + player.HP;
+        playerLivesUI.text =  player.HP + "    Vidas";
     }
 }
 

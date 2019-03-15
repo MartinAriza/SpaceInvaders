@@ -1596,6 +1596,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 795124713932305968, guid: f2fd0edfd6cddfd4f85a1bbbe2a43959,
+        type: 3}
+      propertyPath: m_Text
+      value: oleada    1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3541102606986437093, guid: f2fd0edfd6cddfd4f85a1bbbe2a43959,
+        type: 3}
+      propertyPath: m_Text
+      value: "Puntuaci\xF3n:   0"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456846569322010681, guid: f2fd0edfd6cddfd4f85a1bbbe2a43959,
+        type: 3}
+      propertyPath: m_Text
+      value: 3    Vidas
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2fd0edfd6cddfd4f85a1bbbe2a43959, type: 3}
 --- !u!1001 &7426417928653948722
