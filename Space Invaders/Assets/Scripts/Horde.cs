@@ -128,4 +128,20 @@ public class Horde : MonoBehaviour
             player.destroyPlayer();
         }
     }
+
+    public void changeAlienColor(Color[] colors, int index)
+    {
+        foreach (Alien alien in aliens)
+        {
+            alien.changeColor (colors[index]);
+        }
+    }
+
+    public void changeAlienColor(Color[] colors)
+    {
+        foreach (Alien alien in aliens)
+        {
+            alien.changeColor (colors[UnityEngine.Random.Range(0,colors.Length - 1)]);
+        }
+    }
 }

@@ -53,6 +53,7 @@ public class HordeManager : MonoBehaviour
         foreach(Barrier barrier in barriers)
         {
             barrier.restore();
+            barrier.findHorde();
             barrier.HP += extraBarriersHP * waveNumber;
         }
 

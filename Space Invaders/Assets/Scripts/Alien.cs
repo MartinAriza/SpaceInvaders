@@ -119,4 +119,9 @@ public class Alien : MonoBehaviour
             }
         }
     }
+
+    public void changeColor (Color color)
+    {
+        alienBody.GetComponent<SkinnedMeshRenderer>().material.color = color;
+    }
 }
