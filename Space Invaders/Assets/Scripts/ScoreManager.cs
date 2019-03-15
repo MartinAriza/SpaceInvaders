@@ -5,15 +5,39 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public float playerScore = 0.0f;    
+    public float playerScore = 0.0f;
+    public string playerName;
+    public InputField inp;
+    public Button backToMenu;
+    bool setName;
 
     Horde horde;
     [SerializeField] Text scoreText;
+    [SerializeField] Text setNameText;
+    [SerializeField] Text nameText;
 
     void start()
     {
         //Se recogen los componentes necesarios
         horde = FindObjectOfType<Horde>();
+        setName = false;
+    }
+
+    private void Update()
+    {
+        if(inp.gameObject.activeSelf == true && setName)
+        {
+            if(inp.text.Length == 3)
+            {
+                inp.interactable = false;
+                backToMenu.gameObject.SetActive(true);
+                playerName = inp.text;
+                playerName.ToUpper();
+                rankingController.insertPlayer((int)playerScore, playerName);
+                rankingController.insertPlayer(1000, "PCM");
+                setName = false;
+            }
+        }
     }
 
     //Se detiene la horda, deja de disparar y se muestre la puntuación por pantalla con un botón para volver al menú
@@ -23,8 +47,11 @@ public class ScoreManager : MonoBehaviour
         horde.speed = 0.0f;
         horde.stopFiring();
 
+        inp.gameObject.SetActive(true);
+        setNameText.gameObject.SetActive(true);
         scoreText.gameObject.SetActive(true);
         scoreText.text = "Puntos:  " + playerScore.ToString();
+        setName = true;
 
         if (horde.speed <= 0.0f) horde.speed = 0.0f;
     }

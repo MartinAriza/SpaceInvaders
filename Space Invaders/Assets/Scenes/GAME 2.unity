@@ -121,6 +121,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5272548732517855720, guid: f1d90b124f9e55749bc7eb11220f5c59,
+        type: 3}
+      propertyPath: speed
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 5272548732517855723, guid: f1d90b124f9e55749bc7eb11220f5c59,
         type: 3}
       propertyPath: m_Name
@@ -733,7 +738,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 574892381}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 17.18, z: 1.34}
@@ -1783,6 +1788,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BounceBarriers
       objectReference: {fileID: 0}
+    - target: {fileID: 86281164965349322, guid: 9a146bdaa18f5374781356749bb69585,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 86281164965349325, guid: 9a146bdaa18f5374781356749bb69585,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1837,6 +1847,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 86281164323688536, guid: 9a146bdaa18f5374781356749bb69585,
+        type: 3}
+      propertyPath: m_TagString
+      value: Limit
+      objectReference: {fileID: 0}
+    - target: {fileID: 86281164878184985, guid: 9a146bdaa18f5374781356749bb69585,
+        type: 3}
+      propertyPath: m_TagString
+      value: Limit
+      objectReference: {fileID: 0}
+    - target: {fileID: 86281165261023944, guid: 9a146bdaa18f5374781356749bb69585,
+        type: 3}
+      propertyPath: m_TagString
+      value: Limit
+      objectReference: {fileID: 0}
+    - target: {fileID: 86281165329894441, guid: 9a146bdaa18f5374781356749bb69585,
+        type: 3}
+      propertyPath: m_TagString
+      value: Limit
+      objectReference: {fileID: 0}
+    - target: {fileID: 86281165739187441, guid: 9a146bdaa18f5374781356749bb69585,
+        type: 3}
+      propertyPath: m_TagString
+      value: Limit
+      objectReference: {fileID: 0}
+    - target: {fileID: 86281165946522379, guid: 9a146bdaa18f5374781356749bb69585,
+        type: 3}
+      propertyPath: m_TagString
+      value: Limit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a146bdaa18f5374781356749bb69585, type: 3}
@@ -2100,15 +2140,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: AlienMiniBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 6661848268732157625, guid: 74456785fa9b00f4fac752fd00546b8f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
+      objectReference: {fileID: 0}
     - target: {fileID: 2035130852838406444, guid: 74456785fa9b00f4fac752fd00546b8f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 59.4
+      value: 58.85
       objectReference: {fileID: 0}
     - target: {fileID: 2035130852838406444, guid: 74456785fa9b00f4fac752fd00546b8f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 3.31
       objectReference: {fileID: 0}
     - target: {fileID: 2035130852838406444, guid: 74456785fa9b00f4fac752fd00546b8f,
         type: 3}
@@ -2154,6 +2199,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081341337511831763, guid: 74456785fa9b00f4fac752fd00546b8f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865928452578081776, guid: 74456785fa9b00f4fac752fd00546b8f,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827584663530996765, guid: 74456785fa9b00f4fac752fd00546b8f,
+        type: 3}
+      propertyPath: speed.x
+      value: -500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827584663530996765, guid: 74456785fa9b00f4fac752fd00546b8f,
+        type: 3}
+      propertyPath: speed.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7212645613503686298, guid: 74456785fa9b00f4fac752fd00546b8f,
+        type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 7212645613503686298, guid: 74456785fa9b00f4fac752fd00546b8f,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74456785fa9b00f4fac752fd00546b8f, type: 3}

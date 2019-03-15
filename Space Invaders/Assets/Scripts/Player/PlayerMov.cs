@@ -20,6 +20,7 @@ public class PlayerMov : MonoBehaviour
     [SerializeField] ParticleSystem gun;
     [SerializeField] ParticleSystem deathFX;
     [SerializeField] ParticleSystem [] engineParticles;
+    [SerializeField] GameObject aimCylinder;
 
     ScoreManager scoreManager;
 
@@ -153,6 +154,7 @@ public class PlayerMov : MonoBehaviour
         //Se desactivan colisiones y el renderizado
         gameObject.GetComponent<BoxCollider>().enabled = false;
         gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+        aimCylinder.gameObject.SetActive(false);
 
         //Se destruyen las partículas de los motores
         foreach(ParticleSystem engine in engineParticles) engine.gameObject.SetActive(false);
