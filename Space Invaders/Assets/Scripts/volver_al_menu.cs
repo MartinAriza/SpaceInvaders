@@ -9,6 +9,7 @@ public class volver_al_menu : MonoBehaviour, IPointerClickHandler
    
     public void OnPointerClick(PointerEventData eventData) // 3
     {
+        EyesController.first = true;
         SceneManager.LoadScene("menu");
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EyesController : MonoBehaviour
 {
-    private static bool first = true;
+    [HideInInspector]public static bool first = true;
     private Vector3 originalLook;       //Almacenará el vector de dirección original del ojo
     [SerializeField] static PlayerMov target;  //Guarda una referencia al objeto al que mira el ojo
     float maxAngle = 50.0f;             //Ángulo de giro máximo del ojo respecto a originalLook
