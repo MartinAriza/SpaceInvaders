@@ -12,14 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6402d87cf7bba2a469bc69f5f3894c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTimeBetweenShots: 1
-  maxTimeBetweenShots: 1
+  timeBetweenShots: 1
   shotSpeed: 15
   HP: 1
   scoreValue: 300
-  speed: {x: -10, y: 0, z: 0}
+  speed: {x: -500, y: 2, z: 0}
   deathFX: {fileID: 4639930365437419148, guid: 9b5843d1caa62de49a754265cb8be289, type: 3}
-  gun: {fileID: 0}
+  gun: {fileID: 7212645613503686298}
   alienBody: {fileID: 3041593706140801123}
   alienEyes: {fileID: 348846440123449021}
 --- !u!1001 &7699497444204669360
@@ -33,6 +32,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AlienMiniBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938889999735072521, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8567008244948930716, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
@@ -129,16 +133,6 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.06000004
       objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienBody
-      value: 
-      objectReference: {fileID: 3041593706140801123}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienEyes
-      value: 
-      objectReference: {fileID: 348846440123449021}
     - target: {fileID: 9041475165447211352, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -347,7 +341,12 @@ PrefabInstance:
     - target: {fileID: 1063529942747336490, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: lengthInSec
-      value: 7.27
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063529942747336490, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: looping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1063529942747336490, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
@@ -357,12 +356,17 @@ PrefabInstance:
     - target: {fileID: 1063529942747336490, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 20
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1063529942747336490, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063529942747336490, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1063529942747336490, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
@@ -381,6 +385,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1063529942747336490, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063529942747336490, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
       propertyPath: TrailModule.widthOverTrail.scalar
       value: 1.5
       objectReference: {fileID: 0}
@@ -394,8 +403,20 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 572933936457781824, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a8336de9a23f43946a5c8dbd8b29a881, type: 3}
+--- !u!198 &7212645613503686298 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1063529942747336490, guid: a8336de9a23f43946a5c8dbd8b29a881,
+    type: 3}
+  m_PrefabInstance: {fileID: 7699497444204669360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3041593706140801123 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4679228459028771283, guid: a8336de9a23f43946a5c8dbd8b29a881,

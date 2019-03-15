@@ -513,8 +513,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d4bb411b53414749a89d46c6392c8ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTimeBetweenShots: 1
-  maxTimeBetweenShots: 3
   shotSpeed: 15
   HP: 1
   scoreValue: 10
@@ -718,8 +716,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f391676e5943144bb6c9a1fec182558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetName: 
-  target: {fileID: 0}
 --- !u!1 &5012297441731636179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,8 +1203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f391676e5943144bb6c9a1fec182558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetName: 
-  target: {fileID: 0}
 --- !u!1 &9159320221949862547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,21 +1241,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2868677344687599201}
     m_Modifications:
-    - target: {fileID: 4881861495892245313, guid: ccd4f241e22cb31419bb31dedfd04dcc,
-        type: 3}
-      propertyPath: m_Name
-      value: AlienLaser
-      objectReference: {fileID: 0}
-    - target: {fileID: 4881861495892245313, guid: ccd4f241e22cb31419bb31dedfd04dcc,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4881861495892245313, guid: ccd4f241e22cb31419bb31dedfd04dcc,
-        type: 3}
-      propertyPath: m_TagString
-      value: AlienLaser
-      objectReference: {fileID: 0}
     - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1275,7 +1254,7 @@ PrefabInstance:
     - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.1
+      value: 1.343
       objectReference: {fileID: 0}
     - target: {fileID: 4881861495892245316, guid: ccd4f241e22cb31419bb31dedfd04dcc,
         type: 3}
@@ -1317,20 +1296,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4881861495892245319, guid: ccd4f241e22cb31419bb31dedfd04dcc,
+    - target: {fileID: 4881861495892245313, guid: ccd4f241e22cb31419bb31dedfd04dcc,
         type: 3}
-      propertyPath: moveWithTransform
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4881861495892245319, guid: ccd4f241e22cb31419bb31dedfd04dcc,
-        type: 3}
-      propertyPath: InitialModule.maxNumParticles
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4881861495892245319, guid: ccd4f241e22cb31419bb31dedfd04dcc,
-        type: 3}
-      propertyPath: CollisionModule.collidesWith.m_Bits
-      value: 1536
+      propertyPath: m_Name
+      value: AlienLaser
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccd4f241e22cb31419bb31dedfd04dcc, type: 3}

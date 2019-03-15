@@ -84,7 +84,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScore: 0
+  playerName: 
+  inp: {fileID: 0}
+  backToMenu: {fileID: 0}
   scoreText: {fileID: 0}
+  setNameText: {fileID: 0}
+  nameText: {fileID: 0}
 --- !u!114 &2068307675007613037
 MonoBehaviour:
   m_ObjectHideFlags: 0
