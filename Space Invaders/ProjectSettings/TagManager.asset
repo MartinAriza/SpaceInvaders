@@ -11,6 +11,7 @@ TagManager:
   - Alien
   - Vin
   - KillBarrier
+  - AlienMiniBossLimit
   layers:
   - Default
   - TransparentFX
