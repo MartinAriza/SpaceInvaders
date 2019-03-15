@@ -5,12 +5,13 @@ using UnityEngine;
 public class AlienMiniBoss : MonoBehaviour
 {
     //Segundos que el alien tendrá que esperar para volver a disparar (numero aleatorio entre este intervalo)
-    [SerializeField] float minTimeBetweenShots = 3.0f;
-    [SerializeField] float maxTimeBetweenShots = 6.0f;
+    [SerializeField] float timeBetweenShots = 1.0f;
 
     [SerializeField] [Tooltip("Como de rápido se desplazan los láseres de los aliens")] float shotSpeed = 15.0f;
     [SerializeField] [Tooltip("Numero de disparos necesarios para destruir el alien")] int HP = 1;
     [SerializeField] [Tooltip("Cuantos puntos vale el alien")] float scoreValue = 10.0f;
+
+    [SerializeField] [Tooltip("Variable velocidad del alien")] Vector3 speed = new Vector3(0f,0f,0f);
 
     Animator anim;                          //Objeto animator para poder hacer transiciones entre animaciones 
 
@@ -49,11 +50,8 @@ public class AlienMiniBoss : MonoBehaviour
     public void setAdult(bool a)
     { adult = a; }
 
-    public void setMinTimeBetweenShots(float t)
-    { minTimeBetweenShots = t; }
-
-    public void setMaxTimeBetweenShots(float t)
-    { maxTimeBetweenShots = t; }
+    public void setTimeBetweenShots(float t)
+    { timeBetweenShots = t; }
 
     void Start()
     {
@@ -73,7 +71,13 @@ public class AlienMiniBoss : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+        Movement();
+    }
+
+    private void Movement()
+    {
+        rb.velocity = speed*Time.deltaTime;
+        transform.position = new Vector3(transform.position.x, speed.y*Mathf.Sin(transform.position.x/2), transform.position.z);
     }
 
     IEnumerator fire()
@@ -89,7 +93,7 @@ public class AlienMiniBoss : MonoBehaviour
             }
 
             firstTime = false;
-            yield return new WaitForSeconds(Random.Range(minTimeBetweenShots, maxTimeBetweenShots)); //La subrutina espera un tiempo para seguir ejecutándose
+            yield return new WaitForSeconds(timeBetweenShots); //La subrutina espera un tiempo para seguir ejecutándose
         }
     }
 
@@ -102,18 +106,39 @@ public class AlienMiniBoss : MonoBehaviour
             HP--;   //Se reduce la vida del alien una unidad
             if (HP <= 0)
             {
-                //Se crea al efecto de explosion en la posición del alien y se asigna su padre
-                Instantiate(deathFX, transform.position, Quaternion.identity).gameObject.transform.parent = parent;
-
-                stopFiring = true;  //El alien deja de disparar
-                alive = false;      //Indicamos a la horda que no está vivo
-
-                //Se desactiva la colisión y el render de la mesh del alien
-                gameObject.GetComponent<BoxCollider>().enabled = false;
-
-                alienBody.SetActive(false);
-                alienEyes.SetActive(false);
+                Death();
             }
+        }
+    }
+
+    private void Death()
+    {
+        //Se crea al efecto de explosion en la posición del alien y se asigna su padre
+        Instantiate(deathFX, transform.position, Quaternion.identity).gameObject.transform.parent = parent;
+
+        stopFiring = true;  //El alien deja de disparar
+        gun.Stop();
+        alive = false;      //Indicamos a la horda que no está vivo
+
+            //Se desactiva la colisión y el render de la mesh del alien
+        gameObject.GetComponent<BoxCollider>().enabled = false;
+
+        alienBody.SetActive(false);
+        alienEyes.SetActive(false);
+
+        Destroy(gameObject);
+    }
+
+    //Manejo de colisiones con la horda, los límites de la horda y el límite del minijefe
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Limit" || collision.gameObject.tag == "Alien")
+        {
+            Physics.IgnoreCollision(collision.collider, gameObject.GetComponent<BoxCollider>());
+        }
+        else if (collision.gameObject.tag == "AlienMiniBossLimit")
+        {
+            Death();
         }
     }
 }

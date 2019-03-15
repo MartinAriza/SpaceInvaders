@@ -186,6 +186,7 @@ MonoBehaviour:
   - {fileID: 6337319647288514604}
   - {fileID: 6337319649117483009}
   - {fileID: 6337319648145991273}
+  aimCylinder: {fileID: 1219762301}
   adult: 1
 --- !u!82 &403751947
 AudioSource:

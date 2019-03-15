@@ -17,6 +17,7 @@ MonoBehaviour:
   shotSpeed: 15
   HP: 1
   scoreValue: 300
+  speed: {x: -10, y: 0, z: 0}
   deathFX: {fileID: 4639930365437419148, guid: 9b5843d1caa62de49a754265cb8be289, type: 3}
   gun: {fileID: 0}
   alienBody: {fileID: 3041593706140801123}
@@ -36,12 +37,12 @@ PrefabInstance:
     - target: {fileID: 8567008244948930716, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 59.4
+      value: 58.85
       objectReference: {fileID: 0}
     - target: {fileID: 8567008244948930716, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 3.31
       objectReference: {fileID: 0}
     - target: {fileID: 8567008244948930716, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
