@@ -13,18 +13,21 @@ public class rankingController : MonoBehaviour
 
     private void Start()
     {
+        /*
         insertPlayer(1000, "PCM");
         insertPlayer(3000, "IVG");
         displayRankingInConsole();
         StartCoroutine("addPlayer");
+        */
     }
-
+    /*
     IEnumerator addPlayer()
     {
         yield return new WaitForSeconds(2f);
         insertPlayer(2000, "AVP");
         displayRankingInConsole();
     }
+    */
 
     public static void displayRankingInConsole()
     {
@@ -76,7 +79,7 @@ public class rankingController : MonoBehaviour
 
             //int[] newScores = new int[previousScores.Length + 1];
             bool condition = false;
-            if (previousScores.Length > 0)
+            if (previousScores.Length == maxPlayersInRanking)
             {
                 if (score > previousScores[previousScores.Length - 1]) condition = true;
             }

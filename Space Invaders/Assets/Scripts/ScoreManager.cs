@@ -9,6 +9,7 @@ public class ScoreManager : MonoBehaviour
     public string playerName;
     public InputField inp;
     public Button backToMenu;
+    bool setName;
 
     Horde horde;
     [SerializeField] Text scoreText;
@@ -19,6 +20,24 @@ public class ScoreManager : MonoBehaviour
     {
         //Se recogen los componentes necesarios
         horde = FindObjectOfType<Horde>();
+        setName = false;
+    }
+
+    private void Update()
+    {
+        if(inp.gameObject.activeSelf == true && setName)
+        {
+            if(inp.text.Length == 3)
+            {
+                inp.interactable = false;
+                backToMenu.gameObject.SetActive(true);
+                playerName = inp.text;
+                playerName.ToUpper();
+                rankingController.insertPlayer((int)playerScore, playerName);
+                rankingController.insertPlayer(1000, "PCM");
+                setName = false;
+            }
+        }
     }
 
     //Se detiene la horda, deja de disparar y se muestre la puntuación por pantalla con un botón para volver al menú
@@ -32,10 +51,7 @@ public class ScoreManager : MonoBehaviour
         setNameText.gameObject.SetActive(true);
         scoreText.gameObject.SetActive(true);
         scoreText.text = "Puntos:  " + playerScore.ToString();
-        if(inp.text.Length == 3)
-        {
-            inp.interactable = false;
-        }
+        setName = true;
 
         if (horde.speed <= 0.0f) horde.speed = 0.0f;
     }
