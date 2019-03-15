@@ -110,8 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7520fe6e8aab72d4aab0ee808de53c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
-  downSpeed: 1
+  speed: 300
+  downSpeed: 3
   alienHP: 1
   alienShotSpeed: 25
   alienScoreValue: 100
@@ -286,16 +286,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: minTimeBetweenShots
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: maxTimeBetweenShots
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
@@ -625,16 +615,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
-      propertyPath: minTimeBetweenShots
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: maxTimeBetweenShots
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
       propertyPath: gun
       value: 
       objectReference: {fileID: 88927270013510942}
@@ -958,16 +938,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: minTimeBetweenShots
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: maxTimeBetweenShots
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
@@ -1297,16 +1267,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
-      propertyPath: minTimeBetweenShots
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: maxTimeBetweenShots
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
       propertyPath: gun
       value: 
       objectReference: {fileID: 88927271118836995}
@@ -1633,16 +1593,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
-      propertyPath: minTimeBetweenShots
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: maxTimeBetweenShots
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
       propertyPath: gun
       value: 
       objectReference: {fileID: 88927271064574421}
@@ -1966,16 +1916,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: minTimeBetweenShots
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: maxTimeBetweenShots
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
@@ -2782,16 +2722,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8944183319557287048, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: minTimeBetweenShots
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8944183319557287048, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: maxTimeBetweenShots
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8944183319557287048, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
@@ -10195,16 +10125,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
-      propertyPath: minTimeBetweenShots
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: maxTimeBetweenShots
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
       propertyPath: gun
       value: 
       objectReference: {fileID: 7570800670899095446}
@@ -12013,16 +11933,6 @@ PrefabInstance:
         type: 3}
       propertyPath: gridSize
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: minTimeBetweenShots
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: maxTimeBetweenShots
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}

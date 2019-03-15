@@ -8,9 +8,9 @@ public class Alien : MonoBehaviour
     float minTimeBetweenShots = 3.0f;
     float maxTimeBetweenShots = 6.0f;
 
-    [Tooltip("Como de rápido se desplazan los láseres de los aliens")]float shotSpeed = 15.0f;
-    [Tooltip("Numero de disparos necesarios para destruir el alien")] int HP = 1;
-    [Tooltip("Cuantos puntos vale el alien")]float scoreValue = 10.0f;
+    [SerializeField] [Tooltip("Como de rápido se desplazan los láseres de los aliens")]float shotSpeed = 15.0f;
+    [SerializeField] [Tooltip("Numero de disparos necesarios para destruir el alien")] int HP = 1;
+    [SerializeField] [Tooltip("Cuantos puntos vale el alien")]float scoreValue = 10.0f;
 
     Animator anim;                          //Objeto animator para poder hacer transiciones entre animaciones 
 
