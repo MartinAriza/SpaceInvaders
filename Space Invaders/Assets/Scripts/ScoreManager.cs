@@ -8,13 +8,15 @@ public class ScoreManager : MonoBehaviour
     public float playerScore = 0.0f;
     public string playerName;
     public InputField inp;
-    public Button backToMenu;
+    //public Button backToMenu;
+    [SerializeField]GameObject ranking;
     bool setName;
 
     Horde horde;
     [SerializeField] Text scoreText;
     [SerializeField] Text setNameText;
     [SerializeField] Text nameText;
+    
 
     void start()
     {
@@ -30,12 +32,16 @@ public class ScoreManager : MonoBehaviour
             if(inp.text.Length == 3)
             {
                 inp.interactable = false;
-                backToMenu.gameObject.SetActive(true);
+                //backToMenu.gameObject.SetActive(true);
+                ranking.gameObject.SetActive(true);
                 playerName = inp.text;
                 playerName.ToUpper();
                 rankingController.insertPlayer((int)playerScore, playerName);
                 rankingController.insertPlayer(1000, "PCM");
                 setName = false;
+                inp.gameObject.SetActive(false);
+                setNameText.gameObject.SetActive(false);
+                scoreText.gameObject.SetActive(false);
             }
         }
     }
