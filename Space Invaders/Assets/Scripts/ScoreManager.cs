@@ -35,11 +35,10 @@ public class ScoreManager : MonoBehaviour
             {
                 inp.interactable = false;
                 //backToMenu.gameObject.SetActive(true);
-                ranking.gameObject.SetActive(true);
                 playerName = inp.text;
                 playerName.ToUpper();
                 rankingController.insertPlayer((int)playerScore, playerName);
-                rankingController.insertPlayer(1000, "PCM");
+                ranking.gameObject.SetActive(true);
                 setName = false;
                 inp.gameObject.SetActive(false);
                 setNameText.gameObject.SetActive(false);

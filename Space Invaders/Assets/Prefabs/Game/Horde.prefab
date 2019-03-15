@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7520fe6e8aab72d4aab0ee808de53c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
+  speed: 350
   downSpeed: 3
   alienHP: 1
   alienShotSpeed: 25
@@ -224,16 +224,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: m_Name
-      value: alien1 (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 2868677344687599201, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -288,6 +278,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
+        type: 3}
+      propertyPath: m_Name
+      value: alien1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
@@ -550,16 +550,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: m_Name
-      value: alien1 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 2868677344687599201, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -614,6 +604,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
+        type: 3}
+      propertyPath: m_Name
+      value: alien1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
@@ -876,16 +876,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: m_Name
-      value: alien1 (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 2868677344687599201, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -940,6 +930,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
+        type: 3}
+      propertyPath: m_Name
+      value: alien1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
@@ -1202,16 +1202,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: m_Name
-      value: alien1 (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 2868677344687599201, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1266,6 +1256,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
+        type: 3}
+      propertyPath: m_Name
+      value: alien1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
@@ -1528,16 +1528,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: m_Name
-      value: alien1 (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 2868677344687599201, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1592,6 +1582,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
+        type: 3}
+      propertyPath: m_Name
+      value: alien1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
@@ -1854,16 +1854,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: m_Name
-      value: alien1 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 2868677344687599201, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1918,6 +1908,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
+        type: 3}
+      propertyPath: m_Name
+      value: alien1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
@@ -2250,21 +2250,6 @@ PrefabInstance:
       propertyPath: gridSize
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienBody
-      value: 
-      objectReference: {fileID: 4956281255887130662}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienEyes
-      value: 
-      objectReference: {fileID: 7650084334391916280}
     - target: {fileID: 9041475165447211352, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -2430,6 +2415,21 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 5277519918288843549}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienBody
+      value: 
+      objectReference: {fileID: 4956281255887130662}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienEyes
+      value: 
+      objectReference: {fileID: 7650084334391916280}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8336de9a23f43946a5c8dbd8b29a881, type: 3}
 --- !u!4 &5100519029459360136 stripped
@@ -2649,16 +2649,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_Name
-      value: alien3
-      objectReference: {fileID: 0}
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 3904505829454612155, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2713,6 +2703,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_Name
+      value: alien3
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8944183319557287048, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
@@ -2909,16 +2909,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_Name
-      value: alien3 (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 3904505829454612155, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2973,6 +2963,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_Name
+      value: alien3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8944183319557287048, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
@@ -3239,21 +3239,6 @@ PrefabInstance:
       propertyPath: gridSize
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienBody
-      value: 
-      objectReference: {fileID: 5620148903173306833}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienEyes
-      value: 
-      objectReference: {fileID: 7141713984999366415}
     - target: {fileID: 9041475165447211352, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -3419,6 +3404,21 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 4614918904848964330}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienBody
+      value: 
+      objectReference: {fileID: 5620148903173306833}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienEyes
+      value: 
+      objectReference: {fileID: 7141713984999366415}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8336de9a23f43946a5c8dbd8b29a881, type: 3}
 --- !u!4 &8241220302933115068 stripped
@@ -3708,21 +3708,6 @@ PrefabInstance:
       propertyPath: gridSize
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienBody
-      value: 
-      objectReference: {fileID: 6048624204732306812}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienEyes
-      value: 
-      objectReference: {fileID: 9012748540053009314}
     - target: {fileID: 9041475165447211352, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -3888,6 +3873,21 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 6774746753780807239}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienBody
+      value: 
+      objectReference: {fileID: 6048624204732306812}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienEyes
+      value: 
+      objectReference: {fileID: 9012748540053009314}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8336de9a23f43946a5c8dbd8b29a881, type: 3}
 --- !u!4 &6819486235475177080 stripped
@@ -4177,21 +4177,6 @@ PrefabInstance:
       propertyPath: gridSize
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienBody
-      value: 
-      objectReference: {fileID: 6625251201262507132}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienEyes
-      value: 
-      objectReference: {fileID: 8436137641062888098}
     - target: {fileID: 9041475165447211352, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -4357,6 +4342,21 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 6198119875362731847}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienBody
+      value: 
+      objectReference: {fileID: 6625251201262507132}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienEyes
+      value: 
+      objectReference: {fileID: 8436137641062888098}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8336de9a23f43946a5c8dbd8b29a881, type: 3}
 --- !u!4 &7924729214202524979 stripped
@@ -4646,21 +4646,6 @@ PrefabInstance:
       propertyPath: gridSize
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienBody
-      value: 
-      objectReference: {fileID: 6959248983277266710}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienEyes
-      value: 
-      objectReference: {fileID: 5653856695237788104}
     - target: {fileID: 9041475165447211352, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -4826,6 +4811,21 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 7881725930879484973}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienBody
+      value: 
+      objectReference: {fileID: 6959248983277266710}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienEyes
+      value: 
+      objectReference: {fileID: 5653856695237788104}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8336de9a23f43946a5c8dbd8b29a881, type: 3}
 --- !u!4 &1937526150705408721 stripped
@@ -5115,21 +5115,6 @@ PrefabInstance:
       propertyPath: gridSize
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienBody
-      value: 
-      objectReference: {fileID: 7114683666721015130}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienEyes
-      value: 
-      objectReference: {fileID: 5503081779836199812}
     - target: {fileID: 9041475165447211352, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -5295,6 +5280,21 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 8019174756158662241}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienBody
+      value: 
+      objectReference: {fileID: 7114683666721015130}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienEyes
+      value: 
+      objectReference: {fileID: 5503081779836199812}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8336de9a23f43946a5c8dbd8b29a881, type: 3}
 --- !u!4 &1786573119486429341 stripped
@@ -5514,16 +5514,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_Name
-      value: alien3 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 3904505829454612155, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5578,6 +5568,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_Name
+      value: alien3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8944183319557287048, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
@@ -5774,16 +5774,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_Name
-      value: alien3 (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 3904505829454612155, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5838,6 +5828,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_Name
+      value: alien3 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8944183319557287048, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
@@ -6104,21 +6104,6 @@ PrefabInstance:
       propertyPath: gridSize
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienBody
-      value: 
-      objectReference: {fileID: 7522919546702787187}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienEyes
-      value: 
-      objectReference: {fileID: 5081318054851138733}
     - target: {fileID: 9041475165447211352, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -6284,6 +6269,21 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 7319330802015932744}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienBody
+      value: 
+      objectReference: {fileID: 7522919546702787187}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienEyes
+      value: 
+      objectReference: {fileID: 5081318054851138733}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8336de9a23f43946a5c8dbd8b29a881, type: 3}
 --- !u!4 &8654603685861529511 stripped
@@ -6573,21 +6573,6 @@ PrefabInstance:
       propertyPath: gridSize
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienBody
-      value: 
-      objectReference: {fileID: 7853888622216431771}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienEyes
-      value: 
-      objectReference: {fileID: 4763733867176717893}
     - target: {fileID: 9041475165447211352, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -6753,6 +6738,21 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 6992724604510972832}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienBody
+      value: 
+      objectReference: {fileID: 7853888622216431771}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienEyes
+      value: 
+      objectReference: {fileID: 4763733867176717893}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8336de9a23f43946a5c8dbd8b29a881, type: 3}
 --- !u!4 &6554228331971717588 stripped
@@ -6972,16 +6972,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_Name
-      value: alien3 (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 3904505829454612155, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7036,6 +7026,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_Name
+      value: alien3 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8944183319557287048, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
@@ -7232,16 +7232,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_Name
-      value: alien3 (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 3904505829454612155, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7296,6 +7286,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_Name
+      value: alien3 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8944183319557287048, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
@@ -7562,21 +7562,6 @@ PrefabInstance:
       propertyPath: gridSize
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienBody
-      value: 
-      objectReference: {fileID: 161637594451710156}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienEyes
-      value: 
-      objectReference: {fileID: 3232722688250557970}
     - target: {fileID: 9041475165447211352, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -7742,6 +7727,21 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 1138279740694033399}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienBody
+      value: 
+      objectReference: {fileID: 161637594451710156}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienEyes
+      value: 
+      objectReference: {fileID: 3232722688250557970}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8336de9a23f43946a5c8dbd8b29a881, type: 3}
 --- !u!4 &9149078125745146688 stripped
@@ -8031,21 +8031,6 @@ PrefabInstance:
       propertyPath: gridSize
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienBody
-      value: 
-      objectReference: {fileID: 578396778074229159}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienEyes
-      value: 
-      objectReference: {fileID: 2802453306968502137}
     - target: {fileID: 9041475165447211352, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -8211,6 +8196,21 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 428786598246328988}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienBody
+      value: 
+      objectReference: {fileID: 578396778074229159}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienEyes
+      value: 
+      objectReference: {fileID: 2802453306968502137}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8336de9a23f43946a5c8dbd8b29a881, type: 3}
 --- !u!4 &5652150816737982341 stripped
@@ -8430,16 +8430,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_Name
-      value: alien3 (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 3904505829454612155, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8494,6 +8484,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_Name
+      value: alien3 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8944183319557287048, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
@@ -8690,16 +8690,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_Name
-      value: alien3 (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 3904505829454612155, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8754,6 +8744,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_Name
+      value: alien3 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8944183319557287048, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
@@ -8950,16 +8950,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_Name
-      value: alien3 (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 3904505829454612155, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9014,6 +9004,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_Name
+      value: alien3 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8944183319557287048, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
@@ -9280,21 +9280,6 @@ PrefabInstance:
       propertyPath: gridSize
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienBody
-      value: 
-      objectReference: {fileID: 2274422136488205660}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienEyes
-      value: 
-      objectReference: {fileID: 3563172216525536130}
     - target: {fileID: 9041475165447211352, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -9460,6 +9445,21 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 1325717506947153511}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienBody
+      value: 
+      objectReference: {fileID: 2274422136488205660}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienEyes
+      value: 
+      objectReference: {fileID: 3563172216525536130}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8336de9a23f43946a5c8dbd8b29a881, type: 3}
 --- !u!4 &8667369277812377362 stripped
@@ -9679,16 +9679,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_Name
-      value: alien3 (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 3904505829454612155, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9743,6 +9733,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_Name
+      value: alien3 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8944183319557287048, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
@@ -9939,16 +9939,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: m_Name
-      value: alien1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 2868677344687599201, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10003,6 +9993,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
+        type: 3}
+      propertyPath: m_Name
+      value: alien1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257062086218561942, guid: 22bd6fba25fe977438fb47b9d073b802,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8714039613696523829, guid: 22bd6fba25fe977438fb47b9d073b802,
         type: 3}
@@ -10270,16 +10270,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_Name
-      value: alien3 (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 3904505829454612155, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10334,6 +10324,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_Name
+      value: alien3 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8944183319557287048, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
@@ -10600,21 +10600,6 @@ PrefabInstance:
       propertyPath: gridSize
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienBody
-      value: 
-      objectReference: {fileID: 3754432627290744725}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienEyes
-      value: 
-      objectReference: {fileID: 1943545356447678795}
     - target: {fileID: 9041475165447211352, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -10780,6 +10765,21 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 4174792292718003374}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienBody
+      value: 
+      objectReference: {fileID: 3754432627290744725}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienEyes
+      value: 
+      objectReference: {fileID: 1943545356447678795}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8336de9a23f43946a5c8dbd8b29a881, type: 3}
 --- !u!4 &7375925177357839733 stripped
@@ -10999,16 +10999,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_Name
-      value: alien3 (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 3904505829454612155, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11063,6 +11053,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_Name
+      value: alien3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8944183319557287048, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
@@ -11329,21 +11329,6 @@ PrefabInstance:
       propertyPath: gridSize
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienBody
-      value: 
-      objectReference: {fileID: 4152374956666220016}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienEyes
-      value: 
-      objectReference: {fileID: 1676046754944961326}
     - target: {fileID: 9041475165447211352, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -11509,6 +11494,21 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 3771070794397028043}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienBody
+      value: 
+      objectReference: {fileID: 4152374956666220016}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienEyes
+      value: 
+      objectReference: {fileID: 1676046754944961326}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8336de9a23f43946a5c8dbd8b29a881, type: 3}
 --- !u!4 &3965035724691865378 stripped
@@ -11798,21 +11798,6 @@ PrefabInstance:
       propertyPath: gridSize
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienBody
-      value: 
-      objectReference: {fileID: 4465422400754163846}
-    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
-        type: 3}
-      propertyPath: alienEyes
-      value: 
-      objectReference: {fileID: 1376675018421274200}
     - target: {fileID: 9041475165447211352, guid: a8336de9a23f43946a5c8dbd8b29a881,
         type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -11978,6 +11963,21 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 3462676500119405501}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienBody
+      value: 
+      objectReference: {fileID: 4465422400754163846}
+    - target: {fileID: 3773122293561921787, guid: a8336de9a23f43946a5c8dbd8b29a881,
+        type: 3}
+      propertyPath: alienEyes
+      value: 
+      objectReference: {fileID: 1376675018421274200}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8336de9a23f43946a5c8dbd8b29a881, type: 3}
 --- !u!4 &5453771889937938291 stripped
@@ -12197,16 +12197,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_Name
-      value: alien3 (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 3904505829454612155, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12261,6 +12251,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_Name
+      value: alien3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8944183319557287048, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
@@ -12457,16 +12457,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5272548732517855721}
     m_Modifications:
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_Name
-      value: alien3 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
-        type: 3}
-      propertyPath: m_TagString
-      value: Alien
-      objectReference: {fileID: 0}
     - target: {fileID: 3904505829454612155, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12521,6 +12511,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_Name
+      value: alien3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 319411198257539521, guid: 0bc7910bff0d1c54181472076c45c205,
+        type: 3}
+      propertyPath: m_TagString
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 8944183319557287048, guid: 0bc7910bff0d1c54181472076c45c205,
         type: 3}

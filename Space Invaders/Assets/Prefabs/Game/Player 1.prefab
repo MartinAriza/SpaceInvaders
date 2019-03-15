@@ -175,7 +175,7 @@ MonoBehaviour:
   aceleration: {x: 75, y: 75, z: 0}
   brakeMultiplier: 0.5
   HP: 1
-  maxShots: 5
+  maxShots: 10
   shotSpeed: 30
   rotationAmount: 22
   allowedMovementX: 10
@@ -781,6 +781,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1865108276131427698}
     m_Modifications:
+    - target: {fileID: 4639930365437419148, guid: 9b5843d1caa62de49a754265cb8be289,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 912457958382632691, guid: 9b5843d1caa62de49a754265cb8be289,
         type: 3}
       propertyPath: m_Name
@@ -790,11 +795,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4639930365437419148, guid: 9b5843d1caa62de49a754265cb8be289,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3565755013925025601, guid: 9b5843d1caa62de49a754265cb8be289,
         type: 3}
