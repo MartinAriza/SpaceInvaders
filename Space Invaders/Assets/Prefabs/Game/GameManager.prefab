@@ -86,7 +86,7 @@ MonoBehaviour:
   playerScore: 0
   playerName: 
   inp: {fileID: 0}
-  backToMenu: {fileID: 0}
+  ranking: {fileID: 0}
   scoreText: {fileID: 0}
   setNameText: {fileID: 0}
   nameText: {fileID: 0}
