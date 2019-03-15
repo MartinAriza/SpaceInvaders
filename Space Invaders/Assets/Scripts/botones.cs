@@ -36,4 +36,8 @@ public class botones : MonoBehaviour,
     {
         GetComponent<Image>().sprite = sprite_0;
     }
+    public void OnEnable()
+    {
+        GetComponent<Image>().sprite = sprite_0;
+    }
 }
