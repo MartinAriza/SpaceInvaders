@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +20,10 @@ public class HordeManager : MonoBehaviour
     [SerializeField] [Tooltip("Cuantas vidas extras se le dan al jugador entre horda y horda")]int extraPlayerLives = 1;
     [SerializeField] [Tooltip("Cuantas vidas sele dan a las barreras entre horda y horda")] int extraBarriersHP = 2;
 
+    [SerializeField] [Tooltip("Estancia de alien miniboss")] AlienMiniBoss alienMiniBossPrefab;
+    [SerializeField] [Tooltip("Tiempo entre cada alien miniboss")] int alienMiniBossSpawnRate = 10;
+    [SerializeField] [Tooltip("Posición de spawn del alien miniboss")] Vector3 alienMiniBossSpawnPosition;
+
     Horde horde;
     PlayerMov player;
     [SerializeField] Text waveNumberUI;
@@ -32,6 +37,7 @@ public class HordeManager : MonoBehaviour
     {
         player = FindObjectOfType<PlayerMov>();
         barriers = FindObjectsOfType<Barrier>();
+        StartCoroutine(spawnAlienMiniBoss());
     }
 
     public void spawnNewHorde()
@@ -67,6 +73,13 @@ public class HordeManager : MonoBehaviour
     private void Update()
     {
         playerLivesUI.text =  player.HP + "    Vidas";
+    }
+
+    IEnumerator spawnAlienMiniBoss()
+    {
+        yield return new WaitForSecondsRealtime(alienMiniBossSpawnRate);
+        Instantiate(alienMiniBossPrefab, alienMiniBossSpawnPosition, Quaternion.Euler(0, 180, 0));
+        StartCoroutine(spawnAlienMiniBoss());
     }
 }
 
