@@ -37,7 +37,6 @@ public class HordeManager : MonoBehaviour
     {
         player = FindObjectOfType<PlayerMov>();
         barriers = FindObjectsOfType<Barrier>();
-        StartCoroutine(spawnAlienMiniBoss());
     }
 
     public void spawnNewHorde()
@@ -75,12 +74,14 @@ public class HordeManager : MonoBehaviour
         playerLivesUI.text =  player.HP + "    Vidas";
     }
 
+    public void spawnNewAlienMiniBoss()
+    {
+        StartCoroutine(spawnAlienMiniBoss());
+    }
+
     IEnumerator spawnAlienMiniBoss()
     {
         yield return new WaitForSecondsRealtime(alienMiniBossSpawnRate);
         Instantiate(alienMiniBossPrefab, alienMiniBossSpawnPosition, Quaternion.Euler(0, 180, 0));
-        StartCoroutine(spawnAlienMiniBoss());
     }
 }
-
-//TODO: meter un límite a la dificultad

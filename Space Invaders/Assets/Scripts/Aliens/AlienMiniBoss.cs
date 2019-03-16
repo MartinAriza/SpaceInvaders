@@ -29,6 +29,9 @@ public class AlienMiniBoss : MonoBehaviour
     [SerializeField] GameObject alienBody;  //Enlace a los ojos del alien
     [SerializeField] GameObject alienEyes;  //Enlace al cuerpo del alien
 
+    ScoreManager scoreManager;
+    HordeManager hordeManager;
+
     Rigidbody rb;
 
     //Setters de las variables del alien para poder modificar su dificultad
@@ -55,6 +58,9 @@ public class AlienMiniBoss : MonoBehaviour
 
     void Start()
     {
+        scoreManager = FindObjectOfType<ScoreManager>();
+        hordeManager = FindObjectOfType<HordeManager>();
+
         rb = gameObject.GetComponent<Rigidbody>();
         //Se buscan los objetos y componentes necesarios
         parent = FindObjectOfType<ExplosionDestroyer>().transform;
@@ -66,7 +72,7 @@ public class AlienMiniBoss : MonoBehaviour
         gun = gameObject.GetComponentInChildren<ParticleSystem>();
         gun.startSpeed = shotSpeed;
 
-        StartCoroutine(fire()); //Comienza la subrutina de disparo que se ejecutará en el intervalo aleatorio entre los valores escogidos
+        gun.Play();
     }
 
     private void FixedUpdate()
@@ -78,23 +84,6 @@ public class AlienMiniBoss : MonoBehaviour
     {
         rb.velocity = speed*Time.deltaTime;
         transform.position = new Vector3(transform.position.x, speed.y*Mathf.Sin(transform.position.x/2), transform.position.z);
-    }
-
-    IEnumerator fire()
-    {
-        while (!stopFiring)
-        {
-            //Solo puedes disparar si eres mayor de 13
-            //La primera vez que se ejecuta la subrutina no van a disparar, de esta forma los aliens no comienzan disparando todos a la vez
-            if (adult && !firstTime)
-            {
-                gun.Play();                //El láser se dispara
-                anim.SetBool("atk", true); //Se reproduce la animación de ataque
-            }
-
-            firstTime = false;
-            yield return new WaitForSeconds(timeBetweenShots); //La subrutina espera un tiempo para seguir ejecutándose
-        }
     }
 
     //Manejo de colisiones con partículas (láseres)
@@ -125,6 +114,10 @@ public class AlienMiniBoss : MonoBehaviour
 
         alienBody.SetActive(false);
         alienEyes.SetActive(false);
+
+        scoreManager.playerScore += scoreValue;
+
+        hordeManager.spawnNewAlienMiniBoss();
 
         Destroy(gameObject);
     }
