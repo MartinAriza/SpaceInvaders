@@ -57,6 +57,10 @@ MonoBehaviour:
   alienScoreValueIncrement: 10
   extraPlayerLives: 1
   extraBarriersHP: 1
+  alienMiniBossPrefab: {fileID: 1827584663530996765, guid: 74456785fa9b00f4fac752fd00546b8f,
+    type: 3}
+  alienMiniBossSpawnRate: 10
+  alienMiniBossSpawnPosition: {x: 66.4, y: 3.31, z: 48.57}
   waveNumberUI: {fileID: 0}
   playerLivesUI: {fileID: 0}
   waveNumber: 1
