@@ -12,6 +12,7 @@ public class VinCamera1 : MonoBehaviour
     [SerializeField] float distance = 5.0f;
     [SerializeField] float offsetAceleration = 1.0f;
     Transform target;
+    Transform defaultTarget;
     VinMov targetMoveScript;
     Rigidbody targetRB;
     float targetMaxPossibleSpeed;
@@ -20,6 +21,7 @@ public class VinCamera1 : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Vin").GetComponent<Transform>();
+        defaultTarget = target;
         targetMoveScript = target.GetComponent<VinMov>();
         targetRB = target.GetComponent<Rigidbody>();
         toVarsPosition(target.position);
@@ -52,9 +54,15 @@ public class VinCamera1 : MonoBehaviour
         Vector3 targetedPosition = targetRB.velocity / (targetMaxPossibleSpeed * Time.deltaTime);
         currentOffset += (targetedPosition - currentOffset/ currentMaxOffset) * offsetAceleration;
         currentOffset.y = 0;
-        //print(targetedPosition.magnitude);
         if (currentOffset.magnitude > currentMaxOffset) currentOffset = currentOffset.normalized * currentMaxOffset;
-        //print("current offset is: " + currentOffset);
         toVarsPosition(target.position + currentOffset);
+    }
+    public void changeTarget(Transform newTarget)
+    {
+        target = newTarget;
+    }
+    public void setDefaultTarget()
+    {
+        target = defaultTarget;
     }
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7443662880678167324}
   - component: {fileID: 538475810}
   - component: {fileID: 411842018591140636}
+  - component: {fileID: 92780112}
   m_Layer: 0
   m_Name: VinCamera
   m_TagString: MainCamera
@@ -136,3 +137,16 @@ MonoBehaviour:
   maxDistance: 15
   distance: 5
   offsetAceleration: 0.05
+--- !u!135 &92780112
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7399654235863277815}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
