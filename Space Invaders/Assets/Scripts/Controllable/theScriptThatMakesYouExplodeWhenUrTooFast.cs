@@ -10,6 +10,9 @@ public class theScriptThatMakesYouExplodeWhenUrTooFast : MonoBehaviour
     Vector3 lastSpeed = new Vector3(0f,0f,0f);
     Vector3 actualSpeed = new Vector3(0f, 0f, 0f);
 
+    public ParticleSystem powerWave;
+    [SerializeField] ParticleSystem dustParticles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +35,8 @@ public class theScriptThatMakesYouExplodeWhenUrTooFast : MonoBehaviour
             
             if (lastSpeed.magnitude > speedToExplode)
             {
-                //spawn particles
-
+                Instantiate(dustParticles, gameObject.transform.position, Quaternion.Euler(-lastSpeed));
+                powerWave.Stop();
                 print("toy muerto");
                 gameObject.SetActive(false);
             }

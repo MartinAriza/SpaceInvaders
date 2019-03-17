@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class VinPower : MonoBehaviour
 {
+    #region particles
+    [SerializeField] ParticleSystem [] shieldWaves;
+    [SerializeField] ParticleSystem powerWave;
+    [SerializeField] ParticleSystem controlledAlienLaser;
+    #endregion
 
-    [SerializeField]GameObject target;
+    [SerializeField] GameObject target;
     [SerializeField] float forceImp = 2.0f;
     [SerializeField] float powerRange = 3.0f;
     bool move = false;
@@ -47,6 +52,17 @@ public class VinPower : MonoBehaviour
             float distanceTarget = (target.transform.position - transform.position).magnitude;
             if ((!shield && !move && !control) ||  distanceTarget > powerRange)
             {
+                powerWave.Stop();
+                if(!(target.tag == "Vin"))
+                {
+                    target.GetComponent<theScriptThatMakesYouExplodeWhenUrTooFast>().powerWave.Stop();
+                }
+                
+                foreach (ParticleSystem shieldWave in shieldWaves)
+                {
+                    shieldWave.Stop();
+                }
+
                 mov.usingPower = false;
                 target = null;
                 Cursor.visible = true;
@@ -65,7 +81,7 @@ public class VinPower : MonoBehaviour
                 shieldCollider.enabled = true;
             } else if (control && shoot)
             {
-                print("shoot");
+                controlledAlienLaser.Play();
             }
         }
     }
@@ -84,12 +100,23 @@ public class VinPower : MonoBehaviour
                 if ((target.transform.position - transform.position).magnitude < powerRange)
                     mov.usePower();
                 if(control && target.tag == "Alien")
+                {
                     mainCam.changeTarget(target.transform);
+                    powerWave.Play();
+                    target.GetComponent<theScriptThatMakesYouExplodeWhenUrTooFast>().powerWave.Play();
+                }
+                    
             }
 
         }
         else if (shield)
         {
+            foreach(ParticleSystem shieldWave in shieldWaves)
+            {
+                shieldWave.Play();
+            }
+            powerWave.Play();
+
             target = gameObject;
             mov.usePower();
         }

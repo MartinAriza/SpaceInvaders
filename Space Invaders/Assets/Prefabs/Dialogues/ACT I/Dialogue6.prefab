@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2743892881426982419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2743892881426982421}
+  - component: {fileID: 2743892881426982420}
+  - component: {fileID: 2743892881426982422}
+  m_Layer: 0
+  m_Name: Dialogue6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2743892881426982421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2743892881426982419}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.12, y: 0, z: 4.863}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2743892881426982420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2743892881426982419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87cb24d1cd1cf0d4b9d8279207cead8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDialogueStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onDialogueFinish:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  dialogue:
+  - "VNEstos amplificadores son impresionantes Ali, deber\xEDas tratar de incorporarlos
+    en mi traje."
+  - "VNEs muy ligero y me da mucha informaci\xF3n, pero no tiene suficiente capacidad
+    ofensiva. "
+  - "VNA veces resulta dif\xEDcil mantenerse con vida solo con la inteligencia."
+  - "DNLo tendremos en cuenta se\xF1orita Vin. "
+  - "DNLamentamos informarla de que no ha sido posible instalar los escudos sinusoidales
+    que pidi\xF3. "
+  - "DNEl casco de la Polaris es resistente a los proyectiles conocidos, pero aislarla
+    de las ondas exteriores est\xE1 suponiendo un gran reto. "
+  - 'DNDe todas formas, no debe preocuparse, esta es la primera nave de combate que
+    usa este tipo de armamento de ondas. '
+  - "DNA efectos pr\xE1cticos es usted invulnerable se\xF1orita Vin."
+  - "VNTendr\xE1 que valernos de momento, pero espero mejoras en el futuro. "
+  - "VNLa Uni\xF3n debe demostrar su fuerza y una debilidad tan clara no tardar\xE1
+    en ser explotarse."
+  - "VNNo hemos conseguido tanta influencia solo con la diplomacia, a veces hay que
+    recordarles que eres el m\xE1s fuerte."
+  speakerImages:
+  - {fileID: 21300000, guid: 7c4cb4c922bcead40bbaad1e14a5388a, type: 3}
+  - {fileID: 21300000, guid: 2512ddc113ef0e549a7d2fe7dbae3a0f, type: 3}
+  - {fileID: 21300000, guid: 97d8b710c025a19448b4fea5728ad26c, type: 3}
+  - {fileID: 21300000, guid: 4110918c93e50594598c68bf2f7b546b, type: 3}
+  - {fileID: 21300000, guid: ae1e57cb0ec64c94fb73ddaa38b3c64a, type: 3}
+  - {fileID: 21300000, guid: f1890ba5bf64cfd4d926823a63882f00, type: 3}
+  normalFont: {fileID: 12800000, guid: 1d523769e40f4034d880c8af20fe4fe0, type: 3}
+  glitchedFont: {fileID: 12800000, guid: 93acf280821636b4da3fd52f877f8d85, type: 3}
+  fontSizeName: 40
+  fontSizeDialogue: 30
+  fontColor: {r: 1, g: 1, b: 1, a: 1}
+  timeToWrite: 0.02
+  dialogueTextUI: {fileID: 0}
+  speakerNameUI: {fileID: 0}
+  speakerImageUI: {fileID: 0}
+  dialogueOverlayUI: {fileID: 0}
+  continueButtonUI: {fileID: 0}
+  continueButtonTextUI: {fileID: 0}
+--- !u!65 &2743892881426982422
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2743892881426982419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.0304165, y: 1, z: 0.32279807}
+  m_Center: {x: 1.0152082, y: 0, z: -0.33860096}

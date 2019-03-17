@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class VinMov : MonoBehaviour
 {
+    #region particles
+    [SerializeField] ParticleSystem powerWave;
+    [SerializeField] ParticleSystem levitateWave;
+    #endregion
+
     [SerializeField] [Range(1, 500)] float maxSpeed = 100;
     [SerializeField] [Range(1, 100)] float aceleration = 20;
     [SerializeField] float runMultiplier = 1.5f;
@@ -75,11 +80,17 @@ public class VinMov : MonoBehaviour
             levitate = !levitate;
             if (levitate)
             {
+                if(!levitateWave.isPlaying) levitateWave.Play();
+
+                if (!powerWave.isPlaying) powerWave.Play();
+
                 if (onFloor.Length == 0) levitate = false;
                 else levitateTargetHeight = transform.position.y + levitateHeight;
             }
             else
             {
+                levitateWave.Stop();
+                powerWave.Stop();
                 if (Physics.Raycast(transform.position, -Vector3.up, out hit, levitateHeight + (feetPos.position - transform.position).magnitude + 0.5f, layerMask))
                 {
                     wasLevitating = true;
@@ -175,6 +186,9 @@ public class VinMov : MonoBehaviour
         anim.SetTrigger(Anim_Power);
 
         levitate = false;
+
+        levitateWave.Stop();
+        
         RaycastHit hit;
         if (Physics.Raycast(transform.position, -Vector3.up, out hit, levitateHeight + (feetPos.position - transform.position).magnitude + 0.5f, layerMask))
         {

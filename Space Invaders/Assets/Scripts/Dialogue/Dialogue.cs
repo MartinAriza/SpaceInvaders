@@ -50,7 +50,7 @@ public class Dialogue: MonoBehaviour
     public void startDialogue()
     {
         onDialogueStart.Invoke();
-
+        gameObject.GetComponent<BoxCollider>().enabled = false;
         Time.timeScale = 0.0f;                         //Se pausa el juego (menos la interfaz)
 
         //Se activan los elementos de la interfaz que muestran cosas del diálogo
@@ -203,7 +203,6 @@ public class Dialogue: MonoBehaviour
         if (other.gameObject.tag == "Vin")
         {
             startDialogue();
-            gameObject.GetComponent<BoxCollider>().enabled = false;
         }
     }
 }
