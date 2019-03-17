@@ -105,6 +105,10 @@ public class VinPower : MonoBehaviour
                     powerWave.Play();
                     target.GetComponent<theScriptThatMakesYouExplodeWhenUrTooFast>().powerWave.Play();
                 }
+                else if(move)
+                {
+                    powerWave.Play();
+                }
                     
             }
 

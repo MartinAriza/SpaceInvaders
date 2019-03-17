@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7443662880678167324}
   - component: {fileID: 538475810}
   - component: {fileID: 411842018591140636}
-  - component: {fileID: 1007569952}
   m_Layer: 0
   m_Name: VinCamera
   m_TagString: MainCamera
@@ -101,7 +100,7 @@ MonoBehaviour:
   rotation: {x: 40, y: 0, z: 0}
   postDisplacement: {x: 0, y: 0, z: -1}
   maxOffset: 2
-  distance: 7.5
+  distance: 15
 --- !u!54 &538475810
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -137,16 +136,3 @@ MonoBehaviour:
   maxDistance: 15
   distance: 5
   offsetAceleration: 0.05
---- !u!114 &1007569952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7399654235863277815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 4d2bf13f28ff09f4cb2926e19027ef68, type: 2}
