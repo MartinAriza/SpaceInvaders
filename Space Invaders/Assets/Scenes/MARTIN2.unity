@@ -1372,7 +1372,7 @@ PrefabInstance:
     - target: {fileID: 2743892881426982419, guid: 331a41a704b75da4d915eddeeadb2893,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2743892881426982421, guid: 331a41a704b75da4d915eddeeadb2893,
         type: 3}
@@ -1431,6 +1431,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2743892881426982420, guid: 331a41a704b75da4d915eddeeadb2893,
         type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743892881426982420, guid: 331a41a704b75da4d915eddeeadb2893,
+        type: 3}
       propertyPath: dialogueTextUI
       value: 
       objectReference: {fileID: 1219482856}
@@ -1459,6 +1464,16 @@ PrefabInstance:
       propertyPath: continueButtonTextUI
       value: 
       objectReference: {fileID: 1098949547}
+    - target: {fileID: 2743892881426982420, guid: 331a41a704b75da4d915eddeeadb2893,
+        type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743892881426982420, guid: 331a41a704b75da4d915eddeeadb2893,
+        type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 331a41a704b75da4d915eddeeadb2893, type: 3}
 --- !u!1001 &5461359291203027650
