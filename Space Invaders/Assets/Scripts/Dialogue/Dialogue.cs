@@ -2,11 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Dialogue: MonoBehaviour
 {
-    //Las strings de diálogo están codificadas de la siguiente manera: [0]Mayúscula inicial del personaje (indica quien habla) [1, ...]Frase a decir
+    
+    //Las strings de diálogo están codificadas de la siguiente manera: [0]Mayúscula inicial del personaje [1]G o N indica si está glitcheada o no [2, ...]Frase a decir
 
+    #region Events
+    [Tooltip("Este evento se ejecuta al comenzar el diálogo")] public UnityEvent onDialogueStart;
+    [Tooltip("Este evento se ejecuta al terminar el diálogo")] public UnityEvent onDialogueFinish;
+    #endregion
+
+    #region inspector parameters
+    [Header("Contenido de los diálogos")]
+    [SerializeField] [TextArea] [Tooltip("Dialogo codificado con la inicial del personaje en mayúscula en el caracter 0")] string[] dialogue;
+    [SerializeField] [Tooltip("Sprites posibles para los personajes que hablan en el diálogo")] Sprite[] speakerImages;
+
+    [Header("Parámetros de los diálogos")]
+    [SerializeField] Font normalFont;
+    [SerializeField] Font glitchedFont;
+    [SerializeField][Range(30, 60)] int fontSizeName = 30;
+    [SerializeField][Range(24, 50)] int fontSizeDialogue = 24;
+    [SerializeField][ColorUsage(true, false)] Color fontColor;
+
+    [SerializeField] [Tooltip("Cuantos segundos tarda cada letra en escribirse")] float timeToWrite = 0.2f;
+    [Space(2)]
+    #endregion
+
+    #region references
+    [Header("Referencias a la UI")]
     [SerializeField] Text dialogueTextUI;   //Texto de la UI donde irá el diálogo
     [SerializeField] Text speakerNameUI;    //Texto de la UI donde irá el nombre del interlocutor
 
@@ -15,17 +40,17 @@ public class Dialogue: MonoBehaviour
 
     [SerializeField] Button continueButtonUI;   //Botón de continuar el diálogo
     [SerializeField] Text continueButtonTextUI; //Texto del botón de continuar
+    #endregion
 
-    [SerializeField][Tooltip("Dialogo codificado con la inicial del personaje en mayúscula en el caracter 0")] string [] dialogue;
-    [SerializeField][Tooltip("Sprites posibles para los personajes que hablan en el diálogo")] Sprite[] speakerImages;
-
-    [SerializeField][Tooltip("Cuantos segundos tarda cada letra en escribirse")] float timeToWrite = 0.2f;
-
+    #region class variables
     int dialogueIndex = 0;
     bool finishedWriting = false;
+    #endregion
 
     public void startDialogue()
     {
+        onDialogueStart.Invoke();
+
         Time.timeScale = 0.0f;                         //Se pausa el juego (menos la interfaz)
 
         //Se activan los elementos de la interfaz que muestran cosas del diálogo
@@ -39,24 +64,57 @@ public class Dialogue: MonoBehaviour
         continueButtonUI.onClick.AddListener(delegate { nextString(); }); //Se asigna el evento de pasar de línea de diálogo al botón de la interfaz
         continueButtonTextUI.text = "Continuar";
 
+        speakerNameUI.font = normalFont;
+        speakerNameUI.fontSize = fontSizeName;
+        speakerNameUI.color = fontColor;
+
+        dialogueTextUI.font = normalFont;
+        dialogueTextUI.fontSize = fontSizeDialogue;
+        dialogueTextUI.color = fontColor;
+
         StartCoroutine(write(dialogue[dialogueIndex])); //Se escribe la primera línea
+    }
+
+    IEnumerator write(string st)
+    {
+        finishedWriting = false;
+
+        chooseSpeakerImageAndName(st);
+        dialogueTextUI.text = "";
+
+        st = st.Substring(2);
+
+        foreach (char leter in st.ToCharArray())
+        {
+            if (!finishedWriting)
+            {
+                dialogueTextUI.text += leter;
+                yield return new WaitForSecondsRealtime(timeToWrite);
+            }
+        }
+
+        if (dialogueIndex >= dialogue.Length - 1) continueButtonTextUI.text = "Cerrar";
+
+        finishedWriting = true;
     }
 
     public void nextString()
     {
-        //Si se ha acabadoo
+        //Si se ha acabado de escribir la líne de diálogo
         if(finishedWriting)
         {
-            checkEndOfDialogue();
-            dialogueIndex++;
+            checkEndOfDialogue();   //Se comprueba si es la última
+            dialogueIndex++;        //Se pasa a la siguiente línea
             dialogueIndex = Mathf.Clamp(dialogueIndex, 0, dialogue.Length - 1);
-            StartCoroutine(write(dialogue[dialogueIndex]));
+            checkGlitched(dialogue[dialogueIndex]);
+            StartCoroutine(write(dialogue[dialogueIndex])); //Se escribe la siguiente línea
         }
 
+        //Si no se ha acabado y se pulsa el botón se escribe toda la línea de una vez
         else
         {
             finishedWriting = true;
-            dialogueTextUI.text = dialogue[dialogueIndex].Substring(1);
+            dialogueTextUI.text = dialogue[dialogueIndex].Substring(2);
 
             if(dialogueIndex >= dialogue.Length - 1) continueButtonTextUI.text = "Cerrar";
         }
@@ -81,31 +139,10 @@ public class Dialogue: MonoBehaviour
 
             Time.timeScale = 1.0f;
 
+            onDialogueFinish.Invoke();
+
             Destroy(gameObject);
         }
-    }
-
-    IEnumerator write(string st)
-    {
-        finishedWriting = false;
-
-        chooseSpeakerImageAndName(st);
-        dialogueTextUI.text = "";
-
-        st = st.Substring(1);
-
-        foreach (char leter in st.ToCharArray())
-        {
-            if(!finishedWriting)
-            {
-                dialogueTextUI.text += leter;
-                yield return new WaitForSecondsRealtime(timeToWrite);
-            }
-        }
-
-        if (dialogueIndex >= dialogue.Length - 1) continueButtonTextUI.text = "Cerrar";
-
-        finishedWriting = true;
     }
 
     void chooseSpeakerImageAndName(string st)
@@ -145,5 +182,28 @@ public class Dialogue: MonoBehaviour
 
         speakerImageUI.gameObject.SetActive(true);
         speakerNameUI.gameObject.SetActive(true);
+    }
+
+    void checkGlitched(string st)
+    {
+        if(st[1] == 'G')
+        {
+            speakerNameUI.font = glitchedFont;
+            dialogueTextUI.font = glitchedFont;
+        }
+        else
+        {
+            speakerNameUI.font = normalFont;
+            dialogueTextUI.font = normalFont;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Vin")
+        {
+            startDialogue();
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
     }
 }

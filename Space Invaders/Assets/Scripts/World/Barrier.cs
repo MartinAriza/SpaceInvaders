@@ -12,6 +12,11 @@ public class Barrier : MonoBehaviour
 
     Color color;    //Color de la barrera (cambia según la vida)
 
+    [SerializeField]
+    [Tooltip("Colores posibles con los que se tintan los aliens al disparar a las barreras")]
+    [ColorUsageAttribute(true, true)]
+    Color[] randomColor = { new Color(1, 0, 0, 1), new Color(0, 1, 0, 1), new Color(0, 0, 1, 1), new Color(1, 1, 0, 1), new Color(0, 0, 0, 1), new Color(1, 0, 1, 1) };
+
     [SerializeField] [Range(0, 100)]float colorChangeRate = 25.0f; //Cuanto cambia el color según la vida
 
     private void Start()
@@ -43,8 +48,6 @@ public class Barrier : MonoBehaviour
     }
     private void AlienRainbow()
     {
-        Color [] randomColor = { new Color(1, 0, 0, 1), new Color(0,1,0,1), new Color(0,0,1,1), new Color(1,1,0,1), new Color(0,0,0,1), new Color(1,0,1,1)};
-
         if (nHits == 1)
         {
             horda.changeAlienColor(randomColor, Random.Range(0, randomColor.Length-1));
