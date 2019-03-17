@@ -2732,6 +2732,7 @@ GameObject:
   - component: {fileID: 8936699702236880550}
   - component: {fileID: 2954704109544185997}
   - component: {fileID: 1899743459}
+  - component: {fileID: 2026345786}
   m_Layer: 0
   m_Name: Vin5
   m_TagString: Vin
@@ -2788,7 +2789,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.56
+  m_Radius: 0.32
   m_Height: 3.19
   m_Direction: 1
   m_Center: {x: 0, y: 0.64, z: 0}
@@ -2800,7 +2801,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7087049983964363262}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2828,6 +2829,7 @@ MonoBehaviour:
   levitateHeight: 0.5
   feetPos: {fileID: 8303913092126939112}
   freezeInput: 0
+  usingPower: 0
 --- !u!328 &1899743459
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -2860,6 +2862,21 @@ VideoPlayer:
   m_Looping: 0
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
+--- !u!114 &2026345786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7087049983964363262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86861ef6d0462a429f105b0b87238dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  forceImp: 40
+  powerRange: 8
 --- !u!1 &7257869083870806201
 GameObject:
   m_ObjectHideFlags: 0
