@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2743892881426982421}
   - component: {fileID: 2743892881426982420}
   - component: {fileID: 2743892881426982422}
-  - component: {fileID: 3069188882367368750}
+  - component: {fileID: 273359247}
   m_Layer: 0
-  m_Name: Dialogue10
+  m_Name: Dialogue23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,14 +56,38 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   dialogue:
-  - "DNUna curiosa forma de ver este entrenamiento se\xF1orita Vin. "
-  - 'DNEn fin, pasemos a la siguiente prueba. '
-  - "DNLamento decirle que no hemos encontrado un voluntario para la prueba de manipulaci\xF3n
-    de onda nerviosa. "
-  - "DNDeber\xE1 contentarse con aquel objetivo de all\xED."
-  - "DNCuenta con un chip b\xE1sico que imita las ondas de la musculatura humana,
-    no deber\xEDa tener problemas en forzar su movimiento como har\xEDa con un objetivo
-    vivo. "
+  - 'NNPor fin has llegado, te has tomado tu tiempo con mis tropas. '
+  - "NNHe estado observ\xE1ndote Vin y francamente me decepcionas. "
+  - "NNEsperaba algo m\xE1s espectacular de alguien que ha llamado la atenci\xF3n
+    del Septarca Khuzad. "
+  - "NNAunque supongo que no es dif\xEDcil destacar ah\xED abajo."
+  - "NNQue raza tan pat\xE9tica. "
+  - "NNOs llam\xE1is Uni\xF3n Universal pero ni siquiera hab\xE9is abandonado esa
+    roca."
+  - "VNNo permitir\xE9 que amenaces a la Uni\xF3n Universal escoria de otro mundo. "
+  - VNExijo que expliques vuestros planes para con la Tierra.
+  - "NNNo est\xE1s en posici\xF3n para exigir nada. "
+  - "NNSi has llegado hasta aqu\xED es porque te lo he permitido."
+  - 'NNTienes poder, pero no sabes explotarlo. '
+  - "NNVoy a ofrec\xE9rtelo una \xFAnica vez, \xFAnete al consejo de grabadores Vin. "
+  - "NNEst\xE1s ensimismada con esos escritos rudimentarios de Mabacca, \xBFPor qu\xE9
+    no acudir a la primera fuente de la ritmomancia? "
+  - NNEl Septarca Khuzad es el nuevo Dios de este universo.
+  - "VNJam\xE1s traicionar\xE9 a la Uni\xF3n. "
+  - "VNTe r\xEDes de mi poder, pero solo te quedas aqu\xED, mandando tus tropas a
+    la muerte. "
+  - "VNSin embargo, aqu\xED estoy yo, una pat\xE9tica humana que ha acabado con todas
+    tus tropas, que se ha infiltrado en tu propia nave y aqu\xED est\xE1 plant\xE1ndote
+    cara. "
+  - "VNNo tienes ej\xE9rcito, no tienes nada, est\xE1s solo gusano."
+  - 'NNParece que sigues sin comprender la escala de este conflicto Vin. '
+  - "NNNo estoy aislado, nuestra influencia se extiende muy lejos, demasiado lejos
+    para tu comprensi\xF3n. "
+  - "NNPero eso ya no importa, has rechazado tu \xFAnica oportunidad de salir de aqu\xED. "
+  - "NNTengo \xF3rdenes de llevarte ante el Septarca pero tu estado queda a mi merced. "
+  - NNVas a conocer de primera mano el poder que has rechazado.
+  - 'NNMi paciencia es limitada, a diferencia de poder. '
+  - "NNMe has amenazado por \xFAltima vez escoria de otro mundo."
   speakerImages:
   - {fileID: 21300000, guid: 7c4cb4c922bcead40bbaad1e14a5388a, type: 3}
   - {fileID: 21300000, guid: 2512ddc113ef0e549a7d2fe7dbae3a0f, type: 3}
@@ -83,7 +107,7 @@ MonoBehaviour:
   dialogueOverlayUI: {fileID: 0}
   continueButtonUI: {fileID: 0}
   continueButtonTextUI: {fileID: 0}
-  dialogueSound: {fileID: 0}
+  dialogueSound: {fileID: 273359247}
 --- !u!65 &2743892881426982422
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -97,7 +121,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.0304165, y: 1, z: 0.32279807}
   m_Center: {x: 1.0152082, y: 0, z: -0.33860096}
---- !u!82 &3069188882367368750
+--- !u!82 &273359247
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
