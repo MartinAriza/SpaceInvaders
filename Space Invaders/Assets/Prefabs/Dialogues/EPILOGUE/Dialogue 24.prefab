@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2743892881426982421}
   - component: {fileID: 2743892881426982420}
   - component: {fileID: 2743892881426982422}
-  - component: {fileID: 3069188882367368750}
+  - component: {fileID: 273359247}
   m_Layer: 0
-  m_Name: Dialogue10
+  m_Name: Dialogue 24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,14 +56,31 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   dialogue:
-  - "DNUna curiosa forma de ver este entrenamiento se\xF1orita Vin. "
-  - 'DNEn fin, pasemos a la siguiente prueba. '
-  - "DNLamento decirle que no hemos encontrado un voluntario para la prueba de manipulaci\xF3n
-    de onda nerviosa. "
-  - "DNDeber\xE1 contentarse con aquel objetivo de all\xED."
-  - "DNCuenta con un chip b\xE1sico que imita las ondas de la musculatura humana,
-    no deber\xEDa tener problemas en forzar su movimiento como har\xEDa con un objetivo
-    vivo. "
+  - "LNOh dios Vin, est\xE1s viva. "
+  - "LNCuando perdimos la comunicaci\xF3n yo... Me alegro de que est\xE9s bien. "
+  - "LNLa Polaris env\xEDo todos tus informes al salir de aquella nave. "
+  - LNLo que has descubierto es... aterrador.
+  - "LNDespu\xE9s de todo no estamos solos."
+  - 'VNEsas cosas se nos han adelantado. '
+  - "VNNo estaba solo, se comunicaba constantemente con su l\xEDder. "
+  - 'VNSon poderosos padre, muy poderosos. '
+  - "VNManten\xEDa la nave a flote solo con su energ\xEDa, pod\xEDa comunicarse simplemente
+    con las ondas. "
+  - 'VNSolo he podido vencer porque nos subestimaban, creen que somos idiotas. '
+  - 'VNY tal vez lo sea. '
+  - VNTemo haber enfurecido a fuerzas que no comprendemos...
+  - 'LNBasta de preocupaciones por hoy Vin. '
+  - 'LNHas servido bien, nos han salvado a todos. '
+  - "LNNuestros cient\xEDficos se encargar\xE1n de analizar todos tus datos. "
+  - LNPase lo que pase, estaremos preparados.
+  - "VNNo deben empezar la investigaci\xF3n sin m\xED. "
+  - 'VNNecesito comprender la fuente de su poder, padre. '
+  - "VNSon expertos ritmomantes, podr\xEDa aprender mucho de sus habilidades. "
+  - "VNAs\xED estar\xEDamos preparados para cuando vuelvan."
+  - 'LNSi es que lo hacen, hija. '
+  - "LNDetendr\xE9 la investigaci\xF3n si es tu deseo, pero has de descansar, lo tienes
+    merecido."
+  - "LNYa celebraremos tus \xE9xitos ma\xF1ana."
   speakerImages:
   - {fileID: 21300000, guid: 7c4cb4c922bcead40bbaad1e14a5388a, type: 3}
   - {fileID: 21300000, guid: 2512ddc113ef0e549a7d2fe7dbae3a0f, type: 3}
@@ -83,7 +100,7 @@ MonoBehaviour:
   dialogueOverlayUI: {fileID: 0}
   continueButtonUI: {fileID: 0}
   continueButtonTextUI: {fileID: 0}
-  dialogueSound: {fileID: 0}
+  dialogueSound: {fileID: 273359247}
 --- !u!65 &2743892881426982422
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -97,7 +114,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.0304165, y: 1, z: 0.32279807}
   m_Center: {x: 1.0152082, y: 0, z: -0.33860096}
---- !u!82 &3069188882367368750
+--- !u!82 &273359247
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
+
 public class Dialogue: MonoBehaviour
 {
-    
     //Las strings de diálogo están codificadas de la siguiente manera: [0]Mayúscula inicial del personaje [1]G o N indica si está glitcheada o no [2, ...]Frase a decir
 
     #region Events
@@ -40,6 +40,8 @@ public class Dialogue: MonoBehaviour
 
     [SerializeField] Button continueButtonUI;   //Botón de continuar el diálogo
     [SerializeField] Text continueButtonTextUI; //Texto del botón de continuar
+
+    [SerializeField] AudioSource dialogueSound;
     #endregion
 
     #region class variables
@@ -77,6 +79,7 @@ public class Dialogue: MonoBehaviour
 
     IEnumerator write(string st)
     {
+        if(!dialogueSound.isPlaying)dialogueSound.Play();
         finishedWriting = false;
 
         chooseSpeakerImageAndName(st);
@@ -204,5 +207,10 @@ public class Dialogue: MonoBehaviour
         {
             startDialogue();
         }
+    }
+
+    private void Update()
+    {
+        if (finishedWriting) dialogueSound.Stop();
     }
 }
