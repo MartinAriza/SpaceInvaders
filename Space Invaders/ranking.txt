@@ -7,4 +7,4 @@ Pcm7950
 Pcm6690
 Pcm5040
 Pcm4820
-Pcm3720
+Pcm3800

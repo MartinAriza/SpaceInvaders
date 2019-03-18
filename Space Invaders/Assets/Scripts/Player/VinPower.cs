@@ -7,7 +7,7 @@ public class VinPower : MonoBehaviour
     #region particles
     [SerializeField] ParticleSystem [] shieldWaves;
     [SerializeField] ParticleSystem powerWave;
-    [SerializeField] ParticleSystem controlledAlienLaser;
+    /*[SerializeField] */ParticleSystem controlledAlienLaser;
     #endregion
 
     [SerializeField] GameObject target;
@@ -36,6 +36,28 @@ public class VinPower : MonoBehaviour
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<VinCamera1>();
     }
 
+    private void LateUpdate()
+    {
+        RaycastHit hitInfo = new RaycastHit();
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo, Mathf.Infinity, layerMask)){
+            Outline ol = hitInfo.transform.gameObject.GetComponent<Outline>();
+            if (ol)
+            {
+                ol.enabled = true;
+            }
+        } else if (target)
+        {
+            if(target.tag != "Vin")
+            {
+                Outline ol = target.GetComponent<Outline>();
+                if (ol)
+                {
+                    ol.enabled = true;
+                }
+            }
+        }
+    }
+
     void Update()
     {
         shield = Input.GetKey("e") && !move && !control;
@@ -45,7 +67,6 @@ public class VinPower : MonoBehaviour
         input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         shoot = Input.GetButtonDown("Fire1");
 
-
         if (cast) castObject();
         if (target)
         {
@@ -53,16 +74,14 @@ public class VinPower : MonoBehaviour
             if ((!shield && !move && !control) ||  distanceTarget > powerRange)
             {
                 powerWave.Stop();
-                if(!(target.tag == "Vin"))
+                if (!(target.tag == "Vin"))
                 {
                     target.GetComponent<theScriptThatMakesYouExplodeWhenUrTooFast>().powerWave.Stop();
                 }
-                
                 foreach (ParticleSystem shieldWave in shieldWaves)
                 {
                     shieldWave.Stop();
                 }
-
                 mov.usingPower = false;
                 target = null;
                 Cursor.visible = true;
@@ -82,6 +101,7 @@ public class VinPower : MonoBehaviour
             } else if (control && shoot)
             {
                 controlledAlienLaser.Play();
+                print("shoot");
             }
         }
     }
@@ -101,6 +121,7 @@ public class VinPower : MonoBehaviour
                     mov.usePower();
                 if(control && target.tag == "Alien")
                 {
+                    controlledAlienLaser = target.GetComponent<theScriptThatMakesYouExplodeWhenUrTooFast>().alienLaser;
                     mainCam.changeTarget(target.transform);
                     powerWave.Play();
                     target.GetComponent<theScriptThatMakesYouExplodeWhenUrTooFast>().powerWave.Play();
