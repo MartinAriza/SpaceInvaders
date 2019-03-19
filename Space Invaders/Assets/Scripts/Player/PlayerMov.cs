@@ -17,14 +17,18 @@ public class PlayerMov : MonoBehaviour
     [SerializeField][Tooltip("Cuanta distancia puede moverse la nave desde el centro de la pantalla en el eje X")] float allowedMovementX = 10.0f;
     [SerializeField][Tooltip("Cuanta distancia puede moverse la nave desde el centro de la pantalla en el eje Y")] float allowedMovementY = 5.0f;
 
-    [SerializeField] ParticleSystem gun;
+    ParticleSystem gun = null;
+    [SerializeField] ParticleSystem gunWithBounce;
+    [SerializeField] ParticleSystem gunWithoutBounce;
     [SerializeField] ParticleSystem deathFX;
     [SerializeField] ParticleSystem [] engineParticles;
     [SerializeField] GameObject aimCylinder;
 
+
     ScoreManager scoreManager;
 
-    public bool adult = true;
+    [HideInInspector] public bool adult;
+    public bool bounce;
     AudioSource laserSound;
     Rigidbody rb;
 
@@ -33,6 +37,17 @@ public class PlayerMov : MonoBehaviour
 
     void Start()
     {
+        if (!bounce)
+        {
+            gun = gunWithoutBounce;
+            gunWithBounce.gameObject.SetActive(false);
+        }
+        else
+        {
+            gun = gunWithBounce;
+            gunWithoutBounce.gameObject.SetActive(false);
+        }
+
         //Se modifican las propiedades del láser de la nave
         gun.maxParticles = maxShots;
         gun.startSpeed = shotSpeed;
