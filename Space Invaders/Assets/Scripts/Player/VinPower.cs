@@ -132,8 +132,9 @@ public class VinPower : MonoBehaviour
             RaycastHit hitInfo = new RaycastHit();
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo, Mathf.Infinity, layerMask))
             {
-                print(hitInfo.transform.name);
                 target = hitInfo.transform.gameObject;
+                EventTriggererScript targetEvent = target.GetComponent<EventTriggererScript>();
+                print(hitInfo.transform.name);
                 rb = target.GetComponent<Rigidbody>();
                 if ((target.transform.position - transform.position).magnitude < powerRange)
                     mov.usePower();
@@ -143,10 +144,15 @@ public class VinPower : MonoBehaviour
                     mainCam.changeTarget(target.transform);
                     powerWave.Play();
                     target.GetComponent<theScriptThatMakesYouExplodeWhenUrTooFast>().powerWave.Play();
+                    
+                    if(targetEvent)
+                        targetEvent.OnPowerControlEnter();
                 }
                 else if(move)
                 {
                     powerWave.Play();
+                    if (targetEvent)
+                        targetEvent.OnPowerMoveEnter();
                 }
             }
         }
