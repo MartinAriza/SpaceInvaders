@@ -9,27 +9,24 @@ public class VinLife : MonoBehaviour
     [SerializeField] int lifeLostWhenHit = 5;
     [HideInInspector] public int currentLife;
     [SerializeField] [Tooltip("Time to regenerate 1 life point in seconds")] [Range(0f,5f)]float regenerateTime = 1f;
-    [SerializeField] bool regenerate = true;
+    //[SerializeField] bool regenerate = true;
     [SerializeField] RectTransform lifeBar;
     float maxScale;
     private const float minScale = 0f;
-    VinMov VM;
-    [SerializeField] float idleBonus = 2f;
-
+    //VinMov VM;
+    //[SerializeField] float idleBonus = 2f;
+    VinPower VP;
+    [SerializeField]bool healing = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        VM = GetComponent<VinMov>();
+        //VM = GetComponent<VinMov>();
+        VP = GetComponent<VinPower>();
         currentLife = maxLife;
         maxScale = lifeBar.localScale.x;
-        StartCoroutine("regenerateOverTime");
+        
 
-    }
-
-    private void Update()
-    {
-        print(currentLife);
     }
 
     private void OnParticleCollision(GameObject other)
@@ -46,13 +43,21 @@ public class VinLife : MonoBehaviour
         }
     }
 
+    public void startHealing()
+    {
+        healing = true;
+        StartCoroutine("regenerateOverTime");
+    }
+    public void stopHealing()
+    {
+        healing = false;
+    }
+
     IEnumerator regenerateOverTime()
     {
-        float time = regenerateTime;
-        if (VM.notInput) time /= idleBonus;
-        yield return new WaitForSeconds(time);
-        if (regenerate)
+        if (healing)
         {
+            yield return new WaitForSeconds(regenerateTime);
             currentLife += 1;
             if (currentLife > maxLife)
                 currentLife = maxLife;
