@@ -58,6 +58,7 @@ public class AlienMiniBoss : MonoBehaviour
 
     void Start()
     {
+        adult = FindObjectOfType<AdultManager>().adultReference;
         scoreManager = FindObjectOfType<ScoreManager>();
         hordeManager = FindObjectOfType<HordeManager>();
 
@@ -71,8 +72,10 @@ public class AlienMiniBoss : MonoBehaviour
 
         gun = gameObject.GetComponentInChildren<ParticleSystem>();
         gun.startSpeed = shotSpeed;
-
-        gun.Play();
+        if(adult)
+        {
+            gun.Play();
+        }
     }
 
     private void FixedUpdate()
@@ -131,6 +134,7 @@ public class AlienMiniBoss : MonoBehaviour
         }
         else if (collision.gameObject.tag == "AlienMiniBossLimit")
         {
+            scoreManager.playerScore -= scoreValue;
             Death();
         }
     }

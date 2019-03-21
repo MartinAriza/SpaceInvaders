@@ -9,12 +9,18 @@ using UnityEngine;
 public class AdultManager : MonoBehaviour
 {
     public static bool adult; //Variable static que cambia el botón de adulto, se mantiene entre escenas
+    public static bool bounce;
+    public bool adultReference;
 
-    void Start()
+    void Awake()
     {
-        adult = true;
+        adultReference = adult;
         //Transmite si eres mayor de 13 o no a la horda de aliens y al jugador para cambiar su comportamiento
-        FindObjectOfType<PlayerMov>().adult = adult;
+
+        PlayerMov player = FindObjectOfType<PlayerMov>();
+        player.adult = adult;
+        player.bounce = bounce;
+
         FindObjectOfType<Horde>().adult = adult;
     }
 }

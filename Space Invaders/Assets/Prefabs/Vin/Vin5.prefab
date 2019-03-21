@@ -3832,6 +3832,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevitateWave
       objectReference: {fileID: 0}
+    - target: {fileID: 6026503823232768392, guid: a36d78fc50f8e41408f724c4f94cc577,
+        type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026503823232768392, guid: a36d78fc50f8e41408f724c4f94cc577,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6026503823232768407, guid: a36d78fc50f8e41408f724c4f94cc577,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3885,16 +3895,6 @@ PrefabInstance:
     - target: {fileID: 6026503823232768407, guid: a36d78fc50f8e41408f724c4f94cc577,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6026503823232768392, guid: a36d78fc50f8e41408f724c4f94cc577,
-        type: 3}
-      propertyPath: prewarm
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6026503823232768392, guid: a36d78fc50f8e41408f724c4f94cc577,
-        type: 3}
-      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
