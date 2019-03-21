@@ -20,7 +20,7 @@ public class VinMov : MonoBehaviour
     [SerializeField] Transform feetPos;
     Vector2 direction = new Vector3(0, 0);
     Rigidbody rb;
-    [SerializeField] [Tooltip("Activa para mantener el input actual, pulsa f para activarlo")] bool freezeInput = false;
+    [HideInInspector][Tooltip("Activa para mantener el input actual, pulsa f para activarlo")] public bool freezeInput = false;
     Vector2 input = new Vector2(0f, 0f);
     float levitateTargetHeight;
     Animator anim;
@@ -63,7 +63,7 @@ public class VinMov : MonoBehaviour
     private void Update()
     {
         InputController();
-        if (Input.GetKeyDown("f")) freezeInput = !freezeInput;
+        //if (Input.GetKeyDown("f")) freezeInput = !freezeInput;
     }
 
     void FixedUpdate()
@@ -88,8 +88,8 @@ public class VinMov : MonoBehaviour
                 {
                     sound.Stop();
                 }
-                powerSound = sounds[1];
-                powerSound.Play();
+                //powerSound = sounds[1];
+                //powerSound.Play();
                 if (!levitateWave.isPlaying) levitateWave.Play();
 
                 if (!powerWave.isPlaying) powerWave.Play();
@@ -99,7 +99,7 @@ public class VinMov : MonoBehaviour
             }
             else
             {
-                powerSound.Stop();
+                //powerSound.Stop();
                 foreach (AudioSource sound in sounds){
                     sound.Stop();
                 }                
@@ -198,11 +198,8 @@ public class VinMov : MonoBehaviour
     public void usePower()
     {
         anim.SetTrigger(Anim_Power);
-
         levitate = false;
-
         levitateWave.Stop();
-        
         RaycastHit hit;
         if (Physics.Raycast(transform.position, -Vector3.up, out hit, levitateHeight + (feetPos.position - transform.position).magnitude + 0.5f, layerMask))
         {

@@ -581,7 +581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1179519473, guid: 12ce2dec7b3be21449b0a4b2b98fbf7f, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8397070768816429337, guid: 12ce2dec7b3be21449b0a4b2b98fbf7f,
         type: 3}
@@ -1330,10 +1330,9 @@ MonoBehaviour:
   maxLife: 100
   lifeLostWhenHit: 35
   currentLife: 0
-  regenerateTime: 1
-  regenerate: 1
+  regenerateTime: 0.1
   lifeBar: {fileID: 822181070}
-  idleBonus: 10
+  healing: 0
 --- !u!1 &1854396681
 GameObject:
   m_ObjectHideFlags: 0

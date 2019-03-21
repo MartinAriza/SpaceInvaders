@@ -9,8 +9,8 @@ public class VinPower : MonoBehaviour
     [SerializeField] ParticleSystem powerWave;
     /*[SerializeField] */ParticleSystem controlledAlienLaser;
     #endregion
-    AudioSource[] sounds;
-    AudioSource powerSound;
+    //AudioSource[] sounds;
+    //AudioSource powerSound;
     [SerializeField] GameObject target;
     [SerializeField] float forceImp = 2.0f;
     [SerializeField] float powerRange = 3.0f;
@@ -18,6 +18,7 @@ public class VinPower : MonoBehaviour
     bool control = false;
     bool shield = false;
     bool cast = false;
+    bool heal = false;
     int layerMask;
     Rigidbody rb;
     VinMov mov;
@@ -30,9 +31,12 @@ public class VinPower : MonoBehaviour
     Vector2 input = new Vector2(0f, 0f);
     bool shoot;
 
+    VinLife VL;
+
     void Start()
     {
-        sounds = GetComponents<AudioSource>();
+        VL = GetComponent<VinLife>();
+        //sounds = GetComponents<AudioSource>();
         layerMask = LayerMask.GetMask("controllable");
         mov = GetComponent<VinMov>();
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<VinCamera1>();
@@ -62,10 +66,11 @@ public class VinPower : MonoBehaviour
 
     void Update()
     {
-        shield = Input.GetKey("e") && !move && !control;
-        cast = Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetKeyDown("e");
-        move = Input.GetMouseButton(0) && !shield && !control;
-        control = Input.GetMouseButton(1) && !move && !shield;
+        shield = Input.GetKey("e") && !move && !control && !heal;
+        heal = Input.GetKey("f") && !move && !control && !shield;
+        cast = Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetKeyDown("e") || Input.GetKeyDown("f");
+        move = Input.GetMouseButton(0) && !shield && !control && !heal;
+        control = Input.GetMouseButton(1) && !move && !shield && !heal;
         input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         shoot = Input.GetButtonDown("Fire1");
 
@@ -73,8 +78,9 @@ public class VinPower : MonoBehaviour
         if (target)
         {
             float distanceTarget = (target.transform.position - transform.position).magnitude;
-            if ((!shield && !move && !control) ||  distanceTarget > powerRange)
+            if ((!shield && !move && !control && !heal) ||  distanceTarget > powerRange)
             {
+                VL.stopHealing();
                 powerWave.Stop();
                 if (!(target.tag == "Vin"))
                 {
@@ -89,11 +95,11 @@ public class VinPower : MonoBehaviour
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
                 mainCam.setDefaultTarget();
-                powerSound.Stop();
-                foreach (AudioSource sound in sounds)
+                //powerSound.Stop();
+                /*foreach (AudioSource sound in sounds)
                 {
                     sound.Stop();
-                }
+                }*/
             }
             else
             {
@@ -104,11 +110,16 @@ public class VinPower : MonoBehaviour
             shieldCollider.enabled = false;
             if (shield)
             {
+                mov.usingPower = true;
                 shieldCollider.enabled = true;
             } else if (control && shoot)
             {
+                mov.usingPower = true;
                 controlledAlienLaser.Play();
                 print("shoot");
+            } else if (heal)
+            {
+                mov.usingPower = true;
             }
         }
     }
@@ -116,7 +127,7 @@ public class VinPower : MonoBehaviour
     void castObject()
     {
 
-        if (!shield)
+        if (!shield && !heal)
         {
             RaycastHit hitInfo = new RaycastHit();
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo, Mathf.Infinity, layerMask))
@@ -137,18 +148,16 @@ public class VinPower : MonoBehaviour
                 {
                     powerWave.Play();
                 }
-                    
             }
-
         }
         else if (shield)
         {
-            foreach (AudioSource sound in sounds)
+            /*foreach (AudioSource sound in sounds)
             {
                 sound.Stop();
-            }
-            powerSound = sounds[0];
-            powerSound.Play();
+            }*/
+            //powerSound = sounds[0];
+            //powerSound.Play();
             foreach (ParticleSystem shieldWave in shieldWaves)
             {
                 shieldWave.Play();
@@ -156,8 +165,13 @@ public class VinPower : MonoBehaviour
             powerWave.Play();            
             target = gameObject;
             mov.usePower();
+        } else if (heal)
+        {
+            powerWave.Play();
+            target = gameObject;
+            mov.usePower();
+            VL.startHealing();
         }
-        
     }
 
     private void FixedUpdate()
