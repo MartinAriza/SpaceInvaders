@@ -9,7 +9,8 @@ public class VinPower : MonoBehaviour
     [SerializeField] ParticleSystem powerWave;
     /*[SerializeField] */ParticleSystem controlledAlienLaser;
     #endregion
-
+    AudioSource[] sounds;
+    AudioSource powerSound;
     [SerializeField] GameObject target;
     [SerializeField] float forceImp = 2.0f;
     [SerializeField] float powerRange = 3.0f;
@@ -31,6 +32,7 @@ public class VinPower : MonoBehaviour
 
     void Start()
     {
+        sounds = GetComponents<AudioSource>();
         layerMask = LayerMask.GetMask("controllable");
         mov = GetComponent<VinMov>();
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<VinCamera1>();
@@ -87,6 +89,11 @@ public class VinPower : MonoBehaviour
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
                 mainCam.setDefaultTarget();
+                powerSound.Stop();
+                foreach (AudioSource sound in sounds)
+                {
+                    sound.Stop();
+                }
             }
             else
             {
@@ -136,12 +143,17 @@ public class VinPower : MonoBehaviour
         }
         else if (shield)
         {
-            foreach(ParticleSystem shieldWave in shieldWaves)
+            foreach (AudioSource sound in sounds)
+            {
+                sound.Stop();
+            }
+            powerSound = sounds[0];
+            powerSound.Play();
+            foreach (ParticleSystem shieldWave in shieldWaves)
             {
                 shieldWave.Play();
             }
-            powerWave.Play();
-
+            powerWave.Play();            
             target = gameObject;
             mov.usePower();
         }
