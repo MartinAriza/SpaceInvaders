@@ -27,7 +27,8 @@ public class VinMov : MonoBehaviour
     private float actualAceleration;
     bool falling = false;
     bool wasLevitating = false;
-    [HideInInspector]public bool usingPower = false;
+    [HideInInspector] public bool usingPower = false;
+    [HideInInspector] public bool notInput = true;
 
     //Bool names
     private static string Anim_idle = "idle";
@@ -140,7 +141,7 @@ public class VinMov : MonoBehaviour
         anim.SetBool(Anim_run, run && walk);
 
         //IDLE
-        bool notInput = input.magnitude == 0 && !levitate && !sneakyIdle && !falling;
+        notInput = input.magnitude == 0 && !levitate && !sneakyIdle && !falling;
         if (notInput)
             anim.SetBool(Anim_idle, true);
         else
