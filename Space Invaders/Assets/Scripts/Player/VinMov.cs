@@ -9,6 +9,8 @@ public class VinMov : MonoBehaviour
     [SerializeField] ParticleSystem levitateWave;
     #endregion
 
+    AudioSource[] sounds;
+    AudioSource powerSound;
     [SerializeField] [Range(1, 500)] float maxSpeed = 100;
     [SerializeField] [Range(1, 100)] float aceleration = 20;
     [SerializeField] float runMultiplier = 1.5f;
@@ -52,6 +54,7 @@ public class VinMov : MonoBehaviour
 
     void Awake()
     {
+        sounds = GetComponents<AudioSource>();
         layerMask = LayerMask.GetMask(solidLayer);
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
@@ -81,7 +84,13 @@ public class VinMov : MonoBehaviour
             levitate = !levitate;
             if (levitate)
             {
-                if(!levitateWave.isPlaying) levitateWave.Play();
+                foreach (AudioSource sound in sounds)
+                {
+                    sound.Stop();
+                }
+                powerSound = sounds[1];
+                powerSound.Play();
+                if (!levitateWave.isPlaying) levitateWave.Play();
 
                 if (!powerWave.isPlaying) powerWave.Play();
 
@@ -90,6 +99,10 @@ public class VinMov : MonoBehaviour
             }
             else
             {
+                powerSound.Stop();
+                foreach (AudioSource sound in sounds){
+                    sound.Stop();
+                }                
                 levitateWave.Stop();
                 powerWave.Stop();
                 if (Physics.Raycast(transform.position, -Vector3.up, out hit, levitateHeight + (feetPos.position - transform.position).magnitude + 0.5f, layerMask))
