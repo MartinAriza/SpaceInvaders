@@ -1372,31 +1372,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2304437757189625246, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
-        type: 3}
-      propertyPath: m_Name
-      value: ControlarCubo
-      objectReference: {fileID: 0}
-    - target: {fileID: 7319732258121446468, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
-        type: 3}
-      propertyPath: m_Name
-      value: DestruirCubo
-      objectReference: {fileID: 0}
-    - target: {fileID: 7498704031913198172, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
-        type: 3}
-      propertyPath: m_Name
-      value: Trigger
-      objectReference: {fileID: 0}
     - target: {fileID: 845982073554643373, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
         type: 3}
       propertyPath: taskCompletedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1258959592}
-    - target: {fileID: 9175562926639436029, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
-        type: 3}
-      propertyPath: m_Name
-      value: MoverCubo
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb, type: 3}
 --- !u!114 &7284508590094385063 stripped
