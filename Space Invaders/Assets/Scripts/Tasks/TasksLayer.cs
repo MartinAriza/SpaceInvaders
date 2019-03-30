@@ -22,6 +22,16 @@ public class TasksLayer : MonoBehaviour
         taskMg = GetComponentInParent<TasksManager>();
     }
 
+    public string[] getInfo()
+    {
+        string[] info = new string[tasksList.Length];
+        for(int i = 0; i < tasksList.Length; i++)
+        {
+            info[i] = tasksList[i].name + ": " + tasksList[i].description;
+        }
+        return info;
+    }
+
 
     public bool checkComplete()
     {
