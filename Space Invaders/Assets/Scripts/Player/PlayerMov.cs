@@ -24,7 +24,6 @@ public class PlayerMov : MonoBehaviour
     [SerializeField] ParticleSystem [] engineParticles;
     [SerializeField] GameObject aimCylinder;
 
-
     ScoreManager scoreManager;
 
     [HideInInspector] public bool adult;
@@ -78,17 +77,7 @@ public class PlayerMov : MonoBehaviour
     }
 
     void movement()
-    {
-        /*Vector3 ejeX = Input.GetAxisRaw("Horizontal") * Vector3.right * Time.deltaTime * speed; //Se mueve horizontalmente al jugador
-        rb.velocity = ejeX;
-
-        //Se limita la posición del jugador a los límites establecidos
-        transform.position = new Vector3(
-            Mathf.Clamp(transform.position.x, -allowedMovement, allowedMovement), 
-            transform.position.y, 
-            transform.position.z
-            );*/
-        
+    {   
         //X Movement
         float inputX = Input.GetAxisRaw("Horizontal");
         float absX = Mathf.Abs(inputX);

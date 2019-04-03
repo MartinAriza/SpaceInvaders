@@ -16,7 +16,6 @@ public class AdultManager : MonoBehaviour
     {
         adultReference = adult;
         //Transmite si eres mayor de 13 o no a la horda de aliens y al jugador para cambiar su comportamiento
-
         PlayerMov player = FindObjectOfType<PlayerMov>();
         player.adult = adult;
         player.bounce = bounce;

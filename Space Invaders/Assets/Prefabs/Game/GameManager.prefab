@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6646047537060437866}
   - component: {fileID: 6646047537060437865}
-  - component: {fileID: 6646047537060437864}
   - component: {fileID: 424934155}
   - component: {fileID: 2068307675007613037}
   - component: {fileID: 764109442}
@@ -47,9 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18da602a03879a4a8be6c3fd64042e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hordePrefab: {fileID: 5272548732517855720, guid: f1d90b124f9e55749bc7eb11220f5c59,
-    type: 3}
-  initialPosition: {x: -10.17, y: 0, z: 54.21}
   speedIncrement: 20
   downSpeedIncrement: 0.25
   hpIncrement: 1
@@ -64,19 +60,6 @@ MonoBehaviour:
   waveNumberUI: {fileID: 0}
   playerLivesUI: {fileID: 0}
   waveNumber: 1
---- !u!114 &6646047537060437864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6646047537060437863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 533af68fd5b243e4d8cfeb58821b1b02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destructionPeriod: 10
 --- !u!114 &424934155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a43d65a3165bd5c4bab7b950e23b3fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  adultReference: 0
 --- !u!82 &764109442
 AudioSource:
   m_ObjectHideFlags: 0
