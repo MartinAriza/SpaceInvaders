@@ -41,7 +41,7 @@ public class HordeManager : MonoBehaviour
         waveNumberUI.text = "Oleada    " + waveNumber;
 
         //Se ajustan las propiedades de la nueva horda según en que oleada esté el jugador
-        horde.speed += speedIncrement * waveNumber;
+        horde.speed = Mathf.Abs(horde.speed) + speedIncrement * waveNumber;
         horde.downSpeed += downSpeedIncrement * waveNumber;
 
         horde.alienShotSpeed += shotSpeedIncrement * waveNumber;
@@ -51,7 +51,7 @@ public class HordeManager : MonoBehaviour
         if (waveNumber <= 3)
         {
             player.HP += extraPlayerLives;
-            horde.alienHP += hpIncrement * waveNumber;
+            //horde.alienHP += hpIncrement * waveNumber;
         }
 
         if (waveNumber >= 2) alienMiniBoss.gameObject.SetActive(true);

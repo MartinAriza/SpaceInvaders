@@ -57,11 +57,17 @@ public class Horde : MonoBehaviour
 
     void randomizeAlienHeight()
     {
+        float[] heights = {-3.0f, 0.0f, 3.0f, 6.0f, 6.0f };
+        int randomIndex = 0;
+
         foreach (Alien alien in aliens)
-        { 
+        {
+            randomIndex = UnityEngine.Random.Range(0, heights.Length - 1);
+
             alien.transform.position = new Vector3(
                 alien.transform.position.x,
-                UnityEngine.Random.Range(minAlienY, maxAlienY),
+                //UnityEngine.Random.Range(minAlienY, maxAlienY),
+                heights[randomIndex],
                 alien.transform.position.z);
         }
     }
