@@ -19,6 +19,13 @@ public class PlayerMov : MonoBehaviour
     [SerializeField] float minYPosition = 0.0f;
     [SerializeField] float maxYPosition = 7.5f;
     [SerializeField] float yMovementAmount = 2.5f;
+    [SerializeField] float timeToChangeHeight = 1.0f;
+    float timer = 0.0f;
+    float yTarget = 0.0f;
+    float originalYPos;
+    bool allowTargetChange = true;
+    float lastYpos = 0.0f;
+    float lastFixedYPos = 0.0f;
 
     ParticleSystem gun = null;
     [SerializeField] ParticleSystem gunWithBounce;
@@ -37,10 +44,11 @@ public class PlayerMov : MonoBehaviour
     Vector3 velocity = new Vector3(0f, 0f, 0f);
     Vector3 locRotation = new Vector3(0f, 0f, 0f);
 
-    float newY = 0.0f;
+    
 
     void Start()
     {
+        
         if (!bounce)
         {
             gun = gunWithoutBounce;
@@ -60,11 +68,14 @@ public class PlayerMov : MonoBehaviour
         scoreManager = FindObjectOfType<ScoreManager>();
         laserSound = GetComponent<AudioSource>();
         rb = gameObject.GetComponent<Rigidbody>();
+        originalYPos = transform.position.y;
+        lastYpos = originalYPos;
     }
 
     void Update()
     {
-        yMovement();
+        checkYTarget();
+        //yMovement();
     }
 
     void FixedUpdate()
@@ -94,48 +105,66 @@ public class PlayerMov : MonoBehaviour
         velocity.x += (inputX - velocity.x / speed.x) * aceleration.x * ((1-absX) * brakeMultiplier + 1 * absX); //si no pulso nada me freno más lento de lo que acelero
 
         //Y Movement
-        //float absY = Mathf.Abs(inputY);
-        //velocity.y += (inputY - velocity.y / speed.y) * aceleration.y * ((1 - absY) * brakeMultiplier + 1 * absY);
+        float dir = (originalYPos + yTarget - transform.position.y) / yMovementAmount;
 
-        //Z Movement
+        if (dir != 0f) dir = dir / Mathf.Abs(dir);
+        else dir = 0f;
+
+        float relativePos = 0.0f;
+        if (!allowTargetChange)
+        {
+            timer += Time.fixedDeltaTime;
+            relativePos = 1f / (1f + Mathf.Pow(450f, (-2f * (timer/timeToChangeHeight) + 1f)));
+        }
+        float newPosY = lastYpos + yMovementAmount * dir * relativePos;
+        transform.position = new Vector3(transform.position.x, newPosY, transform.position.z);
+        velocity.y = ((Mathf.Sin(((timer / timeToChangeHeight) - 0.25f) * Mathf.PI * 2f) / 2f + 0.5f) / Time.fixedDeltaTime) * dir;
 
         //Clamping
         velocity = new Vector3(
             Mathf.Clamp(velocity.x, -speed.x, speed.x),
             Mathf.Clamp(velocity.y, -speed.y, speed.y),
             Mathf.Clamp(velocity.z, -speed.z, speed.z)
-            );
-        rb.velocity = velocity * Time.deltaTime;
+        );
+        rb.velocity = new Vector3(velocity.x,0f,velocity.z) * Time.deltaTime;
 
         transform.position = new Vector3(
             Mathf.Clamp(transform.position.x, -allowedMovementX, allowedMovementX),
             Mathf.Clamp(transform.position.y, minYPosition, maxYPosition),
             transform.position.z
-            );
+        );
     }
 
-    void yMovement()
+    private void checkYTarget()
     {
-        bool wPressed = Input.GetKeyDown(KeyCode.W);
-        bool sPressed = Input.GetKeyDown(KeyCode.S);
+        float newY = Input.GetAxisRaw("Vertical");
+        if (allowTargetChange && Mathf.Abs(newY) == 1f)
+        {
+            if(!((yTarget == minYPosition && newY == -1f) || (yTarget == maxYPosition && newY == 1f)))
+            {
+                yTarget += yMovementAmount * newY;
+                yTarget = Mathf.Clamp(yTarget, minYPosition, maxYPosition);
+                allowTargetChange = false;
+                StartCoroutine("allowYChange");
+            }
+        }
+    }
 
-        newY = transform.position.y;
-
-        if (wPressed) newY += yMovementAmount;
-        else if (sPressed) newY -= yMovementAmount;
-
-        newY = Mathf.Clamp(newY, minYPosition, maxYPosition);
-        transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+    IEnumerator allowYChange()
+    {
+        yield return new WaitForSeconds(timeToChangeHeight);
+        allowTargetChange = true;
+        transform.position = new Vector3(transform.position.x, originalYPos + yTarget, transform.position.z);
+        timer = 0f;
+        lastYpos = transform.position.y;
     }
 
     //La nave rota un poco hacia el lado que el jugador se está moviendo
     void rotation()
     {
-        //float roll = Input.GetAxis("Horizontal") * rotationAmount;
-        //transform.localRotation = Quaternion.Euler(0, 0, -roll);
         locRotation.z = (velocity.x / speed.x) * -rotationAmount;
         locRotation.x = (velocity.y / speed.y) * -rotationAmount;
-        transform.localRotation = Quaternion.Euler(locRotation.x, 0, locRotation.z);
+        transform.localRotation = Quaternion.Euler(locRotation.x, 0f, locRotation.z);
     }
 
     //Si se pulsa espacio o mouse Izq se dispara un láser y suena su efecto de sonido
