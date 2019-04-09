@@ -8,8 +8,6 @@ public class theScriptThatMakesYouExplodeWhenUrTooFast : MonoBehaviour
     public ParticleSystem alienLaser;
     #endregion
 
-
-
     int layerControllable;
     [SerializeField] float speedToExplode = 10.0f;
     
@@ -18,8 +16,10 @@ public class theScriptThatMakesYouExplodeWhenUrTooFast : MonoBehaviour
     Vector3 actualSpeed = new Vector3(0f, 0f, 0f);
 
     public ParticleSystem powerWave;
-    [SerializeField] ParticleSystem dustParticles;
+    [SerializeField] ParticleSystem deathParticles;
     Outline ol;
+    [SerializeField] float timeToDeactivate = 0.3f;
+    [SerializeField] MeshRenderer meshRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -44,11 +44,19 @@ public class theScriptThatMakesYouExplodeWhenUrTooFast : MonoBehaviour
             
             if (lastSpeed.magnitude > speedToExplode)
             {
-                Instantiate(dustParticles, gameObject.transform.position, Quaternion.Euler(-lastSpeed));
+                //Instantiate(dustParticles, gameObject.transform.position, Quaternion.Euler(-lastSpeed));
+                deathParticles.Play();
                 powerWave.Stop();
                 print("toy muerto");
-                gameObject.SetActive(false);
+                meshRenderer.enabled = false;
+                StartCoroutine(deactivateObject());
             }
         }
+    }
+
+    IEnumerator deactivateObject()
+    {
+        yield return new WaitForSecondsRealtime(timeToDeactivate);
+        gameObject.SetActive(false);
     }
 }

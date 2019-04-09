@@ -13,6 +13,7 @@ TagManager:
   - KillBarrier
   - AlienMiniBossLimit
   - Wall
+  - Interactable
   layers:
   - Default
   - TransparentFX
@@ -28,8 +29,8 @@ TagManager:
   - staticSolid
   - controllable
   - shield
-  - 
-  - 
+  - Interactable
+  - Waypoint
   - 
   - 
   - 

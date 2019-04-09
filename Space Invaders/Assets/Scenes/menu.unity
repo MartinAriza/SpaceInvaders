@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -463,6 +463,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1513674139822888417, guid: 666f6586dd7d12343a23310838e9f464,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513674139822888417, guid: 666f6586dd7d12343a23310838e9f464,
+        type: 3}
+      propertyPath: m_Name
+      value: Rebotes
+      objectReference: {fileID: 0}
+    - target: {fileID: 6404398487154323932, guid: 666f6586dd7d12343a23310838e9f464,
+        type: 3}
+      propertyPath: m_Text
+      value: "\xBFREBOTES?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168757758130239753, guid: 666f6586dd7d12343a23310838e9f464,
+        type: 3}
+      propertyPath: m_Name
+      value: RebotesNo
+      objectReference: {fileID: 0}
+    - target: {fileID: 955871387267673599, guid: 666f6586dd7d12343a23310838e9f464,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2454118782705848779, guid: 666f6586dd7d12343a23310838e9f464,
+        type: 3}
+      propertyPath: m_Name
+      value: RebotesSi
+      objectReference: {fileID: 0}
     - target: {fileID: 955871386088006471, guid: 666f6586dd7d12343a23310838e9f464,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -628,11 +658,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 955871387267673599, guid: 666f6586dd7d12343a23310838e9f464,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 955871387739830872, guid: 666f6586dd7d12343a23310838e9f464,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -728,16 +753,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 141.35
       objectReference: {fileID: 0}
-    - target: {fileID: 1513674139822888417, guid: 666f6586dd7d12343a23310838e9f464,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1513674139822888417, guid: 666f6586dd7d12343a23310838e9f464,
-        type: 3}
-      propertyPath: m_Name
-      value: Rebotes
-      objectReference: {fileID: 0}
     - target: {fileID: 3986162245209676118, guid: 666f6586dd7d12343a23310838e9f464,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -747,21 +762,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 395
-      objectReference: {fileID: 0}
-    - target: {fileID: 6404398487154323932, guid: 666f6586dd7d12343a23310838e9f464,
-        type: 3}
-      propertyPath: m_Text
-      value: "\xBFREBOTES?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3168757758130239753, guid: 666f6586dd7d12343a23310838e9f464,
-        type: 3}
-      propertyPath: m_Name
-      value: RebotesNo
-      objectReference: {fileID: 0}
-    - target: {fileID: 2454118782705848779, guid: 666f6586dd7d12343a23310838e9f464,
-        type: 3}
-      propertyPath: m_Name
-      value: RebotesSi
       objectReference: {fileID: 0}
     - target: {fileID: 2049217563060400948, guid: 666f6586dd7d12343a23310838e9f464,
         type: 3}
@@ -793,6 +793,36 @@ PrefabInstance:
       propertyPath: menuAudio
       value: 
       objectReference: {fileID: 1663876287}
+    - target: {fileID: 955871386710044920, guid: 666f6586dd7d12343a23310838e9f464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 955871386710044920, guid: 666f6586dd7d12343a23310838e9f464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[6].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 955871386710044920, guid: 666f6586dd7d12343a23310838e9f464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[6].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 955871386710044920, guid: 666f6586dd7d12343a23310838e9f464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[6].m_Target
+      value: 
+      objectReference: {fileID: 299201968}
+    - target: {fileID: 955871386710044920, guid: 666f6586dd7d12343a23310838e9f464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[6].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 955871386710044920, guid: 666f6586dd7d12343a23310838e9f464,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 955871387739830869, guid: 666f6586dd7d12343a23310838e9f464, type: 3}
     - {fileID: 1673125254874222094, guid: 666f6586dd7d12343a23310838e9f464, type: 3}

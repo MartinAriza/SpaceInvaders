@@ -14,7 +14,7 @@ public class Alien : MonoBehaviour
 
     Animator anim;                          //Objeto animator para poder hacer transiciones entre animaciones 
 
-    Horde horde;
+    [SerializeField] static Horde horde;
 
     bool stopFiring = false;                //Si el alien debería dejar de disparar
     bool alive = true;                      //Si el alien está vivo vale true
@@ -58,15 +58,12 @@ public class Alien : MonoBehaviour
     void Start()
     {
         //Se buscan los objetos y componentes necesarios
-        parent = FindObjectOfType<ExplosionDestroyer>().transform;
-
         anim = GetComponentsInChildren<Animator>()[0];
 
         horde = FindObjectOfType<Horde>();
 
         gameObject.GetComponent<CubeEditor>().enabled = false; //Se desactiva el script de snap para que el alien pueda moverse
 
-        gun = gameObject.GetComponentInChildren<ParticleSystem>();
         gun.startSpeed = shotSpeed;
 
         StartCoroutine(fire()); //Comienza la subrutina de disparo que se ejecutará en el intervalo aleatorio entre los valores escogidos
@@ -99,7 +96,7 @@ public class Alien : MonoBehaviour
             if (HP <= 0)
             {
                 //Se crea al efecto de explosion en la posición del alien y se asigna su padre
-                Instantiate(deathFX, transform.position, Quaternion.identity).gameObject.transform.parent = parent;
+                deathFX.Play();
                 horde.playDeathSound(); //Suena el efecto de explosión
 
                 stopFiring = true;  //El alien deja de disparar
@@ -123,5 +120,16 @@ public class Alien : MonoBehaviour
     public void changeColor (Color color)
     {
         alienBody.GetComponent<SkinnedMeshRenderer>().material.color = color;
+    }
+
+    public void reset()
+    {
+        gameObject.GetComponent<BoxCollider>().enabled = true;
+
+        alienBody.SetActive(true);
+        alienEyes.SetActive(true);
+
+        stopFiring = false;
+        alive = true;
     }
 }

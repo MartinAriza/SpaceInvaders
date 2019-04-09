@@ -189,7 +189,7 @@ MonoBehaviour:
   - {fileID: 6337319648145991273}
   aimCylinder: {fileID: 1219762301}
   adult: 1
-  disableBounce: 0
+  bounce: 0
 --- !u!82 &403751947
 AudioSource:
   m_ObjectHideFlags: 0
@@ -425,18 +425,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8495137782207790011, guid: c220f5227bceee6458eb47e4fb2c2894,
         type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8495137782207790011, guid: c220f5227bceee6458eb47e4fb2c2894,
-        type: 3}
       propertyPath: m_Name
       value: PlayerLaserNoBounce
       objectReference: {fileID: 0}
-    - target: {fileID: 3093135451645133771, guid: c220f5227bceee6458eb47e4fb2c2894,
+    - target: {fileID: 8495137782207790011, guid: c220f5227bceee6458eb47e4fb2c2894,
         type: 3}
-      propertyPath: InitialModule.maxNumParticles
-      value: 2
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3093135451645133771, guid: c220f5227bceee6458eb47e4fb2c2894,
         type: 3}
@@ -465,17 +460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3093135451645133771, guid: c220f5227bceee6458eb47e4fb2c2894,
         type: 3}
-      propertyPath: CollisionModule.m_Bounce.scalar
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3093135451645133771, guid: c220f5227bceee6458eb47e4fb2c2894,
-        type: 3}
       propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3093135451645133771, guid: c220f5227bceee6458eb47e4fb2c2894,
-        type: 3}
-      propertyPath: CollisionModule.maxKillSpeed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3093135451645133771, guid: c220f5227bceee6458eb47e4fb2c2894,
@@ -490,13 +475,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1302661693122025728, guid: c220f5227bceee6458eb47e4fb2c2894,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 5
+      propertyPath: m_LocalPosition.x
+      value: 0.125
       objectReference: {fileID: 0}
     - target: {fileID: 1302661693122025728, guid: c220f5227bceee6458eb47e4fb2c2894,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.125
+      propertyPath: m_LocalPosition.y
+      value: 1.031
       objectReference: {fileID: 0}
     - target: {fileID: 1302661693122025728, guid: c220f5227bceee6458eb47e4fb2c2894,
         type: 3}
@@ -525,8 +510,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1302661693122025728, guid: c220f5227bceee6458eb47e4fb2c2894,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.031
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302661693122025728, guid: c220f5227bceee6458eb47e4fb2c2894,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302661693122025728, guid: c220f5227bceee6458eb47e4fb2c2894,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302661693122025728, guid: c220f5227bceee6458eb47e4fb2c2894,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c220f5227bceee6458eb47e4fb2c2894, type: 3}
@@ -785,6 +785,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3300000, guid: b7c25b7c0eb815349be1f758b6d8885f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 5311622d9603ce7478e136884dfc8806, type: 3}
     - target: {fileID: 2300000, guid: b7c25b7c0eb815349be1f758b6d8885f, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -793,10 +797,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4f8a841e89c0dc042a92ebf7798101fe, type: 2}
-    - target: {fileID: 3300000, guid: b7c25b7c0eb815349be1f758b6d8885f, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4300000, guid: 5311622d9603ce7478e136884dfc8806, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7c25b7c0eb815349be1f758b6d8885f, type: 3}
 --- !u!4 &1865108276131427698 stripped
@@ -907,11 +907,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1865108276131427698}
     m_Modifications:
-    - target: {fileID: 4639930365437419148, guid: 9b5843d1caa62de49a754265cb8be289,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 912457958382632691, guid: 9b5843d1caa62de49a754265cb8be289,
         type: 3}
       propertyPath: m_Name

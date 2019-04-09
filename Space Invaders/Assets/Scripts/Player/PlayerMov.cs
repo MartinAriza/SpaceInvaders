@@ -15,7 +15,10 @@ public class PlayerMov : MonoBehaviour
 
     [SerializeField][Tooltip("Cuanto rota la nave al moverse")] float rotationAmount = 4.0f;
     [SerializeField][Tooltip("Cuanta distancia puede moverse la nave desde el centro de la pantalla en el eje X")] float allowedMovementX = 10.0f;
-    [SerializeField][Tooltip("Cuanta distancia puede moverse la nave desde el centro de la pantalla en el eje Y")] float allowedMovementY = 5.0f;
+
+    [SerializeField] float minYPosition = 0.0f;
+    [SerializeField] float maxYPosition = 7.5f;
+    [SerializeField] float yMovementAmount = 2.5f;
 
     ParticleSystem gun = null;
     [SerializeField] ParticleSystem gunWithBounce;
@@ -23,7 +26,6 @@ public class PlayerMov : MonoBehaviour
     [SerializeField] ParticleSystem deathFX;
     [SerializeField] ParticleSystem [] engineParticles;
     [SerializeField] GameObject aimCylinder;
-
 
     ScoreManager scoreManager;
 
@@ -34,6 +36,8 @@ public class PlayerMov : MonoBehaviour
 
     Vector3 velocity = new Vector3(0f, 0f, 0f);
     Vector3 locRotation = new Vector3(0f, 0f, 0f);
+
+    float newY = 0.0f;
 
     void Start()
     {
@@ -58,6 +62,11 @@ public class PlayerMov : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
     }
 
+    void Update()
+    {
+        yMovement();
+    }
+
     void FixedUpdate()
     {
         if (HP > 0)
@@ -78,26 +87,15 @@ public class PlayerMov : MonoBehaviour
     }
 
     void movement()
-    {
-        /*Vector3 ejeX = Input.GetAxisRaw("Horizontal") * Vector3.right * Time.deltaTime * speed; //Se mueve horizontalmente al jugador
-        rb.velocity = ejeX;
-
-        //Se limita la posición del jugador a los límites establecidos
-        transform.position = new Vector3(
-            Mathf.Clamp(transform.position.x, -allowedMovement, allowedMovement), 
-            transform.position.y, 
-            transform.position.z
-            );*/
-        
+    {   
         //X Movement
         float inputX = Input.GetAxisRaw("Horizontal");
         float absX = Mathf.Abs(inputX);
         velocity.x += (inputX - velocity.x / speed.x) * aceleration.x * ((1-absX) * brakeMultiplier + 1 * absX); //si no pulso nada me freno más lento de lo que acelero
 
         //Y Movement
-        float inputY = Input.GetAxisRaw("Vertical");
-        float absY = Mathf.Abs(inputY);
-        velocity.y += (inputY - velocity.y / speed.y) * aceleration.y * ((1-absY) * brakeMultiplier + 1 * absY);
+        //float absY = Mathf.Abs(inputY);
+        //velocity.y += (inputY - velocity.y / speed.y) * aceleration.y * ((1 - absY) * brakeMultiplier + 1 * absY);
 
         //Z Movement
 
@@ -111,9 +109,23 @@ public class PlayerMov : MonoBehaviour
 
         transform.position = new Vector3(
             Mathf.Clamp(transform.position.x, -allowedMovementX, allowedMovementX),
-            Mathf.Clamp(transform.position.y, -allowedMovementY, allowedMovementY),
+            Mathf.Clamp(transform.position.y, minYPosition, maxYPosition),
             transform.position.z
             );
+    }
+
+    void yMovement()
+    {
+        bool wPressed = Input.GetKeyDown(KeyCode.W);
+        bool sPressed = Input.GetKeyDown(KeyCode.S);
+
+        newY = transform.position.y;
+
+        if (wPressed) newY += yMovementAmount;
+        else if (sPressed) newY -= yMovementAmount;
+
+        newY = Mathf.Clamp(newY, minYPosition, maxYPosition);
+        transform.position = new Vector3(transform.position.x, newY, transform.position.z);
     }
 
     //La nave rota un poco hacia el lado que el jugador se está moviendo

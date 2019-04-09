@@ -7,6 +7,7 @@ using UnityEngine;
 public class Horde : MonoBehaviour
 {
     [Header("Propiedades de la horda")]
+    [Tooltip("Posición donde aparecen las hordas")] public Vector3 spawnPosition;
     [Tooltip("Velocidad horizontal de los aliens")]public float speed = 1.0f;
     [Tooltip("Cuantas unidades se desplaza la horda hacia abajo al tocar una pared")]public float downSpeed = 1.0f;
     [Space]
@@ -23,8 +24,8 @@ public class Horde : MonoBehaviour
     Rigidbody rb;
     BoxCollider bc;
     Alien [] aliens;
-    HordeManager hordeManager;
-    ScoreManager scoreManager;
+    static HordeManager hordeManager;
+    static ScoreManager scoreManager;
     AudioSource collision;
     PlayerMov player;
 
@@ -33,7 +34,7 @@ public class Horde : MonoBehaviour
     [SerializeField] float maxAlienY = 3.0f;
 
     public int numberOfAliveAliens;
-
+    int initialNumberOfAliens;
     void Start()
     {
         //Se recogen los componentes necesarios del gameObject
@@ -48,7 +49,7 @@ public class Horde : MonoBehaviour
         scoreManager = FindObjectOfType<ScoreManager>();
 
         numberOfAliveAliens = aliens.Length;    //Numero de aliens que están vivos
-
+        initialNumberOfAliens = numberOfAliveAliens;
         initialiceAlienProperties();
         randomizeAlienHeight();
         calculateBoxCollider();
@@ -56,11 +57,17 @@ public class Horde : MonoBehaviour
 
     void randomizeAlienHeight()
     {
+        float[] heights = {-3.0f, 0.0f, 3.0f, 6.0f, 6.0f };
+        int randomIndex = 0;
+
         foreach (Alien alien in aliens)
-        { 
+        {
+            randomIndex = UnityEngine.Random.Range(0, heights.Length - 1);
+
             alien.transform.position = new Vector3(
                 alien.transform.position.x,
-                UnityEngine.Random.Range(minAlienY, maxAlienY),
+                //UnityEngine.Random.Range(minAlienY, maxAlienY),
+                heights[randomIndex],
                 alien.transform.position.z);
         }
     }
@@ -127,7 +134,7 @@ public class Horde : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = Vector3.right * speed * Time.deltaTime; //Se mueve la horda en el eje horizontal
-        if (numberOfAliveAliens <= 0) { hordeManager.spawnNewHorde(); Destroy(gameObject); } //Si la horda se queda sin aliens se crea otra más fuerte y se destruye esta
+        if (numberOfAliveAliens <= 0) reset(); //Si la horda se queda sin aliens se crea otra más fuerte
     }
 
     private void OnTriggerEnter(Collider other)
@@ -158,5 +165,21 @@ public class Horde : MonoBehaviour
         {
             alien.changeColor (colors[UnityEngine.Random.Range(0,colors.Length - 1)]);
         }
+    }
+
+    private void reset()
+    {
+        transform.position = spawnPosition;
+        foreach (Alien alien in aliens)
+        {
+            alien.reset();
+        }
+
+        numberOfAliveAliens = initialNumberOfAliens;
+        calculateBoxCollider();
+
+        hordeManager.increaseHordeStats();
+        initialiceAlienProperties();
+        randomizeAlienHeight();
     }
 }
