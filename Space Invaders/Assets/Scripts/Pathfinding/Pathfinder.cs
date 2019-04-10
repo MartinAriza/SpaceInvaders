@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pathfinder : MonoBehaviour
 {
-    ArrayList waypoints = new ArrayList();
+    static ArrayList waypoints = new ArrayList();
     Queue<Waypoint> queue = new Queue<Waypoint>();
 
     void Awake()
@@ -29,32 +29,32 @@ public class Pathfinder : MonoBehaviour
 
         BreadthFirstSearch(startWaypoint, endWaypoint);
         List<Waypoint> path = createPath(startWaypoint, endWaypoint);
-
         return path;
     }
 
     private void BreadthFirstSearch(Waypoint startWaypoint, Waypoint endWaypoint)
     {
+        ArrayList visitedWaypoints = new ArrayList(); 
         Waypoint searchCenter;
-        bool isRunning = true;
+        bool foundEndWaypoint = false;
 
         queue.Enqueue(startWaypoint);
 
-        while (isRunning && queue.Count > 0)
+        while (!foundEndWaypoint && queue.Count > 0)
         {
             searchCenter = queue.Dequeue();
-            searchCenter.isExplored = true;
+            visitedWaypoints.Add(searchCenter);
 
-            if (searchCenter == endWaypoint) isRunning = false;
-            else ExploreNeighbours(searchCenter);
+            if (searchCenter == endWaypoint) foundEndWaypoint = true;
+            else ExploreNeighbours(searchCenter, visitedWaypoints);
         }
     }
 
-    private void ExploreNeighbours(Waypoint searchCenter)
+    private void ExploreNeighbours(Waypoint searchCenter, ArrayList visitedWaypoints)
     {
         foreach (Waypoint waypoint in searchCenter.explorableWaypoints)
         {
-            if (waypoint.isExplored || queue.Contains(waypoint)) { }
+            if ( visitedWaypoints.Contains(waypoint) || queue.Contains(waypoint) ) { }
             else
             {
                 queue.Enqueue(waypoint);
@@ -68,14 +68,13 @@ public class Pathfinder : MonoBehaviour
         List<Waypoint> path = new List<Waypoint>();
         path.Add(endWaypoint);
 
-        Waypoint previous = endWaypoint.exploredFrom;
+        Waypoint previousWaypoint = endWaypoint.exploredFrom;
 
-        while (previous != startWaypoint)
+        while (previousWaypoint != startWaypoint)
         {
-            path.Add(previous);
-            previous = previous.exploredFrom;
+            path.Add(previousWaypoint);
+            previousWaypoint = previousWaypoint.exploredFrom;
         }
-
         path.Add(startWaypoint);
         path.Reverse();
 
@@ -84,7 +83,7 @@ public class Pathfinder : MonoBehaviour
 
     private Waypoint getCloserWaypointToCoordinates(Vector3 v)
     {
-        float minDistance = 9999999999999999999999999999999999999f;
+        float minDistance = 99999f;
         Waypoint closestWaypoint = null;
 
         foreach (Waypoint waypoint in waypoints)
@@ -92,9 +91,17 @@ public class Pathfinder : MonoBehaviour
             if ( (waypoint.transform.position - v).magnitude < minDistance)
             {
                 closestWaypoint = waypoint;
-                minDistance = Mathf.Abs(waypoint.transform.position.magnitude - v.magnitude);
+                minDistance = (waypoint.transform.position - v).magnitude;
             }
         }
         return closestWaypoint;
     }
 }
+
+/* TO DO:
+ * Hacer que el movimiento de los agentes sea suave
+ * Añadir sistema de patrulla
+ * Detección de "ruido"
+ * Añadir cono de visión a los agentes
+ * Hacer que los agentes puedan disparar a su objetivo
+ */
