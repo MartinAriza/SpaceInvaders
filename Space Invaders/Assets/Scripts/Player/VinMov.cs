@@ -8,6 +8,17 @@ public class VinMov : MonoBehaviour
     [SerializeField] ParticleSystem powerWave;
     [SerializeField] ParticleSystem levitateWave;
     #endregion
+    #region noise
+    [Header("NOISE")]
+    public SphereCollider noiseSphere;
+    public float defaultNoise = 1.5f;
+    [Range(1.5f, 3f)] public float sneakNoise = 2f;
+    [Range(2f, 6f)] public float walkNoise = 4f;
+    [Range(5f, 9f)] public float runningNoise = 7f;
+    [Range(8f, 12f)] public float powerUseNoise = 10f;
+    [Range(10f, 14f)] public float healNoise = 12.5f;
+    [Space(20)]
+    #endregion
 
     AudioSource[] sounds;
     AudioSource powerSound;
@@ -54,6 +65,7 @@ public class VinMov : MonoBehaviour
 
     void Awake()
     {
+        noiseSphere.radius = defaultNoise;
         sounds = GetComponents<AudioSource>();
         layerMask = LayerMask.GetMask(solidLayer);
         rb = GetComponent<Rigidbody>();
@@ -131,17 +143,27 @@ public class VinMov : MonoBehaviour
         if (onFloor.Length > 0) wasLevitating = false;
 
         //WALK
+        
         if (!freezeInput) input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (usingPower) input = new Vector2(0f, 0f);
         bool walk = input.magnitude > 0f;
         if (walk)
+        {
+            noiseSphere.radius = walkNoise;
             anim.speed = Mathf.Clamp(direction.magnitude / maxSpeed, 0.35f, 1);
+        }
+            
         anim.SetBool(Anim_walk, walk);
 
         //SNEAKY IDLE
         bool sneaky = Input.GetKey(KeyCode.LeftControl);
+        if (sneaky) noiseSphere.radius = sneakNoise;
+
         bool run = Input.GetKey(KeyCode.LeftShift) && !sneaky;
+        if (run) noiseSphere.radius = runningNoise;
+
         bool sneakyIdle = (run || sneaky) && !walk && !levitate;
+        
 
         //MIENTRAS ESTE ANDANDO DEBERÍA PODER EMPEZAR A CORRER Y ANDAR CON SIGILO, NO DEBERÍAS TENER QUE PARARTE
 
@@ -172,6 +194,8 @@ public class VinMov : MonoBehaviour
             actualMaxSpeed *= runMultiplier;
             actualAceleration *= runMultiplier;
         }
+
+        if (notInput || sneakyIdle) noiseSphere.radius = defaultNoise;
     }
 
     private void Move()

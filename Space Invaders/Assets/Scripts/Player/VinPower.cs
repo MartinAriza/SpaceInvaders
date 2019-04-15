@@ -53,7 +53,8 @@ public class VinPower : MonoBehaviour
             }
         } else if (target)
         {
-            if(target.tag != "Vin")
+            mov.noiseSphere.radius = mov.powerUseNoise;
+            if (target.tag != "Vin")
             {
                 Outline ol = target.GetComponent<Outline>();
                 if (ol)
@@ -61,6 +62,7 @@ public class VinPower : MonoBehaviour
                     ol.enabled = true;
                 }
             }
+            if (heal) mov.noiseSphere.radius = mov.healNoise;
         }
     }
 
@@ -126,7 +128,6 @@ public class VinPower : MonoBehaviour
 
     void castObject()
     {
-
         if (!shield && !heal)
         {
             RaycastHit hitInfo = new RaycastHit();
@@ -177,7 +178,7 @@ public class VinPower : MonoBehaviour
             target = gameObject;
             mov.usePower();
             VL.startHealing();
-        }
+        } 
     }
 
     private void FixedUpdate()

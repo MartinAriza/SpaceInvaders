@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Pathfinder : MonoBehaviour
 {
-    
-    static ArrayList waypoints = new ArrayList();   //Referencia a todos los waypoints de la escena
+    static List<Waypoint> waypoints = new List<Waypoint>();   //Referencia a todos los waypoints de la escena
     Queue<Waypoint> queue = new Queue<Waypoint>();  //Cola de procesamiento de waypoints en orden de profundidad
+
     bool foundEndWaypoint = false;
+    List<Waypoint> exploredWaypoints = new List<Waypoint>();
 
     #region splines
-    [SerializeField]int splineGrade = 3;
-    [SerializeField] bool splineAproximation = false;
+    int splineGrade = 3;
+    bool splineAproximation = false;
     #endregion
 
     void Awake()
@@ -29,11 +30,23 @@ public class Pathfinder : MonoBehaviour
         }
     }
 
+    public List<Vector3> getPath(List<Waypoint> patrolPath, Vector3 position, Waypoint closestPatrolWaypoint) //Camino de patrulla
+    {
+        List<Vector3> path = new List<Vector3>();
+
+        foreach(Waypoint patrolW in patrolPath)
+        {
+            path.Add(patrolW.transform.position);
+        }
+        path.Add(patrolPath[0].transform.position);
+        return path;
+    }
+
     public List<Vector3> getPath(Vector3 start, Vector3 end)
     {
         //Waypoints inicial y final aproximados según las coordenadas dadas en el mundo
-        Waypoint startWaypoint = getCloserWaypointToCoordinates(start);
-        Waypoint endWaypoint = getCloserWaypointToCoordinates(end);
+        Waypoint startWaypoint = getCloserWaypointToCoordinates(start, waypoints);
+        Waypoint endWaypoint = getCloserWaypointToCoordinates(end, waypoints);
 
         BreadthFirstSearch(startWaypoint, endWaypoint);
         List<Vector3> path = createPath(startWaypoint, endWaypoint);
@@ -42,7 +55,7 @@ public class Pathfinder : MonoBehaviour
 
     private void BreadthFirstSearch(Waypoint startWaypoint, Waypoint endWaypoint)
     {
-        ArrayList visitedWaypoints = new ArrayList(); 
+        exploredWaypoints = new List<Waypoint>();
         Waypoint searchCenter;  //Waypoint alrededor del cual estamos buscando "vecinos"
         foundEndWaypoint = false;
 
@@ -51,20 +64,20 @@ public class Pathfinder : MonoBehaviour
         while (!foundEndWaypoint && queue.Count > 0)
         {
             searchCenter = queue.Dequeue();
-            visitedWaypoints.Add(searchCenter);
+            exploredWaypoints.Add(searchCenter);
 
             if (searchCenter == endWaypoint) foundEndWaypoint = true;
-            ExploreNeighbours(searchCenter, visitedWaypoints);  //Exploramos los waypoints vecinos del waypoint searchCenter
+            ExploreNeighbours(searchCenter);  //Exploramos los waypoints vecinos del waypoint searchCenter
         }
     }
 
-    private void ExploreNeighbours(Waypoint searchCenter, ArrayList visitedWaypoints)
+    private void ExploreNeighbours(Waypoint searchCenter)
     {
         if (foundEndWaypoint) return;
 
         foreach (Waypoint waypoint in searchCenter.explorableWaypoints)
         {
-            if ( visitedWaypoints.Contains(waypoint) || queue.Contains(waypoint) ) { }
+            if ( exploredWaypoints.Contains(waypoint) || queue.Contains(waypoint)) { }
             else
             {
                 queue.Enqueue(waypoint);    //Colocamos los waypoints a los que puedes ir desde el searchCenter en la cola de procesamiento
@@ -81,22 +94,20 @@ public class Pathfinder : MonoBehaviour
         path.Add(endWaypoint.transform.position);
 
         Waypoint previousWaypoint = endWaypoint.exploredFrom;
-
-        while (previousWaypoint != startWaypoint)
+        while (previousWaypoint != startWaypoint && previousWaypoint != null)
         {
             path.Add(previousWaypoint.transform.position);
             previousWaypoint = previousWaypoint.exploredFrom;
         }
         path.Add(startWaypoint.transform.position);
         path.Reverse(); //le damos la vuelta al camino para que coincida con el que ha de recorrer el agente
-        Debug.Log("First point is: " + path[0] + " last point is: " + path[path.Count - 1]);
-        if(splineAproximation)
-            path = createSplinePath(path);  //Tenemos un camino lineal y queremos conseguir un camino suave usando splines
+
+        //if(splineAproximation) path = createSplinePath(path);  //Tenemos un camino lineal y queremos conseguir un camino suave usando splines
 
         return path;
     }
 
-    private List<Vector3> createSplinePath(List<Vector3> rawPath)
+    /*private List<Vector3> createSplinePath(List<Vector3> rawPath)
     {
         List<Vector3> path = new List<Vector3>();
 
@@ -105,18 +116,23 @@ public class Pathfinder : MonoBehaviour
 
         float splineParameter = 0;
         float splineParameterIncrement = 0.01f;
+        float splineEndThreshold = 1.0f;
+
+        bool splineFinished = false;
 
         float[] nodes = new float[rawPath.Count + curveOrder + 1];
 
         for(int i = 0; i < nodes.Length; i++) nodes[i] = (float)i / (nodes.Length - 1);
 
-        while(splineParameter <= 1)
+        while(splineParameter <= 1.0f && !splineFinished)
         {
             bSpline = new Vector3();
             for (int i = 0; i < rawPath.Count; i++)
             {
                 bSpline += calculateBaseFunction(i, nodes, curveOrder, splineParameter) * rawPath[i];
             }
+
+            if( (bSpline - rawPath[rawPath.Count - 1]).magnitude <= splineEndThreshold) splineFinished = true;
 
             path.Add(bSpline);
             splineParameter += splineParameterIncrement;
@@ -142,17 +158,17 @@ public class Pathfinder : MonoBehaviour
         }
 
         return N;
-    }
+    }*/
 
-    private Waypoint getCloserWaypointToCoordinates(Vector3 v) //Se compara la distancia entre cada waypoint con las coordenadas dadas y nos quedamos con el más cercano
+    public Waypoint getCloserWaypointToCoordinates(Vector3 v, List<Waypoint> waypoints) //Se compara la distancia entre cada waypoint con las coordenadas dadas y nos quedamos con el más cercano
     {
         //Presuponemos que el primer waypoint es el más cercano
         Waypoint closestWaypoint = (Waypoint)waypoints[0];
         float minDistance = (closestWaypoint.transform.position - v).magnitude;
 
-        foreach (Waypoint waypoint in waypoints) 
+        foreach (Waypoint waypoint in waypoints)
         {
-            if ( (waypoint.transform.position - v).magnitude < minDistance)
+            if ((waypoint.transform.position - v).magnitude < minDistance)
             {
                 closestWaypoint = waypoint;
                 minDistance = (waypoint.transform.position - v).magnitude;
@@ -160,12 +176,12 @@ public class Pathfinder : MonoBehaviour
         }
         return closestWaypoint;
     }
-}
 
-/* TO DO:
- * Hacer que el movimiento de los agentes sea suave con splines (BUG: Último y primer punto del path conectados, probablemente fallo de índices)
- * Añadir sistema de patrulla
- * Detección de "ruido"
- * Añadir cono de visión a los agentes
- * Hacer que los agentes puedan disparar a su objetivo
- */
+    public void reset()
+    {
+        foreach (Waypoint waypoint in waypoints)
+        {
+            waypoint.exploredFrom = null;
+        }
+    }
+}

@@ -7,9 +7,9 @@ public class Waypoint : MonoBehaviour
     [SerializeField] bool showIcon = true;
     [Space(20)]
     [SerializeField] float explorableDistance = 5.0f;
-    public ArrayList explorableWaypoints = new ArrayList();
+    public List<Waypoint> explorableWaypoints = new List<Waypoint>();
 
-    [HideInInspector] public Waypoint exploredFrom;
+     public Waypoint exploredFrom;
 
     void Start()
     {
@@ -35,10 +35,9 @@ public class Waypoint : MonoBehaviour
                 )
             {
                 explorableWaypoints.Add(collider.gameObject.GetComponent<Waypoint>());
-                if (!collider.gameObject.GetComponent<Waypoint>().explorableWaypoints.Contains(this))
-                    collider.gameObject.GetComponent<Waypoint>().explorableWaypoints.Add(this);
-            }
-                
+                //if (!collider.gameObject.GetComponent<Waypoint>().explorableWaypoints.Contains(this))
+                  //collider.gameObject.GetComponent<Waypoint>().explorableWaypoints.Add(this);
+            }   
         }
     }
 
