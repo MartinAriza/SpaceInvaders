@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &3769111773930360381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3769111773930360380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776d6c8f81e17454e8b68fe9bf9ec0c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5422860044410748450
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,10 +53,6 @@ PrefabInstance:
     - target: {fileID: 100066, guid: b489e34ee40b90443a2625ab92c81810, type: 3}
       propertyPath: m_Name
       value: soldado_final_6
-      objectReference: {fileID: 0}
-    - target: {fileID: 100066, guid: b489e34ee40b90443a2625ab92c81810, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: b489e34ee40b90443a2625ab92c81810, type: 3}
       propertyPath: m_LocalPosition.x
@@ -102,12 +110,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.4
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: b489e34ee40b90443a2625ab92c81810, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0e24bf7e5731abb49bb5d8cf95021985, type: 2}
     - target: {fileID: 13700000, guid: b489e34ee40b90443a2625ab92c81810, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 988a3dff01a21484c84fedfdf698337b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b489e34ee40b90443a2625ab92c81810, type: 3}
+--- !u!1 &3769111773930360380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100066, guid: b489e34ee40b90443a2625ab92c81810,
+    type: 3}
+  m_PrefabInstance: {fileID: 3769111773930391774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3769111773930263068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400066, guid: b489e34ee40b90443a2625ab92c81810,
