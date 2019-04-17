@@ -7,10 +7,16 @@ public class VinPower : MonoBehaviour
     #region particles
     [SerializeField] ParticleSystem [] shieldWaves;
     [SerializeField] ParticleSystem powerWave;
-    /*[SerializeField] */ParticleSystem controlledAlienLaser;
+    ParticleSystem controlledAlienLaser;
     #endregion
-    //AudioSource[] sounds;
-    //AudioSource powerSound;
+
+    [Header("Sounds")]
+    [SerializeField] AudioSource controlSound;
+    [SerializeField] AudioSource moveSound;
+    [SerializeField] AudioSource shieldSound;
+    AudioSource actualSound;
+
+    [Header("Variables de poder")]
     [SerializeField] GameObject target;
     [SerializeField] float forceImp = 2.0f;
     [SerializeField] float powerRange = 3.0f;
@@ -97,11 +103,13 @@ public class VinPower : MonoBehaviour
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
                 mainCam.setDefaultTarget();
-                //powerSound.Stop();
-                /*foreach (AudioSource sound in sounds)
+
+                //SOUND
+                if(actualSound != null)
                 {
-                    sound.Stop();
-                }*/
+                    actualSound.Stop();
+                    actualSound = null;
+                }
             }
             else
             {
@@ -122,6 +130,7 @@ public class VinPower : MonoBehaviour
             } else if (heal)
             {
                 mov.usingPower = true;
+
             }
         }
     }
@@ -141,6 +150,11 @@ public class VinPower : MonoBehaviour
                     mov.usePower();
                 if(control && target.tag == "Alien")
                 {
+
+                    if (actualSound != null) actualSound.Stop();
+                    actualSound = controlSound;
+                    actualSound.Play();
+
                     controlledAlienLaser = target.GetComponent<theScriptThatMakesYouExplodeWhenUrTooFast>().alienLaser;
                     mainCam.changeTarget(target.transform);
                     powerWave.Play();
@@ -151,6 +165,9 @@ public class VinPower : MonoBehaviour
                 }
                 else if(move)
                 {
+                    if(actualSound != null) actualSound.Stop();
+                    actualSound = moveSound;
+                    actualSound.Play();
                     powerWave.Play();
                     if (targetEvent)
                         targetEvent.OnPowerMoveEnter();
@@ -159,12 +176,11 @@ public class VinPower : MonoBehaviour
         }
         else if (shield)
         {
-            /*foreach (AudioSource sound in sounds)
-            {
-                sound.Stop();
-            }*/
-            //powerSound = sounds[0];
-            //powerSound.Play();
+
+            if (actualSound != null) actualSound.Stop();
+            actualSound = shieldSound;
+            actualSound.Play();
+
             foreach (ParticleSystem shieldWave in shieldWaves)
             {
                 shieldWave.Play();
@@ -172,8 +188,13 @@ public class VinPower : MonoBehaviour
             powerWave.Play();            
             target = gameObject;
             mov.usePower();
+
         } else if (heal)
         {
+            if (actualSound != null) actualSound.Stop();
+            actualSound = moveSound;
+            actualSound.Play();
+
             powerWave.Play();
             target = gameObject;
             mov.usePower();

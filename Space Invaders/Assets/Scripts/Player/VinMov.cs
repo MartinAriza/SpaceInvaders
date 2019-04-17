@@ -17,16 +17,22 @@ public class VinMov : MonoBehaviour
     [Range(5f, 9f)] public float runningNoise = 7f;
     [Range(8f, 12f)] public float powerUseNoise = 10f;
     [Range(10f, 14f)] public float healNoise = 12.5f;
-    [Space(20)]
+    //[Space(20)]
     #endregion
 
-    AudioSource[] sounds;
-    AudioSource powerSound;
+    [Header("Sound variables")]
+    [SerializeField] AudioSource levitateSound;
+    [SerializeField] AudioSource walkingSound;
+
+
+    [Header("Moving variables")]
+    //AudioSource[] sounds;
+    //AudioSource powerSound;
     [SerializeField] [Range(1, 500)] float maxSpeed = 100;
     [SerializeField] [Range(1, 100)] float aceleration = 20;
     [SerializeField] float runMultiplier = 1.5f;
     [SerializeField] float sneakyMultiplier = 0.5f;
-    [SerializeField] [Tooltip("Activa para levitar pulsando e")]bool levitate = false;
+    [SerializeField] [Tooltip("Activa para levitar pulsando espacio")]bool levitate = false;
     [SerializeField] float levitateHeight = 0.5f;
     [SerializeField] Transform feetPos;
     Vector2 direction = new Vector3(0, 0);
@@ -66,7 +72,7 @@ public class VinMov : MonoBehaviour
     void Awake()
     {
         noiseSphere.radius = defaultNoise;
-        sounds = GetComponents<AudioSource>();
+        //sounds = GetComponents<AudioSource>();
         layerMask = LayerMask.GetMask(solidLayer);
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
@@ -85,7 +91,7 @@ public class VinMov : MonoBehaviour
 
     private void InputController()
     {
-        //DEFAULT NIMATION SPEED
+        //DEFAULT ANIMATION SPEED
         anim.speed = 1.0f;
         //Inputs
         //LEVITATE
@@ -96,10 +102,11 @@ public class VinMov : MonoBehaviour
             levitate = !levitate;
             if (levitate)
             {
-                foreach (AudioSource sound in sounds)
+                /*foreach (AudioSource sound in sounds)
                 {
                     sound.Stop();
-                }
+                }*/
+                levitateSound.Play();
                 //powerSound = sounds[1];
                 //powerSound.Play();
                 if (!levitateWave.isPlaying) levitateWave.Play();
@@ -111,10 +118,11 @@ public class VinMov : MonoBehaviour
             }
             else
             {
+                levitateSound.Stop();
                 //powerSound.Stop();
-                foreach (AudioSource sound in sounds){
+                /*foreach (AudioSource sound in sounds){
                     sound.Stop();
-                }                
+                }    */            
                 levitateWave.Stop();
                 powerWave.Stop();
                 if (Physics.Raycast(transform.position, -Vector3.up, out hit, levitateHeight + (feetPos.position - transform.position).magnitude + 0.5f, layerMask))
@@ -224,6 +232,7 @@ public class VinMov : MonoBehaviour
         anim.SetTrigger(Anim_Power);
         levitate = false;
         levitateWave.Stop();
+        levitateSound.Stop();
         RaycastHit hit;
         if (Physics.Raycast(transform.position, -Vector3.up, out hit, levitateHeight + (feetPos.position - transform.position).magnitude + 0.5f, layerMask))
         {
