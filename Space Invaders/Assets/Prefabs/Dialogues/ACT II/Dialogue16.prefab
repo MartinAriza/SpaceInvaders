@@ -56,12 +56,14 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   dialogue:
-  - "NNEl hu\xE9sped se muestra receloso a la asimilaci\xF3n. "
-  - 'NNNuestros exploradores y apresadores han sido neutralizados. '
+  - "NNN\xFAmero dos presenta grandes capacidades Hexarca, parece que ya est\xE1 lista."
+  - "NNHa destruido gran parte de mi flota. Me bato en retirada a la espera de su
+    intervenci\xF3n."
   - "VNAqu\xED la teniente Vin."
   - 'VNHe causado graves bajas en la flota enemiga, pero mis armas son inefectivas
-    contra su blindaje de la nave principal. '
-  - "VNIntentar\xE9 abordar la nave para inutilizarla desde el interior. "
+    contra el blindaje de la nave principal. '
+  - "VNParece que el enemigo trata de escapar. Intentar\xE9 abordar la nave para inutilizarla
+    desde el interior. "
   - "VNMantendr\xE9 mis esc\xE1neres activos y transmitiendo a la sala de control. "
   - VNVin corto.
   speakerImages:
@@ -83,7 +85,7 @@ MonoBehaviour:
   dialogueOverlayUI: {fileID: 0}
   continueButtonUI: {fileID: 0}
   continueButtonTextUI: {fileID: 0}
-  dialogueSound: {fileID: 0}
+  dialogueSound: {fileID: 1952676126482145767}
 --- !u!65 &2743892881426982422
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2743892881426982422}
   - component: {fileID: 273359247}
   m_Layer: 0
-  m_Name: Dialogue 25
+  m_Name: Dialogue 27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,10 +56,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   dialogue:
-  - 'INVeo que no me equivocaba contigo Vin, tu poder es puro. '
-  - "INHas dado un espect\xE1culo impresionante, Neyrblat era uno de mis mejores almirantes. "
-  - 'INNos has enfadado Vin. '
-  - INHas enfadado a tu Dios.
+  - "INVeo que no me equivocaba contigo Vin, por fin he encontrado a mi \xFAltima
+    hija. "
+  - 'INAunque lo que le hiciste a Neyrblat no estuvo nada bien. Somos muy pocos Vin,
+    no podemos destruirnos entre nosotros. '
+  - "INConfiaba en \xE9l para convencerte, pero deber\xEDa haber intervenido personalmente. "
+  - "INOtra muerte m\xE1s que se amontona a mis espaldas. "
+  - "INEspero que esto sea prueba suficiente de que no te ment\xEDa. Eres como \xE9l,
+    como yo. "
+  - 'INEres una Oyuxa. '
+  - INNos veremos pronto querida.
+  - "INPronto tendr\xE1s que tomar una decisi\xF3n muy importante."
   speakerImages:
   - {fileID: 21300000, guid: 7c4cb4c922bcead40bbaad1e14a5388a, type: 3}
   - {fileID: 21300000, guid: 2512ddc113ef0e549a7d2fe7dbae3a0f, type: 3}

@@ -58,7 +58,8 @@ MonoBehaviour:
   dialogue:
   - 'VNTeniente Vin al habla. '
   - VNSiento una gran fuente de ondas en la sala contigua.
-  - "VNLo que sea que produce tanta energ\xEDa est\xE1 manteniendo esta nave en funcionamiento. "
+  - "VNLo que sea que produce tanta energ\xEDa est\xE1 manteniendo esta nave en funcionamiento.
+    Tratar\xE9 de reducirlo para inutilizar la nave enemiga."
   - "VNSi todo sale bien mi siguiente informe ser\xE1 en persona. "
   - VNVin corto.
   speakerImages:

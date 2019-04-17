@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2743892881426982422}
   - component: {fileID: 273359247}
   m_Layer: 0
-  m_Name: Dialogue 24
+  m_Name: Dialogue 26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,31 +56,49 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   dialogue:
-  - "LNOh dios Vin, est\xE1s viva. "
-  - "LNCuando perdimos la comunicaci\xF3n yo... Me alegro de que est\xE9s bien. "
-  - "LNLa Polaris env\xEDo todos tus informes al salir de aquella nave. "
-  - LNLo que has descubierto es... aterrador.
-  - "LNDespu\xE9s de todo no estamos solos."
-  - 'VNEsas cosas se nos han adelantado. '
-  - "VNNo estaba solo, se comunicaba constantemente con su l\xEDder. "
-  - 'VNSon poderosos padre, muy poderosos. '
-  - "VNManten\xEDa la nave a flote solo con su energ\xEDa, pod\xEDa comunicarse simplemente
-    con las ondas. "
-  - 'VNSolo he podido vencer porque nos subestimaban, creen que somos idiotas. '
-  - 'VNY tal vez lo sea. '
-  - VNTemo haber enfurecido a fuerzas que no comprendemos...
-  - 'LNBasta de preocupaciones por hoy Vin. '
-  - 'LNHas servido bien, nos han salvado a todos. '
-  - "LNNuestros cient\xEDficos se encargar\xE1n de analizar todos tus datos. "
-  - LNPase lo que pase, estaremos preparados.
-  - "VNNo deben empezar la investigaci\xF3n sin m\xED. "
-  - 'VNNecesito comprender la fuente de su poder, padre. '
-  - "VNSon expertos ritmomantes, podr\xEDa aprender mucho de sus habilidades. "
-  - "VNAs\xED estar\xEDamos preparados para cuando vuelvan."
-  - 'LNSi es que lo hacen, hija. '
-  - "LNDetendr\xE9 la investigaci\xF3n si es tu deseo, pero has de descansar, lo tienes
-    merecido."
-  - "LNYa celebraremos tus \xE9xitos ma\xF1ana."
+  - "LNY bien hija, \xBFDe qu\xE9 quer\xEDas hablar?"
+  - "VNPodr\xEDas... \xBFPodr\xEDas hablarme sobre mi nacimiento? "
+  - "VN\xBFDe d\xF3nde vengo exactamente?"
+  - "LNBueno Vin, pensaba que tus tutores ya te hab\xEDan explicado el proceso."
+  - "LNVer\xE1s los humanos somos mam\xEDferos y por tanto..."
+  - VN...
+  - "VN\xA1NO ME REFER\xCDA A ESO! "
+  - "VNEse alien\xEDgena, el lider de la flota. Neyrblat. Parec\xEDa conocerme, aseguraba
+    que \xE9ramos hermanos, descendientes de los Oyuxa."
+  - "VNMe cont\xF3 que ellos fueron los primeros ritmomantes del universo y por tanto
+    los m\xE1s experimentados. Eso explicar\xEDa mis habilidades superiores. "
+  - "VNDijo que me salvaron de una cat\xE1strofe un me enviaron aqu\xED para crecer
+    y despu\xE9s volver a casa."
+  - "VNSe supone que Neyrblat deb\xEDa recogerme y llevarme con el Hexarca Khuzad. "
+  - "VNAy\xFAdame padre, cu\xE9ntame la verdad por favor"
+  - "LNLo siento mucho hija, eso fue lo m\xE1s duro que Mab y yo tuvimos que soportar. "
+  - "LNVer\xE1s ella quer\xEDa perpetuar su linaje, no quer\xEDa que sus poderes se
+    perdieran con ella, pero era incapaz de concebir."
+  - "LNT\xFA fuiste un regalo ca\xEDdo del cielo, literalmente. "
+  - "LNCuando ocurri\xF3 pensamos que los Europeos hab\xEDan roto el tratado de paz
+    y hab\xEDan vuelto a atacarnos."
+  - "LNLo que encontramos fue una masa retorci\xE9ndose dentro de una c\xE1psula de
+    cristal. Te llevamos a casa a, Dios me perdone, investigarte. "
+  - "LNConforme pasaron los d\xEDas juro que cada vez te parec\xEDas m\xE1s a tu madre,
+    salvo por esos preciosos ojos violetas. "
+  - "LNFuimos incapaces de experimentar con una ni\xF1a peque\xF1a asique acordamos
+    criarte como la hija que no podr\xEDamos haber tenido."
+  - "LNPara entonces Mab ya sab\xEDa lo de su enfermedad, no le quedaba mucho tiempo
+    aqu\xED. "
+  - "LNAcordamos que te contar\xEDa todo una vez hubiera pasado, pero me derrumb\xE9. "
+  - "LNEl peso de una naci\xF3n, la muerte de mi esposa. Y por supuesto t\xFA. Fue
+    demasiado para m\xED."
+  - "LNRuego que me perdones hija, si quieres marcharte no te lo echar\xE9 en cara."
+  - VN...
+  - 'VNPadre yo... '
+  - 'VNGracias por contarme la verdad. '
+  - "VNNo s\xE9 que hacer ahora mismo. "
+  - "VNHace un momento asesin\xE9 a mi hermano, eso te da en qu\xE9 pensar. "
+  - 'VNVoy a retirarme una temporada a nuestra antigua casa, necesito pensar a solas. '
+  - VNGracias.
+  - VNPor todo.
+  - "LNEspero que encuentres lo que est\xE1s buscando Vin. "
+  - "LNTe apoyar\xE9 en tu decisi\xF3n, sea cu\xE1l sea. "
   speakerImages:
   - {fileID: 21300000, guid: 7c4cb4c922bcead40bbaad1e14a5388a, type: 3}
   - {fileID: 21300000, guid: 2512ddc113ef0e549a7d2fe7dbae3a0f, type: 3}

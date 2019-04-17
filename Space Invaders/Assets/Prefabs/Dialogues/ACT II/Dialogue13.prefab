@@ -64,7 +64,8 @@ MonoBehaviour:
   - "VNPierdo su se\xF1al sala de control. "
   - "VNSala de control \xBFme reciben? Aqu\xED Vin a sala de control."
   - VNMierda, sufrimos interferencias de onda.
-  - "NNTenemos al objetivo Septarca Khuzad, iniciamos el plan de asimilaci\xF3n."
+  - "NNTenemos visual de n\xFAmero dos. "
+  - "NNIniciamos el plan de asimilaci\xF3n Hexarca Khuzad"
   speakerImages:
   - {fileID: 21300000, guid: 7c4cb4c922bcead40bbaad1e14a5388a, type: 3}
   - {fileID: 21300000, guid: 2512ddc113ef0e549a7d2fe7dbae3a0f, type: 3}
@@ -84,7 +85,7 @@ MonoBehaviour:
   dialogueOverlayUI: {fileID: 0}
   continueButtonUI: {fileID: 0}
   continueButtonTextUI: {fileID: 0}
-  dialogueSound: {fileID: 0}
+  dialogueSound: {fileID: 8682691816392660506}
 --- !u!65 &2743892881426982422
 BoxCollider:
   m_ObjectHideFlags: 0

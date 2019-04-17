@@ -58,9 +58,10 @@ MonoBehaviour:
   dialogue:
   - 'VNTeniente Vin al habla. '
   - "VNHe encontrado una m\xE1quina de reconocimiento enemiga operativa."
-  - "VNLlevan estudiando la Tierra desde poco despu\xE9s de la Unificaci\xF3n. "
+  - "VNLlevan estudiando la Tierra desde antes de la Unificaci\xF3n. "
   - "VNEl enemigo marca en sus archivos a individuos con una energ\xEDa de onda fuera
     de lo com\xFAn entre su especie. "
+  - "VNNo s\xE9 que planean hacer con esa gente pero debemos protegerlos."
   - "VNEnvi\xF3 los datos a la sala de control. "
   - VNVin corto.
   speakerImages:

@@ -56,8 +56,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   dialogue:
-  - 'NNLa flota sufre bajas Septarca Khuzad. '
-  - NNDesplegamos a los apresadores.
+  - "NNTal y como esperaba n\xFAmero dos se resiste a la asimilaci\xF3n."
+  - NNDesplegamos a la tropa de onduladores.
   speakerImages:
   - {fileID: 21300000, guid: 7c4cb4c922bcead40bbaad1e14a5388a, type: 3}
   - {fileID: 21300000, guid: 2512ddc113ef0e549a7d2fe7dbae3a0f, type: 3}
@@ -77,7 +77,7 @@ MonoBehaviour:
   dialogueOverlayUI: {fileID: 0}
   continueButtonUI: {fileID: 0}
   continueButtonTextUI: {fileID: 0}
-  dialogueSound: {fileID: 0}
+  dialogueSound: {fileID: 3868690743237194079}
 --- !u!65 &2743892881426982422
 BoxCollider:
   m_ObjectHideFlags: 0

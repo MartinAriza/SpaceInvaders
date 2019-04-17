@@ -59,9 +59,9 @@ MonoBehaviour:
   - 'VNTeniente Vin al habla. '
   - VNEl enemigo posee un amplio conocimiento sobre la ritmomancia.
   - "VNCuenta con m\xE1quinas capaces de capturar y medir las ondas base de los individuos
-    de un planeta entero. "
+    de un planeta entero, catalog\xE1ndolas seg\xFAn su potencia. "
   - "VNCopiar\xE9 todos los datos sobre las distintas especies, podr\xEDan proporcionar
-    informaci\xF3n esencial a la Uni\xF3n Universal. "
+    informaci\xF3n esencial a la Uni\xF3n Universal sobre lo que hay ah\xED fuera. "
   - VNVin corto.
   speakerImages:
   - {fileID: 21300000, guid: 7c4cb4c922bcead40bbaad1e14a5388a, type: 3}

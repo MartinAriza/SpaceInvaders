@@ -57,37 +57,46 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   dialogue:
   - 'NNPor fin has llegado, te has tomado tu tiempo con mis tropas. '
-  - "NNHe estado observ\xE1ndote Vin y francamente me decepcionas. "
-  - "NNEsperaba algo m\xE1s espectacular de alguien que ha llamado la atenci\xF3n
-    del Septarca Khuzad. "
-  - "NNAunque supongo que no es dif\xEDcil destacar ah\xED abajo."
-  - "NNQue raza tan pat\xE9tica. "
-  - "NNOs llam\xE1is Uni\xF3n Universal pero ni siquiera hab\xE9is abandonado esa
-    roca."
-  - "VNNo permitir\xE9 que amenaces a la Uni\xF3n Universal escoria de otro mundo. "
-  - VNExijo que expliques vuestros planes para con la Tierra.
-  - "NNNo est\xE1s en posici\xF3n para exigir nada. "
-  - "NNSi has llegado hasta aqu\xED es porque te lo he permitido."
-  - 'NNTienes poder, pero no sabes explotarlo. '
-  - "NNVoy a ofrec\xE9rtelo una \xFAnica vez, \xFAnete al consejo de grabadores Vin. "
-  - "NNEst\xE1s ensimismada con esos escritos rudimentarios de Mabacca, \xBFPor qu\xE9
-    no acudir a la primera fuente de la ritmomancia? "
-  - NNEl Septarca Khuzad es el nuevo Dios de este universo.
-  - "VNJam\xE1s traicionar\xE9 a la Uni\xF3n. "
-  - "VNTe r\xEDes de mi poder, pero solo te quedas aqu\xED, mandando tus tropas a
-    la muerte. "
-  - "VNSin embargo, aqu\xED estoy yo, una pat\xE9tica humana que ha acabado con todas
-    tus tropas, que se ha infiltrado en tu propia nave y aqu\xED est\xE1 plant\xE1ndote
-    cara. "
-  - "VNNo tienes ej\xE9rcito, no tienes nada, est\xE1s solo gusano."
-  - 'NNParece que sigues sin comprender la escala de este conflicto Vin. '
-  - "NNNo estoy aislado, nuestra influencia se extiende muy lejos, demasiado lejos
-    para tu comprensi\xF3n. "
-  - "NNPero eso ya no importa, has rechazado tu \xFAnica oportunidad de salir de aqu\xED. "
-  - "NNTengo \xF3rdenes de llevarte ante el Septarca pero tu estado queda a mi merced. "
-  - NNVas a conocer de primera mano el poder que has rechazado.
-  - 'NNMi paciencia es limitada, a diferencia de poder. '
-  - "NNMe has amenazado por \xFAltima vez escoria de otro mundo."
+  - "NNNos conocemos al fin n\xFAmero dos, o Vin si prefieres que use tu nombre humano. "
+  - 'NNTu resistencia me decepciona, parece que no eres consciente de lo que estoy
+    haciendo por ti. '
+  - "NNEl Hexarca Khuzad no tolerar\xEDa este arrebato contra los tuyos."
+  - "VNNo entiendo lo que dices alien\xEDgena. \xBFDe qu\xE9 me conoces? \xBFQu\xE9
+    es Khuzad?"
+  - "VN\xBFDe qu\xE9 me conoces?"
+  - "VN\xBFQu\xE9 es Khuzad?"
+  - "NNAsique los \u201Ctuyos\u201D te han mentido. Era de esperar, los humanos son
+    buenos ritmomantes pero son demasiado utilitarios, demasiado ego\xEDstas. Solo
+    te han estado usando como arma."
+  - "NNPero perdona mis modales n\xFAmero dos, cre\xEDa que me conoc\xEDas y he omitido
+    las presentaciones. Soy n\xFAmero cinco, Neyrblat su prefieres usar mi nombre
+    Gorgakvian. "
+  - "NNEl Hexarca Khuzad es nuestro padre, el \xFAltimo de la gran civilizaci\xF3n. "
+  - "NNNos salv\xF3 de la cat\xE1strofe y ahora nos ha llama para volver a casa."
+  - "VNY si es mi padre \xBFc\xF3mo es que no ha contactado conmigo? "
+  - "VNNo parece que est\xE9 haciendo muy buen trabajo como progenitor. "
+  - "VNTus mentiras est\xE1n llenas de agujeros. Recuerdo mi infancia y te aseguro
+    que hubo ninguna \u201CGran cat\xE1strofe\u201D de la que me salvaran."
+  - 'NNNo te culpo por ello, ninguno de los cinco lo recordamos. '
+  - "NNEl Hexarca en persona visit\xF3 mi planeta, parece que fui el primero en florecer,
+    y me cont\xF3 la verdad. Cuando escuch\xE9 sus palabras supe que no ment\xEDa. "
+  - "NNConfi\xF3 en mi para que te trajera a casa y parece que le estoy fallando. "
+  - "NNDime Vin \xBFPor qu\xE9 tus poderes son tan superiores a los de tu especie? "
+  - "NNNinguno de tus compa\xF1eros de pelot\xF3n se te acerca siquiera y todos son
+    ritmomantes muy capaces para los est\xE1ndares humanos."
+  - 'VNEs una herencia de mi madre, ella me dio el don de la ritmomancia al nacer
+    y gracias a sus escritos pude entrenarme. '
+  - "VNRecuerdo que mi padre se asombraba con lo que era capaz de hacer. Hitos que
+    mi madre tard\xF3 a\xF1os en aprender eran naturales para mi. "
+  - "VNLo achataba a la casualidad y la buena ense\xF1anza, ahora no estoy tan segura..."
+  - VN...
+  - "NNVeo que empiezas a recordar n\xFAmero dos. "
+  - "NNNo eres como ellos, no perteneces ah\xED abajo. "
+  - 'NNEres una Oyuxa, al igual que tus otros cuatro hermanos y el gran Hexarca Khuzad. '
+  - "NNMe revel\xF3 que fuimos los primeros ritmomantes del universo con unas habilidades
+    sin parang\xF3n."
+  - "NNPor favor hermana, vuelve a casa con nosostros. Sea lo que sea que planea el
+    Hexarca s\xE9 que beneficiar\xE1 a todo el universo."
   speakerImages:
   - {fileID: 21300000, guid: 7c4cb4c922bcead40bbaad1e14a5388a, type: 3}
   - {fileID: 21300000, guid: 2512ddc113ef0e549a7d2fe7dbae3a0f, type: 3}

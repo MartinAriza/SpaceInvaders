@@ -56,14 +56,16 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   dialogue:
-  - 'VNTeniente Vin al habla. '
+  - VNTeniente Vin al habla. Esto es perturbador.
   - 'VNEl enemigo no se limita a recopilar y estudiar las ondas base de distintas
     especies. '
   - 'VNCapturan a los individuos marcados en sus archivos y los mantienen dentro de
     tanques de estasis. '
-  - "VNEl espeso l\xEDquido no me permite determinar el estado de los espec\xEDmenes. "
-  - 'VNEl enemigo se ha tomado demasiadas molestias en capturarlos, temo que sean
-    cruciales para su plan. '
+  - "VNEl espeso l\xEDquido no me permite determinar con exactitud el estado de los
+    espec\xEDmenes, aunque no parecen mostrar se\xF1ales de vida."
+  - VNTodas sus marcas han sido eliminadas de los archivos del enemigo, es como si
+    estuvieran buscando algo en concreto...
+  - VN...
   - VNNo deben llegar a su destino.
   - VNVin corto.
   speakerImages:
