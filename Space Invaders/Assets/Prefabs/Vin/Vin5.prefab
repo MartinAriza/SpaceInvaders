@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &797043173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 797043174}
+  - component: {fileID: 797043175}
+  m_Layer: 0
+  m_Name: NoiseSphere
+  m_TagString: NoiseSphere
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &797043174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797043173}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2056401930590372044}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &797043175
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797043173}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 10
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1179519473
 GameObject:
   m_ObjectHideFlags: 0
@@ -2825,6 +2869,7 @@ Transform:
   - {fileID: 5461359290209599072}
   - {fileID: 6026503823112903669}
   - {fileID: 4782050994347715884}
+  - {fileID: 797043174}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2891,6 +2936,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerWave: {fileID: 5461359290209599073}
   levitateWave: {fileID: 6026503823112903658}
+  noiseSphere: {fileID: 797043175}
+  defaultNoise: 1.5
+  sneakNoise: 2
+  walkNoise: 4
+  runningNoise: 7
+  powerUseNoise: 10
+  healNoise: 12.5
   maxSpeed: 90
   aceleration: 10
   runMultiplier: 2
