@@ -9,13 +9,13 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Test Scenes/menu.unity
+    path: Assets/Scenes/Test Scenes/SPRINT2/menu.unity
     guid: 90345ad2f48c3ce4bb5412c51e609a5b
   - enabled: 0
-    path: Assets/Scenes/Test Scenes/GAME.unity
+    path: Assets/Scenes/Test Scenes/SPRINT2/GAME.unity
     guid: fc5f704ae13302d4ba52b0c3367f232b
   - enabled: 0
-    path: Assets/Scenes/Test Scenes/GAME 3.unity
+    path: Assets/Scenes/Test Scenes/SPRINT2/GAME 3.unity
     guid: 138cbfa897fa4154d9a1172e5653ac72
   - enabled: 1
     path: Assets/Scenes/Game Scenes/GAME 2.unity

@@ -41,13 +41,18 @@ public class Dialogue: MonoBehaviour
     [SerializeField] Button continueButtonUI;   //Botón de continuar el diálogo
     [SerializeField] Text continueButtonTextUI; //Texto del botón de continuar
 
-    [SerializeField] AudioSource dialogueSound;
+    AudioSource dialogueSound;
     #endregion
 
     #region class variables
     int dialogueIndex = 0;
     bool finishedWriting = false;
     #endregion
+
+    void Start()
+    {
+        dialogueSound = this.GetComponent<AudioSource>();
+    }
 
     public void startDialogue()
     {

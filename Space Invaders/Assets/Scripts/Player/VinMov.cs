@@ -22,7 +22,6 @@ public class VinMov : MonoBehaviour
 
     [Header("Sound variables")]
     [SerializeField] AudioSource levitateSound;
-    [SerializeField] AudioSource walkingSound;
 
 
     [Header("Moving variables")]
