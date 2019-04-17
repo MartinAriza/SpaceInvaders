@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1547533954325378613}
+  - component: {fileID: 1667854992698064971}
   m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1667854992698064971
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7465571333865230369}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5976528, y: 1, z: 0.5785}
+  m_Center: {x: 1.5318737, y: -0.050328575, z: 0.80211043}
 --- !u!1001 &6729503862286238671
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5136676186295774584}
+  - component: {fileID: 2307569802753898627}
   m_Layer: 0
   m_Name: Locker
   m_TagString: Untagged
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2307569802753898627
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4498012601279904396}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8412852, y: 3.0680237, z: 0.713774}
+  m_Center: {x: -0.079357386, y: 1.4784131, z: 0.14257494}
 --- !u!1001 &7666936724546874403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -106,11 +120,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 3339768a8c6605e4c9b0e2f83a42d1be, type: 3}
+    - target: {fileID: 2300002, guid: 3339768a8c6605e4c9b0e2f83a42d1be, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6477f6545d8773f4e9ed6fa7f79c109c, type: 2}
-    - target: {fileID: 2300002, guid: 3339768a8c6605e4c9b0e2f83a42d1be, type: 3}
+    - target: {fileID: 2300000, guid: 3339768a8c6605e4c9b0e2f83a42d1be, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6477f6545d8773f4e9ed6fa7f79c109c, type: 2}

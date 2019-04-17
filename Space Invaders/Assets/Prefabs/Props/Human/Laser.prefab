@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 116389778635140561}
+  - component: {fileID: 6450363518194055247}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &6450363518194055247
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9185739922199929667}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.13
+  m_Center: {x: -0.28, y: 0.09, z: -0.038}
 --- !u!1001 &1225778386070966695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90,7 +104,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: b13b8ea1015a0a34d8eca6df62faeaa1, type: 3}
+    - target: {fileID: 2300004, guid: b13b8ea1015a0a34d8eca6df62faeaa1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0f81a51a8757bf64da156b3fbe4636be, type: 2}
@@ -98,7 +112,7 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0f81a51a8757bf64da156b3fbe4636be, type: 2}
-    - target: {fileID: 2300004, guid: b13b8ea1015a0a34d8eca6df62faeaa1, type: 3}
+    - target: {fileID: 2300000, guid: b13b8ea1015a0a34d8eca6df62faeaa1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0f81a51a8757bf64da156b3fbe4636be, type: 2}

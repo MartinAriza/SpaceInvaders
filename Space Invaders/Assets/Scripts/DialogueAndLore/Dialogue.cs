@@ -22,8 +22,8 @@ public class Dialogue: MonoBehaviour
     [Header("Parámetros de los diálogos")]
     [SerializeField] Font normalFont;
     [SerializeField] Font glitchedFont;
-    [SerializeField][Range(30, 60)] int fontSizeName = 30;
-    [SerializeField][Range(24, 50)] int fontSizeDialogue = 24;
+    [SerializeField][Range(12, 60)] int fontSizeName = 30;
+    [SerializeField][Range(12, 50)] int fontSizeDialogue = 24;
     [SerializeField][ColorUsage(true, false)] Color fontColor;
 
     [SerializeField] [Tooltip("Cuantos segundos tarda cada letra en escribirse")] float timeToWrite = 0.2f;
