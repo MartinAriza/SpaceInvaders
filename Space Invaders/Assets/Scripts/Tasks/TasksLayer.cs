@@ -24,6 +24,7 @@ public class TasksLayer : MonoBehaviour
 
     public string[] getInfo()
     {
+        tasksList = GetComponentsInChildren<Task>();
         string[] info = new string[tasksList.Length];
         for(int i = 0; i < tasksList.Length; i++)
         {
