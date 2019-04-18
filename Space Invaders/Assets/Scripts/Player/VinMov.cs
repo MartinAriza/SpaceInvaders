@@ -36,7 +36,7 @@ public class VinMov : MonoBehaviour
     [SerializeField] Transform feetPos;
     Vector2 direction = new Vector3(0, 0);
     Rigidbody rb;
-    [HideInInspector][Tooltip("Activa para mantener el input actual, pulsa f para activarlo")] public bool freezeInput = false;
+    [Tooltip("Activa para mantener el input actual, pulsa f para activarlo")] public bool freezeInput = false;
     Vector2 input = new Vector2(0f, 0f);
     float levitateTargetHeight;
     Animator anim;
@@ -70,7 +70,6 @@ public class VinMov : MonoBehaviour
     void Awake()
     {
         noiseSphere.radius = defaultNoise;
-        //sounds = GetComponents<AudioSource>();
         layerMask = LayerMask.GetMask(solidLayer);
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
@@ -88,13 +87,14 @@ public class VinMov : MonoBehaviour
 
     private void InputController()
     {
+
         //DEFAULT ANIMATION SPEED
         anim.speed = 1.0f;
         //Inputs
         //LEVITATE
         Collider[] onFloor = Physics.OverlapSphere(feetPos.position, 0.2f, layerMask);
         RaycastHit hit;
-        if (Input.GetKeyDown("space") && !usingPower)
+        if (Input.GetKeyDown("space") && !usingPower && !freezeInput)
         {
             levitate = !levitate;
             if (levitate)
@@ -150,7 +150,7 @@ public class VinMov : MonoBehaviour
         //WALK
         
         if (!freezeInput) input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        if (usingPower) input = new Vector2(0f, 0f);
+        if (usingPower || freezeInput) input = new Vector2(0f, 0f);
         bool walk = input.magnitude > 0f;
         if (walk)
         {
@@ -161,10 +161,10 @@ public class VinMov : MonoBehaviour
         anim.SetBool(Anim_walk, walk);
 
         //SNEAKY IDLE
-        bool sneaky = Input.GetKey(KeyCode.LeftControl);
+        bool sneaky = Input.GetKey(KeyCode.LeftControl) && !freezeInput;
         if (sneaky) noiseSphere.radius = sneakNoise;
 
-        bool run = Input.GetKey(KeyCode.LeftShift) && !sneaky;
+        bool run = Input.GetKey(KeyCode.LeftShift) && !sneaky && !freezeInput;
         if (run) noiseSphere.radius = runningNoise;
 
         bool sneakyIdle = (run || sneaky) && !walk && !levitate;
