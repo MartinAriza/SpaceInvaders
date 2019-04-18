@@ -21,6 +21,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6148865643131523381}
+  - component: {fileID: 1672156631}
+  - component: {fileID: 6997378531240024793}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Untagged
@@ -43,6 +45,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1672156631
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5422860044410748450}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.530384, y: 6.7050514, z: 1.1776258}
+  m_Center: {x: -11.641644, y: 8.824854, z: 29.175564}
+--- !u!95 &6997378531240024793
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5422860044410748450}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0e24bf7e5731abb49bb5d8cf95021985, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3769111773930391774
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -41,10 +41,9 @@ public class PlayerMov : MonoBehaviour
     AudioSource laserSound;
     Rigidbody rb;
 
+    public bool tutorial = true;
     Vector3 velocity = new Vector3(0f, 0f, 0f);
     Vector3 locRotation = new Vector3(0f, 0f, 0f);
-
-    
 
     void Start()
     {
@@ -122,17 +121,20 @@ public class PlayerMov : MonoBehaviour
 
         //Clamping
         velocity = new Vector3(
-            Mathf.Clamp(velocity.x, -speed.x, speed.x),
-            Mathf.Clamp(velocity.y, -speed.y, speed.y),
-            Mathf.Clamp(velocity.z, -speed.z, speed.z)
+        Mathf.Clamp(velocity.x, -speed.x, speed.x),
+        Mathf.Clamp(velocity.y, -speed.y, speed.y),
+        Mathf.Clamp(velocity.z, -speed.z, speed.z)
         );
-        rb.velocity = new Vector3(velocity.x,0f,velocity.z) * Time.deltaTime;
 
-        transform.position = new Vector3(
-            Mathf.Clamp(transform.position.x, -allowedMovementX, allowedMovementX),
-            Mathf.Clamp(transform.position.y, minYPosition, maxYPosition),
-            transform.position.z
-        );
+        rb.velocity = new Vector3(velocity.x,0f,velocity.z) * Time.deltaTime;
+        if (!tutorial)
+        {
+            transform.position = new Vector3(
+                Mathf.Clamp(transform.position.x, -allowedMovementX, allowedMovementX),
+                Mathf.Clamp(transform.position.y, minYPosition, maxYPosition),
+                transform.position.z
+            );
+        }
     }
 
     private void checkYTarget()

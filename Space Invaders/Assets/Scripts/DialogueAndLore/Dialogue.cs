@@ -47,17 +47,19 @@ public class Dialogue: MonoBehaviour
     #region class variables
     int dialogueIndex = 0;
     bool finishedWriting = false;
+    BoxCollider boxCollider;
     #endregion
 
     void Start()
     {
         dialogueSound = this.GetComponent<AudioSource>();
+        boxCollider = gameObject.GetComponent<BoxCollider>();
     }
 
     public void startDialogue()
     {
         onDialogueStart.Invoke();
-        gameObject.GetComponent<BoxCollider>().enabled = false;
+        boxCollider.enabled = false;
         Time.timeScale = 0.0f;                         //Se pausa el juego (menos la interfaz)
 
         //Se activan los elementos de la interfaz que muestran cosas del diálogo
@@ -205,7 +207,7 @@ public class Dialogue: MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Vin")
+        if (other.gameObject.tag == "Vin" || other.gameObject.tag == "Player")
         {
             startDialogue();
         }

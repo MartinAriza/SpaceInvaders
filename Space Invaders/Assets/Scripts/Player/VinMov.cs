@@ -67,7 +67,6 @@ public class VinMov : MonoBehaviour
     //Layer names
     private static string solidLayer = "staticSolid";
 
-
     void Awake()
     {
         noiseSphere.radius = defaultNoise;
@@ -80,7 +79,6 @@ public class VinMov : MonoBehaviour
     private void Update()
     {
         InputController();
-        //if (Input.GetKeyDown("f")) freezeInput = !freezeInput;
     }
 
     void FixedUpdate()
@@ -239,5 +237,10 @@ public class VinMov : MonoBehaviour
         }
         rb.useGravity = true;
         anim.SetBool(Anim_levitate, false);
+    }
+
+    public void stop(bool freeze)
+    {
+        freezeInput = freeze;
     }
 }

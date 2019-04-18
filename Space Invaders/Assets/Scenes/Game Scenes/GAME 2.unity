@@ -1789,6 +1789,11 @@ PrefabInstance:
       propertyPath: timeToChangeHeight
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 1865108276289579825, guid: 4a4a70ab91d8eb048b94514660e8b553,
+        type: 3}
+      propertyPath: tutorial
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a4a70ab91d8eb048b94514660e8b553, type: 3}
 --- !u!1001 &3792041539280063952
