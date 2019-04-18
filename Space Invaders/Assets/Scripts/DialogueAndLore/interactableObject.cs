@@ -5,14 +5,14 @@ using UnityEngine.Events;
 
 public class interactableObject : MonoBehaviour
 {
-    public UnityEvent onClick;
-    Outline outline;
+    [SerializeField] UnityEvent onClick;
+    [SerializeField] UnityEvent onMouseOver;
+    [SerializeField] UnityEvent onMouseExit;
     int layerMask;
 
     private void Start()
     {
         layerMask = LayerMask.GetMask("Interactable");
-        outline = GetComponent<Outline>();
     }
 
     private void LateUpdate()
@@ -23,9 +23,9 @@ public class interactableObject : MonoBehaviour
             RaycastHit hitInfo = new RaycastHit();
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo, Mathf.Infinity, layerMask))
             {
-                if(hitInfo.transform.gameObject.tag == "Interactable")
+                if(hitInfo.transform.gameObject == gameObject && Time.timeScale == 1.0f)
                 {
-                    onClick.Invoke();
+                    this.onClick.Invoke();
                 }
             }
         }
@@ -36,8 +36,14 @@ public class interactableObject : MonoBehaviour
         RaycastHit hitInfo = new RaycastHit();
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo, Mathf.Infinity, layerMask))
         {
-            if (hitInfo.transform.gameObject.tag == "Interactable") outline.enabled = true;
+            if (hitInfo.transform.gameObject == gameObject && Time.timeScale == 1.0f) this.onMouseOver.Invoke();
         }
-        else outline.enabled = false;
+        else this.onMouseExit.Invoke();
+    }
+
+    public void pauseGame(bool pause)
+    {
+        if (pause) Time.timeScale = 0.0f;
+        else Time.timeScale = 1.0f;
     }
 }
