@@ -375,11 +375,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1d523769e40f4034d880c8af20fe4fe0, type: 3}
-    m_FontSize: 42
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
-    m_MaxSize: 42
+    m_MaxSize: 290
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1

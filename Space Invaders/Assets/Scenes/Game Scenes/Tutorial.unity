@@ -232,7 +232,7 @@ RectTransform:
   m_LocalScale: {x: 0.6635758, y: 0.4697882, z: 0.4697882}
   m_Children: []
   m_Father: {fileID: 1292484705}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.01577305, y: 0.8896909}
   m_AnchorMax: {x: 0.13422696, y: 0.9462272}
@@ -955,11 +955,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue7
       objectReference: {fileID: 0}
-    - target: {fileID: 8388463848699782162, guid: d66fad0be133f4d41b04766bb3bafcb2,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2743892881426982421, guid: d66fad0be133f4d41b04766bb3bafcb2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1037,24 +1032,14 @@ PrefabInstance:
       objectReference: {fileID: 1924726551}
     - target: {fileID: 2743892881426982420, guid: d66fad0be133f4d41b04766bb3bafcb2,
         type: 3}
-      propertyPath: continueButtonTextUI
+      propertyPath: dialogueOverlayLinesUI
       value: 
-      objectReference: {fileID: 397437829}
+      objectReference: {fileID: 1878425345}
     - target: {fileID: 2743892881426982420, guid: d66fad0be133f4d41b04766bb3bafcb2,
         type: 3}
       propertyPath: continueButtonUI
       value: 
       objectReference: {fileID: 1521781298}
-    - target: {fileID: 2743892881426982420, guid: d66fad0be133f4d41b04766bb3bafcb2,
-        type: 3}
-      propertyPath: fontSizeDialogue
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982420, guid: d66fad0be133f4d41b04766bb3bafcb2,
-        type: 3}
-      propertyPath: fontSizeName
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d66fad0be133f4d41b04766bb3bafcb2, type: 3}
 --- !u!4 &183267399 stripped
@@ -1264,11 +1249,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue4
       objectReference: {fileID: 0}
-    - target: {fileID: 6401396868768414764, guid: 7ef137c7f6089234aa68b13a8e2dce6c,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2743892881426982421, guid: 7ef137c7f6089234aa68b13a8e2dce6c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1346,24 +1326,14 @@ PrefabInstance:
       objectReference: {fileID: 1924726551}
     - target: {fileID: 2743892881426982420, guid: 7ef137c7f6089234aa68b13a8e2dce6c,
         type: 3}
-      propertyPath: continueButtonTextUI
+      propertyPath: dialogueOverlayLinesUI
       value: 
-      objectReference: {fileID: 397437829}
+      objectReference: {fileID: 1878425345}
     - target: {fileID: 2743892881426982420, guid: 7ef137c7f6089234aa68b13a8e2dce6c,
         type: 3}
       propertyPath: continueButtonUI
       value: 
       objectReference: {fileID: 1521781298}
-    - target: {fileID: 2743892881426982420, guid: 7ef137c7f6089234aa68b13a8e2dce6c,
-        type: 3}
-      propertyPath: fontSizeDialogue
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982420, guid: 7ef137c7f6089234aa68b13a8e2dce6c,
-        type: 3}
-      propertyPath: fontSizeName
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ef137c7f6089234aa68b13a8e2dce6c, type: 3}
 --- !u!4 &222497548 stripped
@@ -1383,11 +1353,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dialogue11
-      objectReference: {fileID: 0}
-    - target: {fileID: 8637426672932982490, guid: 0247e7fa1ea736c4aad134fe5ffb57ed,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2743892881426982421, guid: 0247e7fa1ea736c4aad134fe5ffb57ed,
         type: 3}
@@ -1466,24 +1431,14 @@ PrefabInstance:
       objectReference: {fileID: 1924726551}
     - target: {fileID: 2743892881426982420, guid: 0247e7fa1ea736c4aad134fe5ffb57ed,
         type: 3}
-      propertyPath: continueButtonTextUI
+      propertyPath: dialogueOverlayLinesUI
       value: 
-      objectReference: {fileID: 397437829}
+      objectReference: {fileID: 1878425345}
     - target: {fileID: 2743892881426982420, guid: 0247e7fa1ea736c4aad134fe5ffb57ed,
         type: 3}
       propertyPath: continueButtonUI
       value: 
       objectReference: {fileID: 1521781298}
-    - target: {fileID: 2743892881426982420, guid: 0247e7fa1ea736c4aad134fe5ffb57ed,
-        type: 3}
-      propertyPath: fontSizeDialogue
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982420, guid: 0247e7fa1ea736c4aad134fe5ffb57ed,
-        type: 3}
-      propertyPath: fontSizeName
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0247e7fa1ea736c4aad134fe5ffb57ed, type: 3}
 --- !u!4 &239567613 stripped
@@ -1599,29 +1554,14 @@ PrefabInstance:
       objectReference: {fileID: 1924726551}
     - target: {fileID: 2743892881426982420, guid: 05811b998a73620429a670c6b043b05b,
         type: 3}
-      propertyPath: continueButtonTextUI
+      propertyPath: dialogueOverlayLinesUI
       value: 
-      objectReference: {fileID: 397437829}
+      objectReference: {fileID: 1878425345}
     - target: {fileID: 2743892881426982420, guid: 05811b998a73620429a670c6b043b05b,
         type: 3}
       propertyPath: continueButtonUI
       value: 
       objectReference: {fileID: 1521781298}
-    - target: {fileID: 2743892881426982420, guid: 05811b998a73620429a670c6b043b05b,
-        type: 3}
-      propertyPath: fontSizeDialogue
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982420, guid: 05811b998a73620429a670c6b043b05b,
-        type: 3}
-      propertyPath: fontSizeName
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5741014018640210445, guid: 05811b998a73620429a670c6b043b05b,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05811b998a73620429a670c6b043b05b, type: 3}
 --- !u!1001 &262389182
@@ -1635,11 +1575,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dialogue6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8903146321820606513, guid: c4e008589c42f264ca5b9f65790327cd,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2743892881426982421, guid: c4e008589c42f264ca5b9f65790327cd,
         type: 3}
@@ -1718,24 +1653,14 @@ PrefabInstance:
       objectReference: {fileID: 1924726551}
     - target: {fileID: 2743892881426982420, guid: c4e008589c42f264ca5b9f65790327cd,
         type: 3}
-      propertyPath: continueButtonTextUI
+      propertyPath: dialogueOverlayLinesUI
       value: 
-      objectReference: {fileID: 397437829}
+      objectReference: {fileID: 1878425345}
     - target: {fileID: 2743892881426982420, guid: c4e008589c42f264ca5b9f65790327cd,
         type: 3}
       propertyPath: continueButtonUI
       value: 
       objectReference: {fileID: 1521781298}
-    - target: {fileID: 2743892881426982420, guid: c4e008589c42f264ca5b9f65790327cd,
-        type: 3}
-      propertyPath: fontSizeDialogue
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982420, guid: c4e008589c42f264ca5b9f65790327cd,
-        type: 3}
-      propertyPath: fontSizeName
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4e008589c42f264ca5b9f65790327cd, type: 3}
 --- !u!1001 &263117080
@@ -1839,6 +1764,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.0410252
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -3.5196826
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.80209017
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21898b7814e66b74ca016c7779d3ecf5, type: 3}
@@ -2362,29 +2302,14 @@ PrefabInstance:
       objectReference: {fileID: 1924726551}
     - target: {fileID: 2743892881426982420, guid: fd5d69044cd5bd14fad655fcf1f7cdee,
         type: 3}
-      propertyPath: continueButtonTextUI
+      propertyPath: dialogueOverlayLinesUI
       value: 
-      objectReference: {fileID: 397437829}
+      objectReference: {fileID: 1878425345}
     - target: {fileID: 2743892881426982420, guid: fd5d69044cd5bd14fad655fcf1f7cdee,
         type: 3}
       propertyPath: continueButtonUI
       value: 
       objectReference: {fileID: 1521781298}
-    - target: {fileID: 2743892881426982420, guid: fd5d69044cd5bd14fad655fcf1f7cdee,
-        type: 3}
-      propertyPath: fontSizeDialogue
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982420, guid: fd5d69044cd5bd14fad655fcf1f7cdee,
-        type: 3}
-      propertyPath: fontSizeName
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3069188882367368750, guid: fd5d69044cd5bd14fad655fcf1f7cdee,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd5d69044cd5bd14fad655fcf1f7cdee, type: 3}
 --- !u!1 &310106809
@@ -2594,85 +2519,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 63788057}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &397437828
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 397437831}
-  - component: {fileID: 397437830}
-  - component: {fileID: 397437829}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &397437829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397437828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Continuar
---- !u!222 &397437830
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397437828}
-  m_CullTransparentMesh: 0
---- !u!224 &397437831
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397437828}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1521781295}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &400664302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3063,6 +2909,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.86
       objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.1529374
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -3.5436182
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.80209523
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21898b7814e66b74ca016c7779d3ecf5, type: 3}
 --- !u!1001 &496099137
@@ -3263,6 +3124,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -3.5349503
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.78545016
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.1101196
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.5720141
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21898b7814e66b74ca016c7779d3ecf5, type: 3}
@@ -3473,10 +3359,10 @@ RectTransform:
   m_Father: {fileID: 1292484705}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.19600001, y: 0.34600002}
-  m_AnchoredPosition: {x: -0.5, y: 1}
-  m_SizeDelta: {x: 0, y: 1}
+  m_AnchorMin: {x: 0.0037500004, y: 0.028886555}
+  m_AnchorMax: {x: 0.16100001, y: 0.31711343}
+  m_AnchoredPosition: {x: -0.52001953, y: 0}
+  m_SizeDelta: {x: 4.959999, y: 0.9599991}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &593490047
 CanvasRenderer:
@@ -3506,7 +3392,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 0851d72d9dbdd414d8615f213deb7870, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3836,25 +3722,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &787102191 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7399654235863277815, guid: c0da5aa8230b9744b93e85bf41ade9b2,
-    type: 3}
-  m_PrefabInstance: {fileID: 754842070147647753}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &787102197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787102191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 4d2bf13f28ff09f4cb2926e19027ef68, type: 2}
 --- !u!4 &794875471 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2709840896808634571, guid: d51ccd85ce8b6d14abad1317bdabc2c5,
@@ -3872,11 +3739,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Laser
-      objectReference: {fileID: 0}
-    - target: {fileID: 9185739922199929667, guid: ff269266aeffb504991090935b1a038b,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 116389778635140561, guid: ff269266aeffb504991090935b1a038b,
         type: 3}
@@ -3932,26 +3794,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1225778386071000835, guid: ff269266aeffb504991090935b1a038b,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1225778386071000833, guid: ff269266aeffb504991090935b1a038b,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1225778386071000837, guid: ff269266aeffb504991090935b1a038b,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1225778386071000839, guid: ff269266aeffb504991090935b1a038b,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff269266aeffb504991090935b1a038b, type: 3}
@@ -4061,7 +3903,7 @@ RectTransform:
   m_LocalScale: {x: 0.6635758, y: 0.4697882, z: 0.4697882}
   m_Children: []
   m_Father: {fileID: 1292484705}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.022773052, y: 0.8991546}
   m_AnchorMax: {x: 0.13422696, y: 0.93669087}
@@ -4234,7 +4076,7 @@ RectTransform:
   - {fileID: 1865848460}
   - {fileID: 805825587}
   m_Father: {fileID: 1292484705}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4448,29 +4290,14 @@ PrefabInstance:
       objectReference: {fileID: 1924726551}
     - target: {fileID: 2743892881426982420, guid: d97425f657bcdad4e937f1f4c36273b6,
         type: 3}
-      propertyPath: continueButtonTextUI
+      propertyPath: dialogueOverlayLinesUI
       value: 
-      objectReference: {fileID: 397437829}
+      objectReference: {fileID: 1878425345}
     - target: {fileID: 2743892881426982420, guid: d97425f657bcdad4e937f1f4c36273b6,
         type: 3}
       propertyPath: continueButtonUI
       value: 
       objectReference: {fileID: 1521781298}
-    - target: {fileID: 2743892881426982420, guid: d97425f657bcdad4e937f1f4c36273b6,
-        type: 3}
-      propertyPath: fontSizeDialogue
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982420, guid: d97425f657bcdad4e937f1f4c36273b6,
-        type: 3}
-      propertyPath: fontSizeName
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 790303066417365837, guid: d97425f657bcdad4e937f1f4c36273b6,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97425f657bcdad4e937f1f4c36273b6, type: 3}
 --- !u!4 &940875651 stripped
@@ -4503,10 +4330,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vin5
       objectReference: {fileID: 0}
+    - target: {fileID: 7087049983964363262, guid: 12ce2dec7b3be21449b0a4b2b98fbf7f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2056401930590372044, guid: 12ce2dec7b3be21449b0a4b2b98fbf7f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.77
+      value: 19.3
       objectReference: {fileID: 0}
     - target: {fileID: 2056401930590372044, guid: 12ce2dec7b3be21449b0a4b2b98fbf7f,
         type: 3}
@@ -4516,27 +4348,27 @@ PrefabInstance:
     - target: {fileID: 2056401930590372044, guid: 12ce2dec7b3be21449b0a4b2b98fbf7f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24.7
+      value: 29.99
       objectReference: {fileID: 0}
     - target: {fileID: 2056401930590372044, guid: 12ce2dec7b3be21449b0a4b2b98fbf7f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2056401930590372044, guid: 12ce2dec7b3be21449b0a4b2b98fbf7f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.51624
       objectReference: {fileID: 0}
     - target: {fileID: 2056401930590372044, guid: 12ce2dec7b3be21449b0a4b2b98fbf7f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2056401930590372044, guid: 12ce2dec7b3be21449b0a4b2b98fbf7f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.856444
       objectReference: {fileID: 0}
     - target: {fileID: 2056401930590372044, guid: 12ce2dec7b3be21449b0a4b2b98fbf7f,
         type: 3}
@@ -4551,7 +4383,7 @@ PrefabInstance:
     - target: {fileID: 2056401930590372044, guid: 12ce2dec7b3be21449b0a4b2b98fbf7f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 62.161003
       objectReference: {fileID: 0}
     - target: {fileID: 2056401930590372044, guid: 12ce2dec7b3be21449b0a4b2b98fbf7f,
         type: 3}
@@ -5045,8 +4877,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3651984, y: 0.34570768, z: 0.3709512}
-  m_Center: {x: 0.029163217, y: 0.1317232, z: -0.31452712}
+  m_Size: {x: 1.3651984, y: 0.34570768, z: 0.4499334}
+  m_Center: {x: 0.029163232, y: 0.13172327, z: -0.27503607}
 --- !u!1 &1035714204
 GameObject:
   m_ObjectHideFlags: 0
@@ -5417,6 +5249,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AliDoc
+      objectReference: {fileID: 0}
+    - target: {fileID: 2844315405306523824, guid: f176aa67e38debd49942652215015095,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2844315405306096784, guid: f176aa67e38debd49942652215015095,
         type: 3}
@@ -5817,11 +5654,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue5
       objectReference: {fileID: 0}
-    - target: {fileID: 372949102065403379, guid: aa5c2205227ed854f80ba96c4bf3e038,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2743892881426982421, guid: aa5c2205227ed854f80ba96c4bf3e038,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5899,24 +5731,14 @@ PrefabInstance:
       objectReference: {fileID: 1924726551}
     - target: {fileID: 2743892881426982420, guid: aa5c2205227ed854f80ba96c4bf3e038,
         type: 3}
-      propertyPath: continueButtonTextUI
+      propertyPath: dialogueOverlayLinesUI
       value: 
-      objectReference: {fileID: 397437829}
+      objectReference: {fileID: 1878425345}
     - target: {fileID: 2743892881426982420, guid: aa5c2205227ed854f80ba96c4bf3e038,
         type: 3}
       propertyPath: continueButtonUI
       value: 
       objectReference: {fileID: 1521781298}
-    - target: {fileID: 2743892881426982420, guid: aa5c2205227ed854f80ba96c4bf3e038,
-        type: 3}
-      propertyPath: fontSizeDialogue
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982420, guid: aa5c2205227ed854f80ba96c4bf3e038,
-        type: 3}
-      propertyPath: fontSizeName
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa5c2205227ed854f80ba96c4bf3e038, type: 3}
 --- !u!1001 &1181592193
@@ -6201,11 +6023,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue9
       objectReference: {fileID: 0}
-    - target: {fileID: 5141639013886447314, guid: 873caec9fad13db469465e94aea99053,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2743892881426982421, guid: 873caec9fad13db469465e94aea99053,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6283,24 +6100,14 @@ PrefabInstance:
       objectReference: {fileID: 1924726551}
     - target: {fileID: 2743892881426982420, guid: 873caec9fad13db469465e94aea99053,
         type: 3}
-      propertyPath: continueButtonTextUI
+      propertyPath: dialogueOverlayLinesUI
       value: 
-      objectReference: {fileID: 397437829}
+      objectReference: {fileID: 1878425345}
     - target: {fileID: 2743892881426982420, guid: 873caec9fad13db469465e94aea99053,
         type: 3}
       propertyPath: continueButtonUI
       value: 
       objectReference: {fileID: 1521781298}
-    - target: {fileID: 2743892881426982420, guid: 873caec9fad13db469465e94aea99053,
-        type: 3}
-      propertyPath: fontSizeDialogue
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982420, guid: 873caec9fad13db469465e94aea99053,
-        type: 3}
-      propertyPath: fontSizeName
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 873caec9fad13db469465e94aea99053, type: 3}
 --- !u!4 &1235057650 stripped
@@ -6513,6 +6320,7 @@ RectTransform:
   m_Children:
   - {fileID: 1924726549}
   - {fileID: 593490046}
+  - {fileID: 1878425343}
   - {fileID: 1679697481}
   - {fileID: 1579495726}
   - {fileID: 1521781295}
@@ -6823,29 +6631,14 @@ PrefabInstance:
       objectReference: {fileID: 1924726551}
     - target: {fileID: 2743892881426982420, guid: bbe7a3c9a9da79f40aa0bab43fd0de33,
         type: 3}
-      propertyPath: continueButtonTextUI
+      propertyPath: dialogueOverlayLinesUI
       value: 
-      objectReference: {fileID: 397437829}
+      objectReference: {fileID: 1878425345}
     - target: {fileID: 2743892881426982420, guid: bbe7a3c9a9da79f40aa0bab43fd0de33,
         type: 3}
       propertyPath: continueButtonUI
       value: 
       objectReference: {fileID: 1521781298}
-    - target: {fileID: 2743892881426982420, guid: bbe7a3c9a9da79f40aa0bab43fd0de33,
-        type: 3}
-      propertyPath: fontSizeDialogue
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982420, guid: bbe7a3c9a9da79f40aa0bab43fd0de33,
-        type: 3}
-      propertyPath: fontSizeName
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6441825447863280545, guid: bbe7a3c9a9da79f40aa0bab43fd0de33,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbe7a3c9a9da79f40aa0bab43fd0de33, type: 3}
 --- !u!4 &1343703150 stripped
@@ -7052,6 +6845,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.116676
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -3.518276
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.80210936
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21898b7814e66b74ca016c7779d3ecf5, type: 3}
@@ -7767,11 +7575,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9063759698373631392, guid: 22213979748a5264ca3d56454dca9ae2,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2743892881426982420, guid: 22213979748a5264ca3d56454dca9ae2,
         type: 3}
       propertyPath: dialogueTextUI
@@ -7794,24 +7597,14 @@ PrefabInstance:
       objectReference: {fileID: 1924726551}
     - target: {fileID: 2743892881426982420, guid: 22213979748a5264ca3d56454dca9ae2,
         type: 3}
-      propertyPath: continueButtonTextUI
+      propertyPath: dialogueOverlayLinesUI
       value: 
-      objectReference: {fileID: 397437829}
+      objectReference: {fileID: 1878425345}
     - target: {fileID: 2743892881426982420, guid: 22213979748a5264ca3d56454dca9ae2,
         type: 3}
       propertyPath: continueButtonUI
       value: 
       objectReference: {fileID: 1521781298}
-    - target: {fileID: 2743892881426982420, guid: 22213979748a5264ca3d56454dca9ae2,
-        type: 3}
-      propertyPath: fontSizeDialogue
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982420, guid: 22213979748a5264ca3d56454dca9ae2,
-        type: 3}
-      propertyPath: fontSizeName
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22213979748a5264ca3d56454dca9ae2, type: 3}
 --- !u!4 &1442136893 stripped
@@ -8525,15 +8318,14 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 397437831}
+  m_Children: []
   m_Father: {fileID: 1292484705}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.87211615, y: 0.034}
   m_AnchorMax: {x: 0.9850001, y: 0.048}
-  m_AnchoredPosition: {x: 0.9979248, y: -0.9873047}
-  m_SizeDelta: {x: 2.5899963, y: 7.169998}
+  m_AnchoredPosition: {x: 8.48999, y: 0.13830566}
+  m_SizeDelta: {x: -16.99, y: 9.8963}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1521781296
 MonoBehaviour:
@@ -8555,8 +8347,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: cc54421dafbc56d41bb5669e06d0830e, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -8590,7 +8382,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -8599,9 +8391,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: f9a4a9083ecfd5842af603fdbf1d92d6,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: cc54421dafbc56d41bb5669e06d0830e, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: cc54421dafbc56d41bb5669e06d0830e, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -9317,11 +9110,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1292484705}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.21200001, y: 0.2725088}
   m_AnchorMax: {x: 0.565, y: 0.34600002}
-  m_AnchoredPosition: {x: 0.17501831, y: -0.24003601}
+  m_AnchoredPosition: {x: 0.17501831, y: -0.24005127}
   m_SizeDelta: {x: -0.35001, y: 3.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1579495727
@@ -9787,7 +9580,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1292484705}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.21200001, y: 0.048}
   m_AnchorMax: {x: 0.97900003, y: 0.2725088}
@@ -10569,22 +10362,22 @@ PrefabInstance:
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.6207783
+      value: -0.6532815
       objectReference: {fileID: 0}
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.28733784
+      value: 0.27059805
       objectReference: {fileID: 0}
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.26049083
+      value: 0.27059805
       objectReference: {fileID: 0}
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6813338
+      value: 0.6532815
       objectReference: {fileID: 0}
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
@@ -10594,17 +10387,17 @@ PrefabInstance:
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -84.631004
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 46.728
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -1.092
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
@@ -10624,6 +10417,80 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2601891837065378863, guid: 7229becef9c52884aa214f90008e38ec, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7229becef9c52884aa214f90008e38ec, type: 3}
+--- !u!1 &1878425342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1878425343}
+  - component: {fileID: 1878425344}
+  - component: {fileID: 1878425345}
+  m_Layer: 5
+  m_Name: DialogueOverlayLines
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1878425343
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878425342}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1292484705}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.34600002}
+  m_AnchoredPosition: {x: 0, y: 8.900024}
+  m_SizeDelta: {x: 1, y: 16.8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1878425344
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878425342}
+  m_CullTransparentMesh: 0
+--- !u!114 &1878425345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878425342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 52a2078cdbd3efd42a4d891498d84603, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
 --- !u!1001 &1898381174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10911,8 +10778,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.34600002}
-  m_AnchoredPosition: {x: 0, y: 1}
-  m_SizeDelta: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 8.900024}
+  m_SizeDelta: {x: 1, y: 16.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1924726550
 CanvasRenderer:
@@ -10942,7 +10809,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 21f8218fdeafcfb4a889167fcaa238bc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08bc680bfe1754540ad4be02ff05aacc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10974,8 +10841,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3651984, y: 0.34570768, z: 0.3709512}
-  m_Center: {x: 0.029163217, y: 0.1317232, z: -0.31452712}
+  m_Size: {x: 1.3651984, y: 0.34570768, z: 0.587355}
+  m_Center: {x: 0.029163241, y: 0.1317232, z: -0.20632517}
 --- !u!1001 &1933202870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11100,22 +10967,22 @@ PrefabInstance:
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.50345784
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5010768
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.4582299
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.53430104
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
@@ -11125,17 +10992,17 @@ PrefabInstance:
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -85.721
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 97.00201
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -11.502001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 181585212224396732, guid: 7229becef9c52884aa214f90008e38ec,
         type: 3}
@@ -11347,7 +11214,7 @@ RectTransform:
   m_LocalScale: {x: 0.6635758, y: 0.4697882, z: 0.42358455}
   m_Children: []
   m_Father: {fileID: 1292484705}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.022773052, y: 0.8991546}
   m_AnchorMax: {x: 0.12022696, y: 0.93669087}
@@ -11909,6 +11776,31 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.86
       objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -3.5799136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.7633132
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.1409237
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667854992698064971, guid: 21898b7814e66b74ca016c7779d3ecf5,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.57947725
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21898b7814e66b74ca016c7779d3ecf5, type: 3}
 --- !u!4 &2097636552 stripped
@@ -12100,29 +11992,14 @@ PrefabInstance:
       objectReference: {fileID: 1924726551}
     - target: {fileID: 2743892881426982420, guid: 30c07e190287a3d478e5e530fb4ad8bc,
         type: 3}
-      propertyPath: continueButtonTextUI
+      propertyPath: dialogueOverlayLinesUI
       value: 
-      objectReference: {fileID: 397437829}
+      objectReference: {fileID: 1878425345}
     - target: {fileID: 2743892881426982420, guid: 30c07e190287a3d478e5e530fb4ad8bc,
         type: 3}
       propertyPath: continueButtonUI
       value: 
       objectReference: {fileID: 1521781298}
-    - target: {fileID: 2743892881426982420, guid: 30c07e190287a3d478e5e530fb4ad8bc,
-        type: 3}
-      propertyPath: fontSizeDialogue
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982420, guid: 30c07e190287a3d478e5e530fb4ad8bc,
-        type: 3}
-      propertyPath: fontSizeName
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5344990215664785993, guid: 30c07e190287a3d478e5e530fb4ad8bc,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30c07e190287a3d478e5e530fb4ad8bc, type: 3}
 --- !u!4 &2105282837 stripped
@@ -12426,6 +12303,10 @@ PrefabInstance:
     - target: {fileID: 7399654235863277769, guid: c0da5aa8230b9744b93e85bf41ade9b2,
         type: 3}
       propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 787102197, guid: c0da5aa8230b9744b93e85bf41ade9b2, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -65,25 +65,24 @@ MonoBehaviour:
     no deber\xEDa tener problemas en forzar su movimiento como har\xEDa con un objetivo
     vivo. "
   speakerImages:
-  - {fileID: 21300000, guid: 7c4cb4c922bcead40bbaad1e14a5388a, type: 3}
-  - {fileID: 21300000, guid: 2512ddc113ef0e549a7d2fe7dbae3a0f, type: 3}
-  - {fileID: 21300000, guid: 97d8b710c025a19448b4fea5728ad26c, type: 3}
-  - {fileID: 21300000, guid: 4110918c93e50594598c68bf2f7b546b, type: 3}
-  - {fileID: 21300000, guid: ae1e57cb0ec64c94fb73ddaa38b3c64a, type: 3}
-  - {fileID: 21300000, guid: f1890ba5bf64cfd4d926823a63882f00, type: 3}
+  - {fileID: 21300000, guid: 0851d72d9dbdd414d8615f213deb7870, type: 3}
+  - {fileID: 21300000, guid: 3dd70ce8f79ecfc419683d28ed8f2be9, type: 3}
+  - {fileID: 21300000, guid: 74c871fee4110c744b8da0cfd5780f52, type: 3}
+  - {fileID: 21300000, guid: 750aa0534dc812344ad8f84b34411d86, type: 3}
+  - {fileID: 21300000, guid: 126558015dd4dc943bf5a9ccc45fe03f, type: 3}
+  - {fileID: 21300000, guid: a3686fabac862094d97a544066160117, type: 3}
   normalFont: {fileID: 12800000, guid: 1d523769e40f4034d880c8af20fe4fe0, type: 3}
   glitchedFont: {fileID: 12800000, guid: 93acf280821636b4da3fd52f877f8d85, type: 3}
-  fontSizeName: 40
-  fontSizeDialogue: 30
+  fontSizeName: 20
+  fontSizeDialogue: 20
   fontColor: {r: 1, g: 1, b: 1, a: 1}
   timeToWrite: 0.02
   dialogueTextUI: {fileID: 0}
   speakerNameUI: {fileID: 0}
   speakerImageUI: {fileID: 0}
   dialogueOverlayUI: {fileID: 0}
+  dialogueOverlayLinesUI: {fileID: 0}
   continueButtonUI: {fileID: 0}
-  continueButtonTextUI: {fileID: 0}
-  dialogueSound: {fileID: 0}
 --- !u!65 &2743892881426982422
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -109,7 +108,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 96690248b5572c44c84030ada7899cbc, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0

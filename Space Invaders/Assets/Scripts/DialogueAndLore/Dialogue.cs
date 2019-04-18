@@ -37,9 +37,9 @@ public class Dialogue: MonoBehaviour
 
     [SerializeField] Image speakerImageUI;  //Imagen de la UI que muestra un sprite del interlocutor
     [SerializeField] Image dialogueOverlayUI;   //Imagen de fondo del diálogo
+    [SerializeField] Image dialogueOverlayLinesUI;
 
     [SerializeField] Button continueButtonUI;   //Botón de continuar el diálogo
-    [SerializeField] Text continueButtonTextUI; //Texto del botón de continuar
 
     AudioSource dialogueSound;
     #endregion
@@ -62,6 +62,7 @@ public class Dialogue: MonoBehaviour
 
         //Se activan los elementos de la interfaz que muestran cosas del diálogo
         dialogueOverlayUI.gameObject.SetActive(true);
+        dialogueOverlayLinesUI.gameObject.SetActive(true);
         continueButtonUI.gameObject.SetActive(true);
         dialogueTextUI.gameObject.SetActive(true);
 
@@ -69,7 +70,6 @@ public class Dialogue: MonoBehaviour
         speakerNameUI.enabled = true;
 
         continueButtonUI.onClick.AddListener(delegate { nextString(); }); //Se asigna el evento de pasar de línea de diálogo al botón de la interfaz
-        continueButtonTextUI.text = "Continuar";
 
         speakerNameUI.font = normalFont;
         speakerNameUI.fontSize = fontSizeName;
@@ -101,8 +101,6 @@ public class Dialogue: MonoBehaviour
             }
         }
 
-        if (dialogueIndex >= dialogue.Length - 1) continueButtonTextUI.text = "Cerrar";
-
         finishedWriting = true;
     }
 
@@ -123,8 +121,6 @@ public class Dialogue: MonoBehaviour
         {
             finishedWriting = true;
             dialogueTextUI.text = dialogue[dialogueIndex].Substring(2);
-
-            if(dialogueIndex >= dialogue.Length - 1) continueButtonTextUI.text = "Cerrar";
         }
     }
     
@@ -137,6 +133,7 @@ public class Dialogue: MonoBehaviour
             continueButtonUI.gameObject.SetActive(false);
 
             dialogueOverlayUI.gameObject.SetActive(false);
+            dialogueOverlayLinesUI.gameObject.SetActive(false);
             dialogueTextUI.gameObject.SetActive(false);
 
             speakerImageUI.enabled = false;

@@ -342,7 +342,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.02999878, y: -0.7400055}
+  m_AnchoredPosition: {x: -0.029968262, y: -0.7400055}
   m_SizeDelta: {x: -14.49, y: -14.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8813448463506484951
@@ -375,7 +375,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1d523769e40f4034d880c8af20fe4fe0, type: 3}
-    m_FontSize: 42
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -387,5 +387,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Pulsa WASD para moverte
+
+    Pulsa SHIFT para correr
 
     Haz click sobre los objeto que brillan para interactuar'
