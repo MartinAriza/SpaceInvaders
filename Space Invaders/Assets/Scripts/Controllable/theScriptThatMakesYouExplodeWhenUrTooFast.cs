@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class theScriptThatMakesYouExplodeWhenUrTooFast : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class theScriptThatMakesYouExplodeWhenUrTooFast : MonoBehaviour
 
     int layerControllable;
     [SerializeField] float speedToExplode = 10.0f;
+    [SerializeField] UnityEvent onDisable;
     
     Rigidbody rb;
     Vector3 lastSpeed = new Vector3(0f,0f,0f);
@@ -57,6 +59,7 @@ public class theScriptThatMakesYouExplodeWhenUrTooFast : MonoBehaviour
     IEnumerator deactivateObject()
     {
         yield return new WaitForSecondsRealtime(timeToDeactivate);
+        onDisable.Invoke();
         gameObject.SetActive(false);
     }
 }
