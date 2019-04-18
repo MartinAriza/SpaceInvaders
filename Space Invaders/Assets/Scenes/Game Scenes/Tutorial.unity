@@ -125,16 +125,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TasksManager
       objectReference: {fileID: 0}
-    - target: {fileID: 448633823654092725, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
-        type: 3}
-      propertyPath: name
-      value: Disparo
-      objectReference: {fileID: 0}
-    - target: {fileID: 448633823654092725, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
-        type: 3}
-      propertyPath: description
-      value: Dispara contra la pared del hangar
-      objectReference: {fileID: 0}
     - target: {fileID: 845982073554643373, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
         type: 3}
       propertyPath: taskCompletedEvent.m_PersistentCalls.m_Calls.Array.size
@@ -206,16 +196,6 @@ PrefabInstance:
       propertyPath: currentLayer
       value: 
       objectReference: {fileID: 265114423}
-    - target: {fileID: 8959408220038921839, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
-        type: 3}
-      propertyPath: name
-      value: Movimiento
-      objectReference: {fileID: 0}
-    - target: {fileID: 8959408220038921839, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
-        type: 3}
-      propertyPath: description
-      value: Prueba el movimiento de P.O.L.A.R.I.S
-      objectReference: {fileID: 0}
     - target: {fileID: 7319732258121446468, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
         type: 3}
       propertyPath: m_Name
@@ -250,6 +230,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Movimiento
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959408220038921839, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
+        type: 3}
+      propertyPath: name
+      value: Movimiento
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959408220038921839, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
+        type: 3}
+      propertyPath: description
+      value: Prueba el movimiento de P.O.L.A.R.I.S
+      objectReference: {fileID: 0}
+    - target: {fileID: 448633823654092725, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
+        type: 3}
+      propertyPath: name
+      value: Disparo
+      objectReference: {fileID: 0}
+    - target: {fileID: 448633823654092725, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
+        type: 3}
+      propertyPath: description
+      value: Dispara contra la pared del hangar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb, type: 3}
@@ -2388,6 +2388,11 @@ PrefabInstance:
       propertyPath: onDialogueFinish.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5741014018640210445, guid: 05811b998a73620429a670c6b043b05b,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1.081192
+      objectReference: {fileID: 0}
     - target: {fileID: 2743892881426982422, guid: 05811b998a73620429a670c6b043b05b,
         type: 3}
       propertyPath: m_Size.z
@@ -2417,11 +2422,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.y
       value: 0.3488338
-      objectReference: {fileID: 0}
-    - target: {fileID: 5741014018640210445, guid: 05811b998a73620429a670c6b043b05b,
-        type: 3}
-      propertyPath: MinDistance
-      value: 1.081192
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05811b998a73620429a670c6b043b05b, type: 3}
@@ -15046,7 +15046,7 @@ PrefabInstance:
     - target: {fileID: 1865108276289579824, guid: 4a4a70ab91d8eb048b94514660e8b553,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.84
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 1865108276289579824, guid: 4a4a70ab91d8eb048b94514660e8b553,
         type: 3}
