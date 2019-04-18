@@ -143,7 +143,7 @@ public class PlayerMov : MonoBehaviour
     private void checkYTarget()
     {
         float newY = Input.GetAxisRaw("Vertical");
-        if (allowTargetChange && Mathf.Abs(newY) == 1f)
+        if (allowTargetChange && Mathf.Abs(newY) == 1f && !tutorial)
         {
             if(!((yTarget == minYPosition && newY == -1f) || (yTarget == maxYPosition && newY == 1f)))
             {
