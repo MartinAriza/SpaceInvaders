@@ -125,10 +125,11 @@ public class PlayerMov : MonoBehaviour
         Mathf.Clamp(velocity.y, -speed.y, speed.y),
         Mathf.Clamp(velocity.z, -speed.z, speed.z)
         );
-
-        rb.velocity = new Vector3(velocity.x * transform.right.x,
+        rb.velocity = (velocity.x * transform.right + velocity.z * transform.forward) * Time.deltaTime;
+        /*rb.velocity = new Vector3(velocity.x * transform.right.x,
             0f,
-            velocity.z * transform.right.z) * Time.deltaTime;
+            velocity.z * transform.right.z) * Time.deltaTime;*/
+
         if (!tutorial)
         {
             transform.position = new Vector3(
