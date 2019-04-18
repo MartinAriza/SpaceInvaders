@@ -126,7 +126,9 @@ public class PlayerMov : MonoBehaviour
         Mathf.Clamp(velocity.z, -speed.z, speed.z)
         );
 
-        rb.velocity = new Vector3(velocity.x,0f,velocity.z) * Time.deltaTime;
+        rb.velocity = new Vector3(velocity.x * transform.right.x,
+            0f,
+            velocity.z * transform.right.z) * Time.deltaTime;
         if (!tutorial)
         {
             transform.position = new Vector3(
@@ -166,7 +168,9 @@ public class PlayerMov : MonoBehaviour
     {
         locRotation.z = (velocity.x / speed.x) * -rotationAmount;
         locRotation.x = (velocity.y / speed.y) * -rotationAmount;
-        transform.localRotation = Quaternion.Euler(locRotation.x, 0f, locRotation.z);
+        if(!tutorial) transform.localRotation = Quaternion.Euler(locRotation.x, 0f, locRotation.z);
+        else transform.localRotation = Quaternion.Euler(locRotation.x, 135.264f, locRotation.z);
+
     }
 
     //Si se pulsa espacio o mouse Izq se dispara un láser y suena su efecto de sonido

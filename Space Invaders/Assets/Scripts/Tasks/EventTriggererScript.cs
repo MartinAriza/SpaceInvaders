@@ -19,6 +19,8 @@ public class EventTriggererScript : MonoBehaviour
     [Header("OnPowerControlEvent")]
     [SerializeField] UnityEvent onPowerControl = new UnityEvent();
 
+    [SerializeField] UnityEvent onParticleCollision = new UnityEvent();
+
 
     public void OnPowerMoveEnter()
     {
@@ -53,5 +55,10 @@ public class EventTriggererScript : MonoBehaviour
     public void OnDisable()
     {
         onDisable.Invoke();
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        onParticleCollision.Invoke();
     }
 }
