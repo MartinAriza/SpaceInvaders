@@ -14,6 +14,7 @@ public class AdultManager : MonoBehaviour
 
     void Awake()
     {
+        adult = true;
         adultReference = adult;
         //Transmite si eres mayor de 13 o no a la horda de aliens y al jugador para cambiar su comportamiento
         PlayerMov player = FindObjectOfType<PlayerMov>();

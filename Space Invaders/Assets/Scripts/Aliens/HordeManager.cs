@@ -23,6 +23,7 @@ public class HordeManager : MonoBehaviour
     PlayerMov player;
     [SerializeField] Text waveNumberUI;
     [SerializeField] Text playerLivesUI;
+    [SerializeField] Dialogue[] dialogues;
 
     [HideInInspector] public int waveNumber = 1;
 
@@ -33,6 +34,7 @@ public class HordeManager : MonoBehaviour
         horde = FindObjectOfType<Horde>();
         player = FindObjectOfType<PlayerMov>();
         barriers = FindObjectsOfType<Barrier>();
+        checkDialogue();
     }
 
     public void increaseHordeStats()
@@ -54,7 +56,7 @@ public class HordeManager : MonoBehaviour
             //horde.alienHP += hpIncrement * waveNumber;
         }
 
-        if (waveNumber >= 2) alienMiniBoss.gameObject.SetActive(true);
+        if (waveNumber >= 3) alienMiniBoss.gameObject.SetActive(true);
 
         //Se restauran las barreras y se les modifican los puntos de vida según el número de oleada
         foreach(Barrier barrier in barriers)
@@ -63,10 +65,31 @@ public class HordeManager : MonoBehaviour
             barrier.findHorde();
             barrier.HP += extraBarriersHP * waveNumber;
         }
+
+        checkDialogue();
     }
 
     private void Update()
     {
         playerLivesUI.text =  player.HP + "    Vidas";
+    }
+
+    private void checkDialogue()
+    {
+        switch(waveNumber)
+        {
+            case 1:
+                dialogues[0].startDialogue();
+                break;
+            case 2:
+                dialogues[1].startDialogue();
+                break;
+            case 3:
+                dialogues[2].startDialogue();
+                break;
+            case 5:
+                dialogues[3].startDialogue();
+                break;
+        }
     }
 }

@@ -7,6 +7,7 @@ public class VinPower : MonoBehaviour
     #region particles
     [SerializeField] ParticleSystem [] shieldWaves;
     [SerializeField] ParticleSystem powerWave;
+    [SerializeField] ParticleSystem healWave;
     ParticleSystem controlledAlienLaser;
     #endregion
 
@@ -101,6 +102,7 @@ public class VinPower : MonoBehaviour
             {
                 VL.stopHealing();
                 powerWave.Stop();
+                healWave.Stop();
                 if (!(target.tag == "Vin"))
                 {
                     target.GetComponent<theScriptThatMakesYouExplodeWhenUrTooFast>().powerWave.Stop();
@@ -207,6 +209,7 @@ public class VinPower : MonoBehaviour
             actualSound.Play();
 
             powerWave.Play();
+            healWave.Play();
             target = gameObject;
             mov.usePower();
             VL.startHealing();

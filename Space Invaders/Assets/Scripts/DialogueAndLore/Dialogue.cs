@@ -50,7 +50,7 @@ public class Dialogue: MonoBehaviour
     BoxCollider boxCollider;
     #endregion
 
-    void Start()
+    void Awake()
     {
         dialogueSound = this.GetComponent<AudioSource>();
         boxCollider = gameObject.GetComponent<BoxCollider>();

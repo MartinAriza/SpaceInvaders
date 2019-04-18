@@ -9,7 +9,12 @@ public class empezar_game : MonoBehaviour, IPointerClickHandler
    
     public void OnPointerClick(PointerEventData eventData) // 3
     {
-        SceneManager.LoadScene("GAME 2");
+        SceneManager.LoadScene("Tutorial");
+    }
+
+    public void loadScene(string scene)
+    {
+        SceneManager.LoadScene(scene);
     }
 
 }
