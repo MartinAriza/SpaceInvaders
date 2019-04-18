@@ -74,19 +74,30 @@ public class VinPower : MonoBehaviour
 
     void Update()
     {
-        shield = Input.GetKey("e") && !move && !control && !heal;
-        heal = Input.GetKey("f") && !move && !control && !shield;
-        cast = Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetKeyDown("e") || Input.GetKeyDown("f");
-        move = Input.GetMouseButton(0) && !shield && !control && !heal;
-        control = Input.GetMouseButton(1) && !move && !shield && !heal;
-        input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        shoot = Input.GetButtonDown("Fire1");
+        shield =    Input.GetKey("e") && !move && !control && !heal;
+        heal =      Input.GetKey("f") && !move && !control && !shield;
+        cast =      Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetKeyDown("e") || Input.GetKeyDown("f");
+        move =      Input.GetMouseButton(0) && !shield && !control && !heal;
+        control =   Input.GetMouseButton(1) && !move && !shield && !heal;
+        input =     new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        shoot =     Input.GetButtonDown("Fire1");
+
+        if (mov.freezeInput)
+        {
+            shield = false;
+            heal = false;
+            cast = false;
+            move = false;
+            control = false;
+            input = new Vector2(0f, 0f);
+            shoot = false;
+        }
 
         if (cast) castObject();
         if (target)
         {
             float distanceTarget = (target.transform.position - transform.position).magnitude;
-            if ((!shield && !move && !control && !heal) ||  distanceTarget > powerRange)
+            if ((!shield && !move && !control && !heal) ||  distanceTarget > powerRange || mov.freezeInput)
             {
                 VL.stopHealing();
                 powerWave.Stop();
