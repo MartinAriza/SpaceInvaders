@@ -93,7 +93,6 @@ public class PlayerMov : MonoBehaviour
         {
             if (adult) fire();
         }
-        checkExit();
     }
 
     void movement()
@@ -180,14 +179,8 @@ public class PlayerMov : MonoBehaviour
         if (Input.GetButton("Fire1"))
         {
             gun.Play();
-            laserSound.Play();
+            if(Time.timeScale != 0.0f) laserSound.Play();
         }
-    }
-
-    //Si se pulsa escape se cierra el juego
-    void checkExit()
-    {
-        if( Input.GetKey("escape") ) { Application.Quit(); }
     }
 
     //Si un alien toca al jugador le quita una vida

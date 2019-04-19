@@ -2673,6 +2673,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TaskLayer
       objectReference: {fileID: 0}
+    - target: {fileID: 1628867665021458801, guid: 0808a7479d9b9314e9ae8ccfe8925ebb,
+        type: 3}
+      propertyPath: name
+      value: "\xA1Sobrevive contra la amenaza alien\xEDgena!"
+      objectReference: {fileID: 0}
     - target: {fileID: 8467525067029562325, guid: 0808a7479d9b9314e9ae8ccfe8925ebb,
         type: 3}
       propertyPath: m_RootOrder
@@ -2687,11 +2692,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -24.774548
-      objectReference: {fileID: 0}
-    - target: {fileID: 1628867665021458801, guid: 0808a7479d9b9314e9ae8ccfe8925ebb,
-        type: 3}
-      propertyPath: name
-      value: "\xA1Sobrevive contra la amenaza alien\xEDgena!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0808a7479d9b9314e9ae8ccfe8925ebb, type: 3}
@@ -3049,6 +3049,82 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue16
       objectReference: {fileID: 0}
+    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
+        type: 3}
+      propertyPath: speakerImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0851d72d9dbdd414d8615f213deb7870,
+        type: 3}
+    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
+        type: 3}
+      propertyPath: speakerImages.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3dd70ce8f79ecfc419683d28ed8f2be9,
+        type: 3}
+    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
+        type: 3}
+      propertyPath: speakerImages.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 74c871fee4110c744b8da0cfd5780f52,
+        type: 3}
+    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
+        type: 3}
+      propertyPath: speakerImages.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 750aa0534dc812344ad8f84b34411d86,
+        type: 3}
+    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
+        type: 3}
+      propertyPath: speakerImages.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 126558015dd4dc943bf5a9ccc45fe03f,
+        type: 3}
+    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
+        type: 3}
+      propertyPath: speakerImages.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: a3686fabac862094d97a544066160117,
+        type: 3}
+    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
+        type: 3}
+      propertyPath: dialogueTextUI
+      value: 
+      objectReference: {fileID: 1041108486}
+    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
+        type: 3}
+      propertyPath: speakerNameUI
+      value: 
+      objectReference: {fileID: 515719879}
+    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
+        type: 3}
+      propertyPath: speakerImageUI
+      value: 
+      objectReference: {fileID: 529121496}
+    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
+        type: 3}
+      propertyPath: dialogueOverlayUI
+      value: 
+      objectReference: {fileID: 353195964}
+    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
+        type: 3}
+      propertyPath: dialogueOverlayLinesUI
+      value: 
+      objectReference: {fileID: 687276204}
+    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
+        type: 3}
+      propertyPath: continueButtonUI
+      value: 
+      objectReference: {fileID: 1083570231}
+    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
+        type: 3}
+      propertyPath: fontSizeName
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
+        type: 3}
+      propertyPath: fontSizeDialogue
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2743892881426982421, guid: a0430cda3806ea742bb83819d5f0c5e2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3104,82 +3180,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
-        type: 3}
-      propertyPath: speakerImages.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: 0851d72d9dbdd414d8615f213deb7870,
-        type: 3}
-    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
-        type: 3}
-      propertyPath: speakerImages.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 3dd70ce8f79ecfc419683d28ed8f2be9,
-        type: 3}
-    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
-        type: 3}
-      propertyPath: speakerImages.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: 74c871fee4110c744b8da0cfd5780f52,
-        type: 3}
-    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
-        type: 3}
-      propertyPath: speakerImages.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: 750aa0534dc812344ad8f84b34411d86,
-        type: 3}
-    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
-        type: 3}
-      propertyPath: speakerImages.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300000, guid: 126558015dd4dc943bf5a9ccc45fe03f,
-        type: 3}
-    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
-        type: 3}
-      propertyPath: speakerImages.Array.data[5]
-      value: 
-      objectReference: {fileID: 21300000, guid: a3686fabac862094d97a544066160117,
-        type: 3}
-    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
-        type: 3}
-      propertyPath: dialogueTextUI
-      value: 
-      objectReference: {fileID: 1041108486}
-    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
-        type: 3}
-      propertyPath: speakerNameUI
-      value: 
-      objectReference: {fileID: 515719879}
-    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
-        type: 3}
-      propertyPath: speakerImageUI
-      value: 
-      objectReference: {fileID: 529121496}
-    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
-        type: 3}
-      propertyPath: dialogueOverlayUI
-      value: 
-      objectReference: {fileID: 353195964}
-    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
-        type: 3}
-      propertyPath: dialogueOverlayLinesUI
-      value: 
-      objectReference: {fileID: 687276204}
-    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
-        type: 3}
-      propertyPath: continueButtonUI
-      value: 
-      objectReference: {fileID: 1083570231}
-    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
-        type: 3}
-      propertyPath: fontSizeName
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982420, guid: a0430cda3806ea742bb83819d5f0c5e2,
-        type: 3}
-      propertyPath: fontSizeDialogue
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0430cda3806ea742bb83819d5f0c5e2, type: 3}
 --- !u!4 &1676472647 stripped
@@ -3199,6 +3199,82 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dialogue15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
+        type: 3}
+      propertyPath: speakerImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0851d72d9dbdd414d8615f213deb7870,
+        type: 3}
+    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
+        type: 3}
+      propertyPath: speakerImages.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3dd70ce8f79ecfc419683d28ed8f2be9,
+        type: 3}
+    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
+        type: 3}
+      propertyPath: speakerImages.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 74c871fee4110c744b8da0cfd5780f52,
+        type: 3}
+    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
+        type: 3}
+      propertyPath: speakerImages.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 750aa0534dc812344ad8f84b34411d86,
+        type: 3}
+    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
+        type: 3}
+      propertyPath: speakerImages.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 126558015dd4dc943bf5a9ccc45fe03f,
+        type: 3}
+    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
+        type: 3}
+      propertyPath: speakerImages.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: a3686fabac862094d97a544066160117,
+        type: 3}
+    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
+        type: 3}
+      propertyPath: dialogueTextUI
+      value: 
+      objectReference: {fileID: 1041108486}
+    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
+        type: 3}
+      propertyPath: speakerNameUI
+      value: 
+      objectReference: {fileID: 515719879}
+    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
+        type: 3}
+      propertyPath: speakerImageUI
+      value: 
+      objectReference: {fileID: 529121496}
+    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
+        type: 3}
+      propertyPath: dialogueOverlayUI
+      value: 
+      objectReference: {fileID: 353195964}
+    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
+        type: 3}
+      propertyPath: dialogueOverlayLinesUI
+      value: 
+      objectReference: {fileID: 687276204}
+    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
+        type: 3}
+      propertyPath: continueButtonUI
+      value: 
+      objectReference: {fileID: 1083570231}
+    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
+        type: 3}
+      propertyPath: fontSizeName
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
+        type: 3}
+      propertyPath: fontSizeDialogue
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2743892881426982421, guid: 2b7e66fc650a19f478610817b6b7a24a,
         type: 3}
@@ -3254,82 +3330,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
-        type: 3}
-      propertyPath: speakerImages.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: 0851d72d9dbdd414d8615f213deb7870,
-        type: 3}
-    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
-        type: 3}
-      propertyPath: speakerImages.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 3dd70ce8f79ecfc419683d28ed8f2be9,
-        type: 3}
-    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
-        type: 3}
-      propertyPath: speakerImages.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: 74c871fee4110c744b8da0cfd5780f52,
-        type: 3}
-    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
-        type: 3}
-      propertyPath: speakerImages.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: 750aa0534dc812344ad8f84b34411d86,
-        type: 3}
-    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
-        type: 3}
-      propertyPath: speakerImages.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300000, guid: 126558015dd4dc943bf5a9ccc45fe03f,
-        type: 3}
-    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
-        type: 3}
-      propertyPath: speakerImages.Array.data[5]
-      value: 
-      objectReference: {fileID: 21300000, guid: a3686fabac862094d97a544066160117,
-        type: 3}
-    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
-        type: 3}
-      propertyPath: dialogueTextUI
-      value: 
-      objectReference: {fileID: 1041108486}
-    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
-        type: 3}
-      propertyPath: speakerNameUI
-      value: 
-      objectReference: {fileID: 515719879}
-    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
-        type: 3}
-      propertyPath: speakerImageUI
-      value: 
-      objectReference: {fileID: 529121496}
-    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
-        type: 3}
-      propertyPath: dialogueOverlayUI
-      value: 
-      objectReference: {fileID: 353195964}
-    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
-        type: 3}
-      propertyPath: dialogueOverlayLinesUI
-      value: 
-      objectReference: {fileID: 687276204}
-    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
-        type: 3}
-      propertyPath: continueButtonUI
-      value: 
-      objectReference: {fileID: 1083570231}
-    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
-        type: 3}
-      propertyPath: fontSizeName
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982420, guid: 2b7e66fc650a19f478610817b6b7a24a,
-        type: 3}
-      propertyPath: fontSizeDialogue
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b7e66fc650a19f478610817b6b7a24a, type: 3}
@@ -3424,61 +3424,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue14
       objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -28.47494
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -19.576267
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.4986315
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2743892881426982420, guid: a477585174c0e5a4ea86c7a856c8785d,
         type: 3}
       propertyPath: speakerImages.Array.data[0]
@@ -3554,6 +3499,61 @@ PrefabInstance:
         type: 3}
       propertyPath: fontSizeDialogue
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -28.47494
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -19.576267
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.4986315
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743892881426982421, guid: a477585174c0e5a4ea86c7a856c8785d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a477585174c0e5a4ea86c7a856c8785d, type: 3}
@@ -3747,7 +3747,7 @@ PrefabInstance:
     - target: {fileID: 1865108276289579825, guid: 4a4a70ab91d8eb048b94514660e8b553,
         type: 3}
       propertyPath: maxShots
-      value: 999
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a4a70ab91d8eb048b94514660e8b553, type: 3}

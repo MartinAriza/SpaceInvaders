@@ -139,7 +139,6 @@ public class VinPower : MonoBehaviour
             {
                 mov.usingPower = true;
                 controlledAlienLaser.Play();
-                print("shoot");
             } else if (heal)
             {
                 mov.usingPower = true;
@@ -157,7 +156,6 @@ public class VinPower : MonoBehaviour
             {
                 target = hitInfo.transform.gameObject;
                 EventTriggererScript targetEvent = target.GetComponent<EventTriggererScript>();
-                print(hitInfo.transform.name);
                 rb = target.GetComponent<Rigidbody>();
                 if ((target.transform.position - transform.position).magnitude < powerRange)
                     mov.usePower();
@@ -252,5 +250,10 @@ public class VinPower : MonoBehaviour
             if (look.magnitude > 0.01)
                 target.transform.LookAt(target.transform.position + look);
         }
+    }
+
+    public bool isShielding()
+    {
+        return shield;
     }
 }

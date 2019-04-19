@@ -18,6 +18,7 @@ public class EventTriggererScript : MonoBehaviour
 
     [Header("OnPowerControlEvent")]
     [SerializeField] UnityEvent onPowerControl = new UnityEvent();
+    [SerializeField] float controlTimer = 5f;
 
     [SerializeField] UnityEvent onParticleCollision = new UnityEvent();
 
@@ -29,7 +30,7 @@ public class EventTriggererScript : MonoBehaviour
 
     public void OnPowerControlEnter()
     {
-        onPowerControl.Invoke();
+        StartCoroutine(powerControl());
     }
 
     private void OnTriggerEnter(Collider other)
@@ -59,6 +60,13 @@ public class EventTriggererScript : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        onParticleCollision.Invoke();
+        VinPower vinPower = gameObject.GetComponent<VinPower>();
+        if(vinPower != null && vinPower.isShielding() && other.tag == "AlienLaser") onParticleCollision.Invoke();
+    }
+
+    IEnumerator powerControl()
+    {
+        yield return new WaitForSecondsRealtime(controlTimer);
+        onPowerControl.Invoke();
     }
 }

@@ -18,7 +18,7 @@ public class TasksManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("p"))
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
             checkPausedMenu();
     }
 
@@ -66,9 +66,6 @@ public class TasksManager : MonoBehaviour
         if(index < TasksLayersList.Length)
         {
             currentLayer = TasksLayersList[index];
-        } else
-        {
-            print("finished all tasks");
         }
     }
 }
