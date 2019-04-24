@@ -31,7 +31,7 @@ public class VinLife : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        if (other.tag == "AlienLaser")
+        if (other.tag == "AlienLaser" && !VP.isShielding())
         {
             currentLife -= lifeLostWhenHit;
             if (currentLife < 0)

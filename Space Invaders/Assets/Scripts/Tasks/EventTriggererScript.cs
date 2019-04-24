@@ -61,7 +61,8 @@ public class EventTriggererScript : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         VinPower vinPower = gameObject.GetComponent<VinPower>();
-        if(vinPower != null && vinPower.isShielding() && other.tag == "AlienLaser") onParticleCollision.Invoke();
+        if (vinPower != null && vinPower.isShielding() && other.tag == "AlienLaser") onParticleCollision.Invoke();
+        else if (vinPower == null) onParticleCollision.Invoke();
     }
 
     IEnumerator powerControl()

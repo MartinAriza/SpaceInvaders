@@ -120,21 +120,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5743655894253778100, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
-        type: 3}
-      propertyPath: m_Name
-      value: TasksManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 448633823654092725, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
-        type: 3}
-      propertyPath: name
-      value: Disparo
-      objectReference: {fileID: 0}
-    - target: {fileID: 448633823654092725, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
-        type: 3}
-      propertyPath: description
-      value: Dispara contra la diana
-      objectReference: {fileID: 0}
     - target: {fileID: 845982073554643373, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
         type: 3}
       propertyPath: taskCompletedEvent.m_PersistentCalls.m_Calls.Array.size
@@ -150,6 +135,11 @@ PrefabInstance:
         type: 3}
       propertyPath: name
       value: Habla con el Doctor Ali
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743655894253778100, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
+        type: 3}
+      propertyPath: m_Name
+      value: TasksManager
       objectReference: {fileID: 0}
     - target: {fileID: 5460763391822265983, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
         type: 3}
@@ -206,16 +196,6 @@ PrefabInstance:
       propertyPath: currentLayer
       value: 
       objectReference: {fileID: 265114423}
-    - target: {fileID: 8959408220038921839, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
-        type: 3}
-      propertyPath: name
-      value: Movimiento
-      objectReference: {fileID: 0}
-    - target: {fileID: 8959408220038921839, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
-        type: 3}
-      propertyPath: description
-      value: Prueba el movimiento de P.O.L.A.R.I.S
-      objectReference: {fileID: 0}
     - target: {fileID: 7319732258121446468, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
         type: 3}
       propertyPath: m_Name
@@ -250,6 +230,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Movimiento
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959408220038921839, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
+        type: 3}
+      propertyPath: name
+      value: Movimiento
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959408220038921839, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
+        type: 3}
+      propertyPath: description
+      value: Prueba el movimiento de P.O.L.A.R.I.S
+      objectReference: {fileID: 0}
+    - target: {fileID: 448633823654092725, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
+        type: 3}
+      propertyPath: name
+      value: Disparo
+      objectReference: {fileID: 0}
+    - target: {fileID: 448633823654092725, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb,
+        type: 3}
+      propertyPath: description
+      value: Dispara contra la diana
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2f36bc7b9f4c7f4abca0a149aafb1bb, type: 3}
@@ -1745,6 +1745,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1836260334}
     m_Modifications:
+    - target: {fileID: 8467525067029562325, guid: 0808a7479d9b9314e9ae8ccfe8925ebb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 428569497208286740, guid: 0808a7479d9b9314e9ae8ccfe8925ebb,
         type: 3}
       propertyPath: m_Name
@@ -1759,11 +1764,6 @@ PrefabInstance:
         type: 3}
       propertyPath: description
       value: Completa el entrenamiento de poderes ritmomantes
-      objectReference: {fileID: 0}
-    - target: {fileID: 8467525067029562325, guid: 0808a7479d9b9314e9ae8ccfe8925ebb,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0808a7479d9b9314e9ae8ccfe8925ebb, type: 3}
@@ -5034,6 +5034,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Escudo
       objectReference: {fileID: 0}
+    - target: {fileID: 7031827933013389687, guid: 5a63be7009fa05b488570ea463e42538,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7284508590094385063, guid: 5a63be7009fa05b488570ea463e42538,
         type: 3}
       propertyPath: name
@@ -5043,11 +5048,6 @@ PrefabInstance:
         type: 3}
       propertyPath: description
       value: Bloquea los disparos con el escudo
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031827933013389687, guid: 5a63be7009fa05b488570ea463e42538,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a63be7009fa05b488570ea463e42538, type: 3}
@@ -5063,6 +5063,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MoverCubo
       objectReference: {fileID: 0}
+    - target: {fileID: 7031827933013389687, guid: 5a63be7009fa05b488570ea463e42538,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7284508590094385063, guid: 5a63be7009fa05b488570ea463e42538,
         type: 3}
       propertyPath: name
@@ -5072,11 +5077,6 @@ PrefabInstance:
         type: 3}
       propertyPath: description
       value: Mueve el cubo y haz que choque fuerte con una pared para destruirlo
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031827933013389687, guid: 5a63be7009fa05b488570ea463e42538,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a63be7009fa05b488570ea463e42538, type: 3}
@@ -5796,6 +5796,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Control
       objectReference: {fileID: 0}
+    - target: {fileID: 7031827933013389687, guid: 5a63be7009fa05b488570ea463e42538,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7284508590094385063, guid: 5a63be7009fa05b488570ea463e42538,
         type: 3}
       propertyPath: name
@@ -5805,11 +5810,6 @@ PrefabInstance:
         type: 3}
       propertyPath: description
       value: "Usa la manipulaci\xF3n de onda nerviosa para controlar el segundo cubo"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031827933013389687, guid: 5a63be7009fa05b488570ea463e42538,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a63be7009fa05b488570ea463e42538, type: 3}
@@ -10577,16 +10577,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ControlarCubo
       objectReference: {fileID: 0}
-    - target: {fileID: 7284508590094385063, guid: 5a63be7009fa05b488570ea463e42538,
-        type: 3}
-      propertyPath: name
-      value: Hablar con Trumpet
-      objectReference: {fileID: 0}
-    - target: {fileID: 7284508590094385063, guid: 5a63be7009fa05b488570ea463e42538,
-        type: 3}
-      propertyPath: description
-      value: Habla con Lord Trumpet en la sala de control
-      objectReference: {fileID: 0}
     - target: {fileID: 7031827933013389687, guid: 5a63be7009fa05b488570ea463e42538,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10601,6 +10591,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7284508590094385063, guid: 5a63be7009fa05b488570ea463e42538,
+        type: 3}
+      propertyPath: name
+      value: Hablar con Trumpet
+      objectReference: {fileID: 0}
+    - target: {fileID: 7284508590094385063, guid: 5a63be7009fa05b488570ea463e42538,
+        type: 3}
+      propertyPath: description
+      value: Habla con Lord Trumpet en la sala de control
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a63be7009fa05b488570ea463e42538, type: 3}
@@ -10888,6 +10888,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1836260334}
     m_Modifications:
+    - target: {fileID: 8467525067029562325, guid: 0808a7479d9b9314e9ae8ccfe8925ebb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 428569497208286740, guid: 0808a7479d9b9314e9ae8ccfe8925ebb,
         type: 3}
       propertyPath: m_Name
@@ -10902,11 +10907,6 @@ PrefabInstance:
         type: 3}
       propertyPath: description
       value: Habla con Trumpet en la sala de mando
-      objectReference: {fileID: 0}
-    - target: {fileID: 8467525067029562325, guid: 0808a7479d9b9314e9ae8ccfe8925ebb,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0808a7479d9b9314e9ae8ccfe8925ebb, type: 3}
@@ -11344,7 +11344,7 @@ PrefabInstance:
     - target: {fileID: 2056401930590372044, guid: 12ce2dec7b3be21449b0a4b2b98fbf7f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.06
+      value: 18.94
       objectReference: {fileID: 0}
     - target: {fileID: 2056401930590372044, guid: 12ce2dec7b3be21449b0a4b2b98fbf7f,
         type: 3}
@@ -11354,7 +11354,7 @@ PrefabInstance:
     - target: {fileID: 2056401930590372044, guid: 12ce2dec7b3be21449b0a4b2b98fbf7f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 29.62
+      value: 29.81
       objectReference: {fileID: 0}
     - target: {fileID: 2056401930590372044, guid: 12ce2dec7b3be21449b0a4b2b98fbf7f,
         type: 3}
@@ -13625,6 +13625,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7241673247911680517, guid: 7131f503deb69764a89b7b4146d969fe,
+        type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 11776
+      objectReference: {fileID: 0}
     - target: {fileID: 7023212678875733069, guid: 7131f503deb69764a89b7b4146d969fe,
         type: 3}
       propertyPath: onDisable.m_PersistentCalls.m_Calls.Array.size
@@ -14079,6 +14084,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Levitar
       objectReference: {fileID: 0}
+    - target: {fileID: 7031827933013389687, guid: 5a63be7009fa05b488570ea463e42538,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7284508590094385063, guid: 5a63be7009fa05b488570ea463e42538,
         type: 3}
       propertyPath: name
@@ -14088,11 +14098,6 @@ PrefabInstance:
         type: 3}
       propertyPath: description
       value: "Levita sobre los obst\xE1culos"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7031827933013389687, guid: 5a63be7009fa05b488570ea463e42538,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a63be7009fa05b488570ea463e42538, type: 3}
@@ -30184,6 +30189,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: "Mant\xE9n F para curarte"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295390108205890938, guid: 85e216195d273744dbb70d1e4627d48a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.17504883
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295390108864548712, guid: 85e216195d273744dbb70d1e4627d48a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.5600586
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212344066199783287, guid: 85e216195d273744dbb70d1e4627d48a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.1999817
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212344066199783287, guid: 85e216195d273744dbb70d1e4627d48a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -504.9939
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212344066867274779, guid: 85e216195d273744dbb70d1e4627d48a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.1999817
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212344065384309735, guid: 85e216195d273744dbb70d1e4627d48a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.1999817
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85e216195d273744dbb70d1e4627d48a, type: 3}
